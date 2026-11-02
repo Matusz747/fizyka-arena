@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciśnienie cieczy – Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #0891b2);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        nav {
+            background: #1e293b;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 12px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #67e8f9;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        }
+
+        h2 {
+            color: #0e7490;
+            margin-top: 0;
+        }
+
+        .formula {
+            background: #cffafe;
+            padding: 16px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 23px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .example {
+            background: #ecfdf5;
+            border-left: 5px solid #10b981;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .note {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .task {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 12px 0;
+        }
+
+        button {
+            background: #0891b2;
+            color: white;
+            border: none;
+            padding: 9px 15px;
+            border-radius: 7px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background: #0e7490;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 10px;
+            color: #047857;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            section {
+                padding: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌊 Ciśnienie cieczy</h1>
+    <p>Sprawdź, dlaczego ciśnienie wody rośnie wraz z głębokością.</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Lekcje</a>
+    <a href="cisnienie.html">Poprzednia lekcja</a>
+    <a href="prawo-archimedesa.html">Następna lekcja</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest ciśnienie hydrostatyczne?</h2>
+        <p>
+            Ciśnienie hydrostatyczne to ciśnienie wywierane przez ciecz
+            znajdującą się w spoczynku. Powstaje ono między innymi
+            z powodu ciężaru cieczy znajdującej się nad danym miejscem.
+        </p>
+        <p>
+            Im głębiej znajdujemy się pod powierzchnią cieczy,
+            tym większe jest ciśnienie hydrostatyczne.
+        </p>
+        <div class="example">
+            <strong>Przykład:</strong> Nurek znajdujący się głęboko
+            pod wodą odczuwa większe ciśnienie niż osoba pływająca
+            tuż przy powierzchni.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Od czego zależy ciśnienie cieczy?</h2>
+        <p>Ciśnienie hydrostatyczne zależy od:</p>
+        <ul>
+            <li>głębokości, na której znajduje się dany punkt,</li>
+            <li>gęstości cieczy,</li>
+            <li>przyspieszenia grawitacyjnego.</li>
+        </ul>
+        <p>
+            Nie zależy natomiast bezpośrednio od kształtu naczynia
+            ani od całkowitej ilości cieczy.
+        </p>
+    </section>
+
+    <section>
+        <h2>3. Wzór na ciśnienie hydrostatyczne</h2>
+        <p>Ciśnienie hydrostatyczne obliczamy ze wzoru:</p>
+
+        <div class="formula">
+            p = ρ · g · h
+        </div>
+
+        <p>Gdzie:</p>
+        <ul>
+            <li><strong>p</strong> – ciśnienie hydrostatyczne w paskalach (Pa),</li>
+            <li><strong>ρ</strong> – gęstość cieczy w kg/m³,</li>
+            <li><strong>g</strong> – przyspieszenie grawitacyjne w m/s²,</li>
+            <li><strong>h</strong> – głębokość w metrach (m).</li>
+        </ul>
+
+        <div class="note">
+            W zadaniach szkolnych często przyjmuje się
+            g = 10 m/s².
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Dlaczego ciśnienie rośnie z głębokością?</h2>
+        <p>
+            Im niżej w cieczy znajduje się dany punkt, tym większy
+            słup cieczy znajduje się nad nim. Ciężar tego słupa
+            powoduje większe ciśnienie.
+        </p>
+        <div class="example">
+            <strong>Przykład:</strong> W basenie ciśnienie przy dnie
+            jest większe niż przy powierzchni wody.
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Czy rodzaj cieczy ma znaczenie?</h2>
+        <p>
+            Tak. Ciecze o większej gęstości wywierają większe
+            ciśnienie hydrostatyczne na tej samej głębokości.
+        </p>
+        <p>
+            Na przykład na tej samej głębokości ciśnienie
+            hydrostatyczne w rtęci jest większe niż w wodzie,
+            ponieważ rtęć ma większą gęstość.
+        </p>
+    </section>
+
+    <section>
+        <h2>6. Przykład obliczeniowy</h2>
+
+        <div class="example">
+            <p>
+                Oblicz ciśnienie hydrostatyczne na głębokości 2 m
+                w wodzie. Przyjmij gęstość wody 1000 kg/m³
+                oraz g = 10 m/s².
+            </p>
+
+            <p><strong>Dane:</strong></p>
+            <ul>
+                <li>ρ = 1000 kg/m³</li>
+                <li>g = 10 m/s²</li>
+                <li>h = 2 m</li>
+            </ul>
+
+            <p><strong>Wzór:</strong></p>
+            <p>p = ρ · g · h</p>
+
+            <p><strong>Podstawienie:</strong></p>
+            <p>p = 1000 · 10 · 2</p>
+
+            <p><strong>Wynik:</strong></p>
+            <p>p = 20 000 Pa = 20 kPa</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Ciśnienie cieczy w życiu codziennym</h2>
+        <ul>
+            <li>Woda wywiera ciśnienie na ściany basenu.</li>
+            <li>Tamy muszą być mocne, szczególnie w dolnej części.</li>
+            <li>Nurkowie używają sprzętu dostosowanego do warunków pod wodą.</li>
+            <li>W zbiornikach wodnych ciśnienie rośnie wraz z głębokością.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>8. Naczynia połączone</h2>
+        <p>
+            Naczynia połączone to naczynia, które są ze sobą
+            połączone w taki sposób, że ciecz może przepływać
+            między nimi.
+        </p>
+        <p>
+            Gdy w połączonych naczyniach znajduje się ta sama ciecz
+            i panują odpowiednie warunki równowagi, poziomy cieczy
+            w poszczególnych częściach są jednakowe.
+        </p>
+        <div class="example">
+            <strong>Przykład:</strong> Zasada naczyń połączonych
+            jest wykorzystywana w instalacjach wodnych.
+        </div>
+    </section>
+
+    <section>
+        <h2>9. Ciśnienie hydrostatyczne a ciśnienie całkowite</h2>
+        <p>
+            Wzór p = ρ · g · h opisuje ciśnienie hydrostatyczne
+            wynikające z ciężaru cieczy.
+        </p>
+        <p>
+            Jeśli nad cieczą działa dodatkowo ciśnienie zewnętrzne,
+            na przykład ciśnienie atmosferyczne, ciśnienie całkowite
+            może być większe.
+        </p>
+    </section>
+
+    <section>
+        <h2>10. Słowniczek</h2>
+        <ul>
+            <li><strong>Ciśnienie hydrostatyczne</strong> – ciśnienie wywierane przez ciecz w spoczynku.</li>
+            <li><strong>Głębokość</strong> – odległość danego punktu od powierzchni cieczy.</li>
+            <li><strong>Gęstość</strong> – masa przypadająca na jednostkę objętości.</li>
+            <li><strong>Naczynia połączone</strong> – naczynia połączone tak, aby ciecz mogła między nimi przepływać.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>11. Sprawdź swoją wiedzę</h2>
+
+        <div class="task">
+            <p><strong>1. Co to jest ciśnienie hydrostatyczne?</strong></p>
+            <button onclick="showAnswer('a1')">Pokaż odpowiedź</button>
+            <div class="answer" id="a1">
+                To ciśnienie wywierane przez ciecz znajdującą się w spoczynku.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>2. Jak zmienia się ciśnienie wraz z głębokością?</strong></p>
+            <button onclick="showAnswer('a2')">Pokaż odpowiedź</button>
+            <div class="answer" id="a2">
+                Rośnie wraz z głębokością.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>3. Podaj wzór na ciśnienie hydrostatyczne.</strong></p>
+            <button onclick="showAnswer('a3')">Pokaż odpowiedź</button>
+            <div class="answer" id="a3">
+                p = ρ · g · h
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>4. Co oznacza symbol ρ?</strong></p>
+            <button onclick="showAnswer('a4')">Pokaż odpowiedź</button>
+            <div class="answer" id="a4">
+                Gęstość cieczy.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>5. Czy ciśnienie hydrostatyczne zależy od kształtu naczynia?</strong></p>
+            <button onclick="showAnswer('a5')">Pokaż odpowiedź</button>
+            <div class="answer" id="a5">
+                Nie. Przy tej samej cieczy i tej samej głębokości jest takie samo.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>6. Oblicz ciśnienie na głębokości 3 m w wodzie. Przyjmij ρ = 1000 kg/m³ i g = 10 m/s².</strong></p>
+            <button onclick="showAnswer('a6')">Pokaż odpowiedź</button>
+            <div class="answer" id="a6">
+                p = 1000 · 10 · 3 = 30 000 Pa.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>7. Co to są naczynia połączone?</strong></p>
+            <button onclick="showAnswer('a7')">Pokaż odpowiedź</button>
+            <div class="answer" id="a7">
+                To naczynia połączone tak, aby ciecz mogła przepływać między nimi.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>12. Podsumowanie</h2>
+        <ul>
+            <li>Ciśnienie hydrostatyczne występuje w cieczach w spoczynku.</li>
+            <li>Rośnie wraz z głębokością.</li>
+            <li>Zależy od gęstości cieczy i przyspieszenia grawitacyjnego.</li>
+            <li>Obliczamy je ze wzoru p = ρ · g · h.</li>
+            <li>Nie zależy bezpośrednio od kształtu naczynia.</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena – Nauka fizyki dla klas 7 i 8</p>
+</footer>
+
+<script>
+    function showAnswer(id) {
+        const answer = document.getElementById(id);
+
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+        } else {
+            answer.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>

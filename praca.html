@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praca mechaniczna – Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #7c3aed);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        nav {
+            background: #1e293b;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 12px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #c4b5fd;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        }
+
+        h2 {
+            color: #6d28d9;
+            margin-top: 0;
+        }
+
+        .formula {
+            background: #ede9fe;
+            padding: 16px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 23px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .example {
+            background: #ecfdf5;
+            border-left: 5px solid #10b981;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .note {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .task {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 12px 0;
+        }
+
+        button {
+            background: #7c3aed;
+            color: white;
+            border: none;
+            padding: 9px 15px;
+            border-radius: 7px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background: #6d28d9;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 10px;
+            color: #047857;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            section {
+                padding: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>⚙️ Praca mechaniczna</h1>
+    <p>Poznaj pracę w fizyce i naucz się obliczać ją ze wzoru.</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Lekcje</a>
+    <a href="prawo-archimedesa.html">Poprzednia lekcja</a>
+    <a href="moc.html">Następna lekcja</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest praca mechaniczna?</h2>
+        <p>
+            W fizyce praca mechaniczna jest wykonywana wtedy,
+            gdy siła działająca na ciało powoduje jego przemieszczenie.
+        </p>
+        <p>
+            Samo działanie siły nie zawsze oznacza wykonanie pracy.
+            Jeśli na przykład pchasz ścianę, ale ściana się nie przesuwa,
+            w fizycznym znaczeniu nie wykonujesz pracy mechanicznej
+            nad ścianą.
+        </p>
+        <div class="example">
+            <strong>Przykład:</strong> Podnosząc plecak z podłogi
+            na biurko, wykonujesz pracę mechaniczną, ponieważ
+            działasz siłą i przemieszczasz plecak.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Wzór na pracę mechaniczną</h2>
+        <p>
+            Gdy siła działa w kierunku przemieszczenia,
+            pracę obliczamy ze wzoru:
+        </p>
+
+        <div class="formula">
+            W = F · s
+        </div>
+
+        <p>Gdzie:</p>
+        <ul>
+            <li><strong>W</strong> – praca mechaniczna,</li>
+            <li><strong>F</strong> – siła działająca na ciało,</li>
+            <li><strong>s</strong> – przemieszczenie ciała.</li>
+        </ul>
+
+        <div class="note">
+            Wzór W = F · s stosujemy w prostym przypadku,
+            gdy siła ma ten sam kierunek co przemieszczenie.
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Jednostka pracy</h2>
+        <p>
+            Jednostką pracy w układzie SI jest dżul (J).
+        </p>
+
+        <div class="formula">
+            1 J = 1 N · 1 m
+        </div>
+
+        <p>
+            Jeden dżul pracy wykonujemy wtedy, gdy siła 1 N
+            przesuwa ciało o 1 m w swoim kierunku.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Kiedy praca jest wykonywana?</h2>
+        <p>Praca mechaniczna jest wykonywana, gdy:</p>
+        <ul>
+            <li>na ciało działa siła,</li>
+            <li>ciało przemieszcza się,</li>
+            <li>siła ma składową w kierunku przemieszczenia.</li>
+        </ul>
+
+        <div class="example">
+            <strong>Przykłady:</strong>
+            <ul>
+                <li>Podnoszenie książki.</li>
+                <li>Ciągnięcie wózka.</li>
+                <li>Przesuwanie pudełka po podłodze.</li>
+                <li>Podnoszenie zakupów.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Kiedy praca wynosi zero?</h2>
+        <p>
+            Jeśli ciało nie przemieszcza się, praca mechaniczna
+            wykonana przez działającą na nie siłę wynosi zero.
+        </p>
+        <p>
+            W prostym modelu praca wynosi również zero,
+            gdy siła jest prostopadła do kierunku przemieszczenia.
+        </p>
+
+        <div class="note">
+            <strong>Przykład:</strong> Osoba trzymająca nieruchomą
+            torbę w ręce działa na nią siłą, ale nie wykonuje
+            pracy mechanicznej nad torbą, jeśli torba się nie porusza.
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Przykład obliczeniowy</h2>
+
+        <div class="example">
+            <p>
+                Chłopiec przesuwa pudełko siłą 20 N na odległość 3 m.
+                Siła działa w kierunku ruchu. Oblicz wykonaną pracę.
+            </p>
+
+            <p><strong>Dane:</strong></p>
+            <ul>
+                <li>F = 20 N</li>
+                <li>s = 3 m</li>
+            </ul>
+
+            <p><strong>Wzór:</strong></p>
+            <p>W = F · s</p>
+
+            <p><strong>Podstawienie:</strong></p>
+            <p>W = 20 N · 3 m</p>
+
+            <p><strong>Wynik:</strong></p>
+            <p>W = 60 J</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Praca podczas podnoszenia przedmiotu</h2>
+        <p>
+            Podczas podnoszenia przedmiotu wykonujemy pracę przeciwko
+            sile ciężkości.
+        </p>
+        <p>
+            Jeśli podnosimy ciało pionowo w górę ze stałą prędkością,
+            a pomijamy opory ruchu, możemy obliczyć pracę ze wzoru:
+        </p>
+
+        <div class="formula">
+            W = m · g · h
+        </div>
+
+        <p>Gdzie:</p>
+        <ul>
+            <li><strong>m</strong> – masa ciała w kilogramach (kg),</li>
+            <li><strong>g</strong> – przyspieszenie grawitacyjne (m/s²),</li>
+            <li><strong>h</strong> – wysokość podniesienia (m).</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>8. Przykład podnoszenia plecaka</h2>
+
+        <div class="example">
+            <p>
+                Plecak o masie 4 kg podniesiono na wysokość 1,5 m.
+                Przyjmij g = 10 m/s². Oblicz wykonaną pracę.
+            </p>
+
+            <p><strong>Dane:</strong></p>
+            <ul>
+                <li>m = 4 kg</li>
+                <li>g = 10 m/s²</li>
+                <li>h = 1,5 m</li>
+            </ul>
+
+            <p><strong>Wzór:</strong></p>
+            <p>W = m · g · h</p>
+
+            <p><strong>Podstawienie:</strong></p>
+            <p>W = 4 · 10 · 1,5</p>
+
+            <p><strong>Wynik:</strong></p>
+            <p>W = 60 J</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>9. Od czego zależy praca?</h2>
+        <p>W prostym przypadku praca zależy od:</p>
+        <ul>
+            <li>wartości siły działającej na ciało,</li>
+            <li>długości przemieszczenia,</li>
+            <li>kierunku działania siły względem przemieszczenia.</li>
+        </ul>
+        <p>
+            Jeśli siła i przemieszczenie mają ten sam kierunek,
+            większa siła lub dłuższa droga oznaczają większą pracę.
+        </p>
+    </section>
+
+    <section>
+        <h2>10. Praca w życiu codziennym</h2>
+        <ul>
+            <li>Podnoszenie zakupów.</li>
+            <li>Wciąganie przedmiotu po pochylni.</li>
+            <li>Przesuwanie mebli.</li>
+            <li>Podnoszenie ciężarów.</li>
+            <li>Praca silnika podczas poruszania pojazdu.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>11. Słowniczek</h2>
+        <ul>
+            <li><strong>Praca mechaniczna</strong> – wielkość fizyczna opisująca przekazywanie energii przez siłę podczas przemieszczenia.</li>
+            <li><strong>Siła</strong> – oddziaływanie mogące zmienić ruch lub kształt ciała.</li>
+            <li><strong>Przemieszczenie</strong> – zmiana położenia ciała.</li>
+            <li><strong>Dżul</strong> – jednostka pracy i energii.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>12. Sprawdź swoją wiedzę</h2>
+
+        <div class="task">
+            <p><strong>1. Kiedy w fizyce wykonujemy pracę mechaniczną?</strong></p>
+            <button onclick="showAnswer('a1')">Pokaż odpowiedź</button>
+            <div class="answer" id="a1">
+                Gdy siła powoduje przemieszczenie ciała i ma składową w kierunku tego przemieszczenia.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>2. Jaki jest wzór na pracę w prostym przypadku?</strong></p>
+            <button onclick="showAnswer('a2')">Pokaż odpowiedź</button>
+            <div class="answer" id="a2">
+                W = F · s
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>3. Jaka jest jednostka pracy?</strong></p>
+            <button onclick="showAnswer('a3')">Pokaż odpowiedź</button>
+            <div class="answer" id="a3">
+                Dżul (J).
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>4. Czy pchanie nieruchomej ściany oznacza wykonanie pracy mechanicznej nad ścianą?</strong></p>
+            <button onclick="showAnswer('a4')">Pokaż odpowiedź</button>
+            <div class="answer" id="a4">
+                Nie, ponieważ ściana się nie przemieszcza.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>5. Oblicz pracę, jeśli F = 10 N, a s = 5 m.</strong></p>
+            <button onclick="showAnswer('a5')">Pokaż odpowiedź</button>
+            <div class="answer" id="a5">
+                W = 10 · 5 = 50 J.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>6. Jak obliczamy pracę podczas podnoszenia ciała?</strong></p>
+            <button onclick="showAnswer('a6')">Pokaż odpowiedź</button>
+            <div class="answer" id="a6">
+                W = m · g · h, jeśli ciało podnosimy pionowo ze stałą prędkością i pomijamy opory.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>7. Oblicz pracę potrzebną do podniesienia ciała o masie 2 kg na wysokość 3 m. Przyjmij g = 10 m/s².</strong></p>
+            <button onclick="showAnswer('a7')">Pokaż odpowiedź</button>
+            <div class="answer" id="a7">
+                W = 2 · 10 · 3 = 60 J.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>13. Podsumowanie</h2>
+        <ul>
+            <li>Praca mechaniczna jest wykonywana, gdy siła powoduje przemieszczenie.</li>
+            <li>W prostym przypadku obliczamy ją ze wzoru W = F · s.</li>
+            <li>Jednostką pracy jest dżul (J).</li>
+            <li>Podczas podnoszenia ciała można użyć wzoru W = m · g · h.</li>
+            <li>Jeśli ciało się nie przemieszcza, praca mechaniczna wykonana przez działającą na nie siłę wynosi zero.</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena – Nauka fizyki dla klas 7 i 8</p>
+</footer>
+
+<script>
+    function showAnswer(id) {
+        const answer = document.getElementById(id);
+
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+        } else {
+            answer.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>

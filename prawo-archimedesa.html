@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prawo Archimedesa – Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #0891b2);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        nav {
+            background: #1e293b;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 12px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #67e8f9;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        }
+
+        h2 {
+            color: #0e7490;
+            margin-top: 0;
+        }
+
+        .formula {
+            background: #cffafe;
+            padding: 16px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 23px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .example {
+            background: #ecfdf5;
+            border-left: 5px solid #10b981;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .note {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .task {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 12px 0;
+        }
+
+        button {
+            background: #0891b2;
+            color: white;
+            border: none;
+            padding: 9px 15px;
+            border-radius: 7px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background: #0e7490;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 10px;
+            color: #047857;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            section {
+                padding: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🛟 Prawo Archimedesa</h1>
+    <p>Dowiedz się, dlaczego niektóre ciała pływają, a inne toną.</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Lekcje</a>
+    <a href="cisnienie-cieczy.html">Poprzednia lekcja</a>
+    <a href="praca.html">Następna lekcja</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Kim był Archimedes?</h2>
+        <p>
+            Archimedes był greckim matematykiem, fizykiem i wynalazcą,
+            który żył w starożytności. Zajmował się między innymi
+            badaniem ciał zanurzonych w cieczach.
+        </p>
+        <p>
+            Jego imieniem nazwano prawo opisujące siłę wyporu
+            działającą na ciało znajdujące się w cieczy lub gazie.
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Czym jest siła wyporu?</h2>
+        <p>
+            Siła wyporu to siła, którą ciecz lub gaz działa na
+            zanurzone w nim ciało. Jest skierowana pionowo do góry.
+        </p>
+        <div class="example">
+            <strong>Przykład:</strong> Gdy zanurzasz piłkę pod wodą
+            i puszczasz ją, piłka wypływa na powierzchnię.
+            Dzieje się tak dzięki sile wyporu.
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Treść prawa Archimedesa</h2>
+        <p>
+            Na ciało zanurzone w cieczy lub gazie działa skierowana
+            pionowo do góry siła wyporu. Jej wartość jest równa
+            ciężarowi cieczy lub gazu wypartego przez to ciało.
+        </p>
+        <div class="note">
+            <strong>Zapamiętaj:</strong> Siła wyporu jest równa
+            ciężarowi wypartej cieczy lub gazu.
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Wzór na siłę wyporu</h2>
+        <div class="formula">
+            F<sub>w</sub> = ρ · g · V
+        </div>
+
+        <p>Gdzie:</p>
+        <ul>
+            <li><strong>F<sub>w</sub></strong> – siła wyporu w niutonach (N),</li>
+            <li><strong>ρ</strong> – gęstość cieczy lub gazu w kg/m³,</li>
+            <li><strong>g</strong> – przyspieszenie grawitacyjne w m/s²,</li>
+            <li><strong>V</strong> – objętość wypartej cieczy lub gazu w m³.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>5. Od czego zależy siła wyporu?</h2>
+        <p>Siła wyporu zależy od:</p>
+        <ul>
+            <li>gęstości cieczy lub gazu,</li>
+            <li>objętości wypartej cieczy lub gazu,</li>
+            <li>przyspieszenia grawitacyjnego.</li>
+        </ul>
+        <p>
+            Przy tej samej objętości wypartej cieczy większa jej gęstość
+            oznacza większą siłę wyporu.
+        </p>
+    </section>
+
+    <section>
+        <h2>6. Dlaczego ciała pływają lub toną?</h2>
+        <p>
+            O tym, czy ciało będzie pływać, czy tonąć, decyduje
+            między innymi porównanie jego ciężaru z siłą wyporu.
+        </p>
+
+        <h3>Ciało tonie</h3>
+        <p>
+            Jeśli ciężar ciała jest większy od siły wyporu,
+            ciało opada na dno.
+        </p>
+
+        <h3>Ciało unosi się w cieczy</h3>
+        <p>
+            Jeśli siła wyporu równoważy ciężar ciała,
+            ciało może pozostawać w równowadze.
+        </p>
+
+        <h3>Ciało wypływa</h3>
+        <p>
+            Jeśli siła wyporu jest większa od ciężaru ciała,
+            ciało porusza się ku powierzchni.
+        </p>
+    </section>
+
+    <section>
+        <h2>7. Gęstość ciała i gęstość cieczy</h2>
+        <p>
+            Przydatne jest porównanie średniej gęstości ciała
+            z gęstością cieczy.
+        </p>
+        <ul>
+            <li>Jeśli gęstość ciała jest mniejsza niż gęstość cieczy, ciało może pływać.</li>
+            <li>Jeśli gęstość ciała jest większa niż gęstość cieczy, ciało tonie.</li>
+            <li>Jeśli gęstości są równe, ciało może pozostawać zanurzone w równowadze.</li>
+        </ul>
+        <div class="note">
+            W przypadku ciał o nieregularnym kształcie liczy się
+            ich średnia gęstość, uwzględniająca również puste przestrzenie.
+        </div>
+    </section>
+
+    <section>
+        <h2>8. Dlaczego statki pływają?</h2>
+        <p>
+            Statek jest wykonany z materiałów, które same w sobie
+            mogą mieć dużą gęstość, ale jego kadłub zawiera dużo
+            powietrza. Dzięki temu średnia gęstość całego statku
+            jest odpowiednio mała.
+        </p>
+        <p>
+            Statek wypiera taką ilość wody, że siła wyporu równoważy
+            jego ciężar.
+        </p>
+    </section>
+
+    <section>
+        <h2>9. Prawo Archimedesa w gazach</h2>
+        <p>
+            Siła wyporu występuje nie tylko w cieczach, ale również
+            w gazach.
+        </p>
+        <p>
+            Balon wypełniony odpowiednim gazem może unosić się
+            w powietrzu, ponieważ działa na niego siła wyporu
+            związana z wyparciem powietrza.
+        </p>
+    </section>
+
+    <section>
+        <h2>10. Przykład obliczeniowy</h2>
+        <div class="example">
+            <p>
+                Ciało wyparło 0,002 m³ wody. Przyjmij gęstość wody
+                1000 kg/m³ oraz g = 10 m/s². Oblicz siłę wyporu.
+            </p>
+
+            <p><strong>Dane:</strong></p>
+            <ul>
+                <li>ρ = 1000 kg/m³</li>
+                <li>V = 0,002 m³</li>
+                <li>g = 10 m/s²</li>
+            </ul>
+
+            <p><strong>Wzór:</strong></p>
+            <p>F<sub>w</sub> = ρ · g · V</p>
+
+            <p><strong>Podstawienie:</strong></p>
+            <p>F<sub>w</sub> = 1000 · 10 · 0,002</p>
+
+            <p><strong>Wynik:</strong></p>
+            <p>F<sub>w</sub> = 20 N</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>11. Zastosowania prawa Archimedesa</h2>
+        <ul>
+            <li>Budowa statków i łodzi.</li>
+            <li>Działanie łodzi podwodnych.</li>
+            <li>Wyporność kamizelek ratunkowych.</li>
+            <li>Działanie balonów unoszących się w powietrzu.</li>
+            <li>Pomiar objętości nieregularnych przedmiotów.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>12. Słowniczek</h2>
+        <ul>
+            <li><strong>Siła wyporu</strong> – siła skierowana do góry, działająca na ciało zanurzone w cieczy lub gazie.</li>
+            <li><strong>Wypór</strong> – zjawisko związane z działaniem siły wyporu.</li>
+            <li><strong>Objętość wypartej cieczy</strong> – objętość cieczy, która została wyparta przez zanurzone ciało.</li>
+            <li><strong>Gęstość</strong> – masa przypadająca na jednostkę objętości.</li>
+            <li><strong>Wyporność</strong> – zdolność ciała do wypierania cieczy.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>13. Sprawdź swoją wiedzę</h2>
+
+        <div class="task">
+            <p><strong>1. W którą stronę skierowana jest siła wyporu?</strong></p>
+            <button onclick="showAnswer('a1')">Pokaż odpowiedź</button>
+            <div class="answer" id="a1">
+                Pionowo do góry.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>2. Co mówi prawo Archimedesa?</strong></p>
+            <button onclick="showAnswer('a2')">Pokaż odpowiedź</button>
+            <div class="answer" id="a2">
+                Siła wyporu jest równa ciężarowi wypartej cieczy lub gazu.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>3. Podaj wzór na siłę wyporu.</strong></p>
+            <button onclick="showAnswer('a3')">Pokaż odpowiedź</button>
+            <div class="answer" id="a3">
+                Fw = ρ · g · V
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>4. Dlaczego statek może pływać po wodzie?</strong></p>
+            <button onclick="showAnswer('a4')">Pokaż odpowiedź</button>
+            <div class="answer" id="a4">
+                Ponieważ wypiera odpowiednią ilość wody, a siła wyporu równoważy jego ciężar.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>5. Czy siła wyporu występuje w gazach?</strong></p>
+            <button onclick="showAnswer('a5')">Pokaż odpowiedź</button>
+            <div class="answer" id="a5">
+                Tak. Przykładem jest balon unoszący się w powietrzu.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>6. Co oznacza symbol V we wzorze?</strong></p>
+            <button onclick="showAnswer('a6')">Pokaż odpowiedź</button>
+            <div class="answer" id="a6">
+                Objętość wypartej cieczy lub gazu.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>7. Oblicz siłę wyporu, jeśli ρ = 1000 kg/m³, g = 10 m/s², a V = 0,001 m³.</strong></p>
+            <button onclick="showAnswer('a7')">Pokaż odpowiedź</button>
+            <div class="answer" id="a7">
+                Fw = 1000 · 10 · 0,001 = 10 N.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>14. Podsumowanie</h2>
+        <ul>
+            <li>Prawo Archimedesa dotyczy ciał zanurzonych w cieczach i gazach.</li>
+            <li>Na takie ciało działa siła wyporu skierowana do góry.</li>
+            <li>Siła wyporu jest równa ciężarowi wypartej cieczy lub gazu.</li>
+            <li>Siłę wyporu obliczamy ze wzoru Fw = ρ · g · V.</li>
+            <li>Prawo Archimedesa wyjaśnia między innymi, dlaczego statki pływają.</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena – Nauka fizyki dla klas 7 i 8</p>
+</footer>
+
+<script>
+    function showAnswer(id) {
+        const answer = document.getElementById(id);
+
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+        } else {
+            answer.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>

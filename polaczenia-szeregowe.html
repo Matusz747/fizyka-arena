@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Połączenia szeregowe | Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            color: #263238;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1565c0, #42a5f5);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background: #0d47a1;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1565c0;
+        }
+
+        .formula {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #0d47a1;
+        }
+
+        .example {
+            background: #fff8e1;
+            padding: 15px;
+            border-left: 5px solid #ffb300;
+            border-radius: 5px;
+        }
+
+        .important {
+            background: #e8f5e9;
+            padding: 15px;
+            border-left: 5px solid #43a047;
+            border-radius: 5px;
+        }
+
+        .diagram {
+            background: #e3f2fd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        details {
+            background: #f5f5f5;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #1565c0;
+        }
+
+        /* Przyciski nawigacyjne */
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .navigation-buttons a {
+            display: inline-block;
+            background: #1565c0;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .navigation-buttons a:hover {
+            background: #0d47a1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #263238;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🔗 Połączenia szeregowe</h1>
+    <p>Fizyka Arena – klasa 8</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Lekcje</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest połączenie szeregowe?</h2>
+
+        <p>
+            <strong>Połączenie szeregowe</strong> to sposób
+            łączenia elementów obwodu elektrycznego,
+            w którym elementy są połączone jeden za drugim.
+        </p>
+
+        <p>
+            Prąd ma tylko jedną drogę przepływu przez
+            wszystkie elementy obwodu.
+        </p>
+
+        <div class="diagram">
+            🔋 Bateria → 💡 Żarówka 1 → 💡 Żarówka 2
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Natężenie prądu</h2>
+
+        <p>
+            W połączeniu szeregowym natężenie prądu
+            jest takie samo w każdym elemencie.
+        </p>
+
+        <div class="formula">
+            I = I₁ = I₂
+        </div>
+
+        <p>
+            Jeśli przez pierwszą żarówkę płynie prąd
+            o natężeniu 2 A, przez drugą również płynie 2 A.
+        </p>
+
+        <div class="important">
+            W połączeniu szeregowym prąd nie rozdziela się
+            na kilka osobnych dróg.
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Napięcie w połączeniu szeregowym</h2>
+
+        <p>
+            Napięcie źródła jest równe sumie napięć
+            na poszczególnych elementach.
+        </p>
+
+        <div class="formula">
+            U = U₁ + U₂
+        </div>
+
+        <p>
+            Dla trzech elementów:
+        </p>
+
+        <div class="formula">
+            U = U₁ + U₂ + U₃
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Opór zastępczy</h2>
+
+        <p>
+            Opór zastępczy połączenia szeregowego
+            jest sumą oporów wszystkich elementów.
+        </p>
+
+        <div class="formula">
+            R = R₁ + R₂
+        </div>
+
+        <p>
+            Dla trzech oporników:
+        </p>
+
+        <div class="formula">
+            R = R₁ + R₂ + R₃
+        </div>
+
+        <div class="important">
+            Dodanie kolejnego opornika w połączeniu
+            szeregowym zwiększa całkowity opór obwodu.
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Przykład obliczeniowy</h2>
+
+        <div class="example">
+            <p><strong>Zadanie:</strong></p>
+
+            <p>
+                Dwa oporniki połączono szeregowo.
+                Ich opory wynoszą 4 Ω i 6 Ω.
+                Oblicz opór zastępczy.
+            </p>
+
+            <p><strong>Dane:</strong></p>
+            <p>R₁ = 4 Ω</p>
+            <p>R₂ = 6 Ω</p>
+
+            <p><strong>Wzór:</strong></p>
+            <p>R = R₁ + R₂</p>
+
+            <p><strong>Obliczenia:</strong></p>
+            <p>R = 4 Ω + 6 Ω = 10 Ω</p>
+
+            <p><strong>Odpowiedź:</strong></p>
+            <p>Opór zastępczy wynosi 10 Ω.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Co się stanie, gdy jedna żarówka się przepali?</h2>
+
+        <p>
+            W typowym obwodzie szeregowym przepalenie
+            jednej żarówki powoduje przerwanie obwodu.
+        </p>
+
+        <p>
+            Wtedy prąd przestaje płynąć przez cały obwód,
+            dlatego pozostałe żarówki również gasną.
+        </p>
+    </section>
+
+    <section>
+        <h2>7. Słowniczek</h2>
+
+        <ul>
+            <li><strong>Połączenie szeregowe</strong> – elementy połączone jeden za drugim.</li>
+            <li><strong>Opór zastępczy</strong> – opór całego połączenia.</li>
+            <li><strong>Natężenie</strong> – w połączeniu szeregowym jest jednakowe w każdym elemencie.</li>
+            <li><strong>Napięcie</strong> – w połączeniu szeregowym rozdziela się między elementy.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>8. Sprawdź swoją wiedzę</h2>
+
+        <details>
+            <summary>1. Jak połączone są elementy w połączeniu szeregowym?</summary>
+            <p>Jeden za drugim, tworząc jedną drogę przepływu prądu.</p>
+        </details>
+
+        <details>
+            <summary>2. Jakie jest natężenie prądu w każdym elemencie?</summary>
+            <p>Jest takie samo w każdym elemencie.</p>
+        </details>
+
+        <details>
+            <summary>3. Jak obliczyć opór zastępczy?</summary>
+            <p>Należy dodać opory wszystkich elementów.</p>
+        </details>
+
+        <details>
+            <summary>4. Oblicz opór: R₁ = 3 Ω, R₂ = 7 Ω.</summary>
+            <p>R = 3 Ω + 7 Ω = 10 Ω.</p>
+        </details>
+    </section>
+
+    <!-- Nawigacja między lekcjami -->
+
+    <section>
+        <div class="navigation-buttons">
+            <a href="obwody.html">← Poprzednia lekcja</a>
+            <a href="polaczenia-rownolegle.html">Następna lekcja →</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Opór elektryczny | Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            color: #263238;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1565c0, #42a5f5);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background: #0d47a1;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1565c0;
+        }
+
+        .formula {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #0d47a1;
+        }
+
+        .example {
+            background: #fff8e1;
+            padding: 15px;
+            border-left: 5px solid #ffb300;
+            border-radius: 5px;
+        }
+
+        .important {
+            background: #e8f5e9;
+            padding: 15px;
+            border-left: 5px solid #43a047;
+            border-radius: 5px;
+        }
+
+        details {
+            background: #f5f5f5;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #1565c0;
+        }
+
+        /* Przyciski poprzedniej i następnej lekcji */
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .navigation-buttons a {
+            background: #1565c0;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .navigation-buttons a:hover {
+            background: #0d47a1;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #263238;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>⚡ Opór elektryczny</h1>
+    <p>Fizyka Arena – klasa 8</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Lekcje</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest opór elektryczny?</h2>
+
+        <p>
+            <strong>Opór elektryczny</strong> określa, jak bardzo
+            dany element utrudnia przepływ prądu elektrycznego.
+        </p>
+
+        <p>
+            Im większy opór, tym trudniej prądowi płynąć przez
+            dany element przy takim samym napięciu.
+        </p>
+
+        <p>
+            Opór elektryczny oznaczamy literą <strong>R</strong>.
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Jednostka oporu</h2>
+
+        <p>
+            Jednostką oporu elektrycznego jest
+            <strong>om (Ω)</strong>.
+        </p>
+
+        <ul>
+            <li>1 Ω – jeden om</li>
+            <li>1 kΩ = 1000 Ω</li>
+            <li>1 MΩ = 1 000 000 Ω</li>
+        </ul>
+
+        <div class="important">
+            Symbol Ω to grecka litera omega.
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Od czego zależy opór?</h2>
+
+        <p>Opór przewodnika zależy między innymi od:</p>
+
+        <ul>
+            <li>rodzaju materiału,</li>
+            <li>długości przewodnika,</li>
+            <li>grubości przewodnika,</li>
+            <li>temperatury.</li>
+        </ul>
+
+        <p>
+            Zwykle dłuższy przewodnik ma większy opór,
+            a grubszy przewodnik wykonany z tego samego
+            materiału ma mniejszy opór.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Związek oporu, napięcia i natężenia</h2>
+
+        <p>
+            Opór elektryczny można obliczyć, korzystając
+            z napięcia i natężenia prądu.
+        </p>
+
+        <div class="formula">
+            R = U / I
+        </div>
+
+        <p>Gdzie:</p>
+
+        <ul>
+            <li><strong>R</strong> – opór elektryczny w omach (Ω),</li>
+            <li><strong>U</strong> – napięcie w woltach (V),</li>
+            <li><strong>I</strong> – natężenie w amperach (A).</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>5. Przykład obliczeniowy</h2>
+
+        <div class="example">
+            <p><strong>Zadanie:</strong></p>
+
+            <p>
+                Przez żarówkę płynie prąd o natężeniu 2 A.
+                Napięcie wynosi 12 V. Oblicz opór żarówki.
+            </p>
+
+            <p><strong>Dane:</strong></p>
+            <p>U = 12 V</p>
+            <p>I = 2 A</p>
+
+            <p><strong>Wzór:</strong></p>
+            <p>R = U / I</p>
+
+            <p><strong>Obliczenia:</strong></p>
+            <p>R = 12 V / 2 A = 6 Ω</p>
+
+            <p><strong>Odpowiedź:</strong> Opór wynosi 6 Ω.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Jak mierzymy opór?</h2>
+
+        <p>
+            Opór elektryczny mierzymy za pomocą
+            <strong>omomierza</strong> lub multimetru
+            ustawionego na pomiar oporu.
+        </p>
+
+        <p>
+            Opór elementu mierzy się przy odłączonym
+            zasilaniu obwodu.
+        </p>
+    </section>
+
+    <section>
+        <h2>7. Słowniczek</h2>
+
+        <ul>
+            <li><strong>Opór elektryczny</strong> – utrudnienie przepływu prądu.</li>
+            <li><strong>Om (Ω)</strong> – jednostka oporu.</li>
+            <li><strong>Omomierz</strong> – przyrząd do pomiaru oporu.</li>
+            <li><strong>Przewodnik</strong> – materiał, przez który prąd może przepływać.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>8. Sprawdź swoją wiedzę</h2>
+
+        <details>
+            <summary>1. Jak oznaczamy opór elektryczny?</summary>
+            <p>Literą R.</p>
+        </details>
+
+        <details>
+            <summary>2. Jaka jest jednostka oporu?</summary>
+            <p>Om (Ω).</p>
+        </details>
+
+        <details>
+            <summary>3. Jak obliczyć opór, gdy znamy napięcie i natężenie?</summary>
+            <p>R = U / I.</p>
+        </details>
+
+        <details>
+            <summary>4. Oblicz opór, jeśli U = 10 V, a I = 2 A.</summary>
+            <p>R = 10 V / 2 A = 5 Ω.</p>
+        </details>
+    </section>
+
+    <!-- Nawigacja między lekcjami -->
+
+  
+<section>
+    <div class="navigation-buttons">
+        <a href="napiecie.html">← Poprzednia lekcja</a>
+        <a href="prawo-ohma.html">Następna lekcja →</a>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena</p>
+</footer>
+
+</body>
+</html>

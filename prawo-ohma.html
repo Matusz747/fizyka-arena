@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prawo Ohma | Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            color: #263238;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1565c0, #42a5f5);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background: #0d47a1;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1565c0;
+        }
+
+        .formula {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #0d47a1;
+        }
+
+        .example {
+            background: #fff8e1;
+            padding: 15px;
+            border-left: 5px solid #ffb300;
+            border-radius: 5px;
+        }
+
+        .important {
+            background: #e8f5e9;
+            padding: 15px;
+            border-left: 5px solid #43a047;
+            border-radius: 5px;
+        }
+
+        details {
+            background: #f5f5f5;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #1565c0;
+        }
+
+        /* Przyciski poprzedniej i następnej lekcji */
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .navigation-buttons a {
+            display: inline-block;
+            background: #1565c0;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .navigation-buttons a:hover {
+            background: #0d47a1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #263238;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>⚡ Prawo Ohma</h1>
+    <p>Fizyka Arena – klasa 8</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Lekcje</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Kim był Georg Simon Ohm?</h2>
+
+        <p>
+            <strong>Georg Simon Ohm</strong> był niemieckim fizykiem,
+            który badał zależności między napięciem, natężeniem
+            prądu i oporem elektrycznym.
+        </p>
+
+        <p>
+            Od jego nazwiska pochodzi nazwa prawa Ohma
+            oraz jednostka oporu – om.
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Na czym polega prawo Ohma?</h2>
+
+        <p>
+            Prawo Ohma opisuje zależność między napięciem,
+            natężeniem prądu i oporem elektrycznym.
+        </p>
+
+        <div class="formula">
+            I = U / R
+        </div>
+
+        <p>Gdzie:</p>
+
+        <ul>
+            <li><strong>I</strong> – natężenie prądu w amperach (A),</li>
+            <li><strong>U</strong> – napięcie w woltach (V),</li>
+            <li><strong>R</strong> – opór w omach (Ω).</li>
+        </ul>
+
+        <div class="important">
+            Przy stałym oporze zwiększenie napięcia powoduje
+            zwiększenie natężenia prądu.
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Trzy wzory z prawa Ohma</h2>
+
+        <p>Prawo Ohma można przekształcić na trzy sposoby:</p>
+
+        <div class="formula">
+            I = U / R
+        </div>
+
+        <p>Obliczanie natężenia prądu.</p>
+
+        <div class="formula">
+            U = I · R
+        </div>
+
+        <p>Obliczanie napięcia.</p>
+
+        <div class="formula">
+            R = U / I
+        </div>
+
+        <p>Obliczanie oporu.</p>
+    </section>
+
+    <section>
+        <h2>4. Przykład – obliczanie natężenia</h2>
+
+        <div class="example">
+            <p><strong>Zadanie:</strong></p>
+
+            <p>
+                Do opornika o oporze 6 Ω przyłożono napięcie 12 V.
+                Oblicz natężenie prądu.
+            </p>
+
+            <p><strong>Dane:</strong></p>
+            <p>U = 12 V</p>
+            <p>R = 6 Ω</p>
+
+            <p><strong>Wzór:</strong></p>
+            <p>I = U / R</p>
+
+            <p><strong>Obliczenia:</strong></p>
+            <p>I = 12 V / 6 Ω = 2 A</p>
+
+            <p><strong>Odpowiedź:</strong> Natężenie wynosi 2 A.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Przykład – obliczanie napięcia</h2>
+
+        <div class="example">
+            <p><strong>Zadanie:</strong></p>
+
+            <p>
+                Przez opornik o oporze 4 Ω płynie prąd
+                o natężeniu 3 A. Oblicz napięcie.
+            </p>
+
+            <p><strong>Dane:</strong></p>
+            <p>R = 4 Ω</p>
+            <p>I = 3 A</p>
+
+            <p><strong>Wzór:</strong></p>
+            <p>U = I · R</p>
+
+            <p><strong>Obliczenia:</strong></p>
+            <p>U = 3 A · 4 Ω = 12 V</p>
+
+            <p><strong>Odpowiedź:</strong> Napięcie wynosi 12 V.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Przykład – obliczanie oporu</h2>
+
+        <div class="example">
+            <p><strong>Zadanie:</strong></p>
+
+            <p>
+                Napięcie wynosi 15 V, a natężenie prądu 3 A.
+                Oblicz opór.
+            </p>
+
+            <p><strong>Dane:</strong></p>
+            <p>U = 15 V</p>
+            <p>I = 3 A</p>
+
+            <p><strong>Wzór:</strong></p>
+            <p>R = U / I</p>
+
+            <p><strong>Obliczenia:</strong></p>
+            <p>R = 15 V / 3 A = 5 Ω</p>
+
+            <p><strong>Odpowiedź:</strong> Opór wynosi 5 Ω.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Słowniczek</h2>
+
+        <ul>
+            <li><strong>Prawo Ohma</strong> – opisuje zależność między napięciem, natężeniem i oporem.</li>
+            <li><strong>Natężenie</strong> – ilość ładunku przepływającego w jednostce czasu.</li>
+            <li><strong>Napięcie</strong> – różnica potencjałów elektrycznych.</li>
+            <li><strong>Opór</strong> – miara utrudnienia przepływu prądu.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>8. Sprawdź swoją wiedzę</h2>
+
+        <details>
+            <summary>1. Jak brzmi wzór na natężenie z prawa Ohma?</summary>
+            <p>I = U / R.</p>
+        </details>
+
+        <details>
+            <summary>2. Jak obliczyć napięcie?</summary>
+            <p>U = I · R.</p>
+        </details>
+
+        <details>
+            <summary>3. Oblicz natężenie: U = 20 V, R = 5 Ω.</summary>
+            <p>I = 20 V / 5 Ω = 4 A.</p>
+        </details>
+
+        <details>
+            <summary>4. Oblicz napięcie: I = 2 A, R = 8 Ω.</summary>
+            <p>U = 2 A · 8 Ω = 16 V.</p>
+        </details>
+    </section>
+
+    <!-- Nawigacja między lekcjami -->
+
+    <section>
+        <div class="navigation-buttons">
+            <a href="opor.html">← Poprzednia lekcja</a>
+            <a href="obwody.html">Następna lekcja →</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena</p>
+</footer>
+
+</body>
+</html>

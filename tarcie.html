@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarcie – Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+        }
+
+        nav {
+            background: #1e293b;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 12px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        }
+
+        h2 {
+            color: #1d4ed8;
+            margin-top: 0;
+        }
+
+        .formula {
+            background: #dbeafe;
+            padding: 16px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .example {
+            background: #ecfdf5;
+            border-left: 5px solid #10b981;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .note {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .task {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 12px 0;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 9px 15px;
+            border-radius: 7px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 10px;
+            color: #047857;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 29px;
+            }
+
+            section {
+                padding: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🛞 Tarcie</h1>
+    <p>Dowiedz się, czym jest siła tarcia i dlaczego jest nam potrzebna.</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Lekcje</a>
+    <a href="grawitacja.html">Poprzednia lekcja</a>
+    <a href="cisnienie.html">Następna lekcja</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest tarcie?</h2>
+        <p>
+            Tarcie to zjawisko występujące wtedy, gdy dwie stykające się
+            powierzchnie przesuwają się względem siebie lub próbują się
+            przesunąć.
+        </p>
+        <p>
+            Siła tarcia zazwyczaj utrudnia ruch i działa przeciwnie
+            do kierunku przesuwania się powierzchni.
+        </p>
+        <div class="note">
+            <strong>Ważne:</strong> Tarcie nie zawsze jest złe.
+            Dzięki niemu możemy chodzić, pisać i hamować samochodem.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Przykłady tarcia w życiu codziennym</h2>
+        <ul>
+            <li>Podczas chodzenia buty trą o podłoże.</li>
+            <li>Hamulce rowerowe wykorzystują tarcie, aby zatrzymać koła.</li>
+            <li>Gdy przesuwamy książkę po stole, działa na nią tarcie.</li>
+            <li>Gdy pocieramy dłonie, możemy poczuć ciepło.</li>
+            <li>Opony samochodu mają kontakt z nawierzchnią dzięki tarciu.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. Kierunek działania siły tarcia</h2>
+        <p>
+            Siła tarcia działa wzdłuż stykających się powierzchni.
+            Jej zwrot jest przeciwny do ruchu lub do tendencji
+            do przesuwania się powierzchni względem siebie.
+        </p>
+        <div class="example">
+            <strong>Przykład:</strong> Jeśli przesuwasz pudełko w prawo
+            po podłodze, siła tarcia działająca na pudełko jest skierowana
+            w lewo.
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Rodzaje tarcia</h2>
+
+        <h3>Tarcie statyczne</h3>
+        <p>
+            Występuje, gdy powierzchnie stykają się, ale nie przesuwają
+            się względem siebie. Pomaga na przykład utrzymać naszą stopę
+            na podłożu podczas chodzenia.
+        </p>
+
+        <h3>Tarcie kinetyczne (ślizgowe)</h3>
+        <p>
+            Występuje, gdy jedna powierzchnia przesuwa się po drugiej.
+            Przykładem jest przesuwanie książki po stole.
+        </p>
+
+        <h3>Tarcie toczne</h3>
+        <p>
+            Występuje, gdy ciało toczy się po powierzchni.
+            Przykładem jest koło roweru poruszające się po drodze.
+        </p>
+    </section>
+
+    <section>
+        <h2>5. Od czego zależy siła tarcia?</h2>
+        <p>Siła tarcia zależy przede wszystkim od:</p>
+        <ul>
+            <li>rodzaju stykających się powierzchni,</li>
+            <li>tego, jak mocno powierzchnie są do siebie dociskane.</li>
+        </ul>
+        <p>
+            Zwykle łatwiej przesuwa się przedmiot po gładkiej powierzchni
+            niż po szorstkiej.
+        </p>
+        <div class="note">
+            W szkolnych zadaniach często przyjmuje się uproszczony model,
+            w którym siła tarcia kinetycznego zależy od współczynnika
+            tarcia i siły nacisku.
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Wzór na siłę tarcia</h2>
+        <p>
+            W prostym modelu tarcia kinetycznego siłę tarcia obliczamy
+            ze wzoru:
+        </p>
+
+        <div class="formula">
+            F<sub>t</sub> = μ · N
+        </div>
+
+        <p>Gdzie:</p>
+        <ul>
+            <li><strong>F<sub>t</sub></strong> – siła tarcia, wyrażana w niutonach (N),</li>
+            <li><strong>μ</strong> – współczynnik tarcia, bez jednostki,</li>
+            <li><strong>N</strong> – siła nacisku, wyrażana w niutonach (N).</li>
+        </ul>
+        <p>
+            Ten wzór jest uproszczeniem i dotyczy modelu tarcia
+            kinetycznego. Nie opisuje wszystkich rodzajów tarcia.
+        </p>
+    </section>
+
+    <section>
+        <h2>7. Przykład obliczeniowy</h2>
+
+        <div class="example">
+            <p>
+                Na przedmiot działa siła nacisku o wartości 20 N.
+                Współczynnik tarcia wynosi 0,3.
+                Oblicz siłę tarcia kinetycznego.
+            </p>
+
+            <p><strong>Dane:</strong></p>
+            <ul>
+                <li>μ = 0,3</li>
+                <li>N = 20 N</li>
+            </ul>
+
+            <p><strong>Wzór:</strong></p>
+            <p>F<sub>t</sub> = μ · N</p>
+
+            <p><strong>Podstawienie:</strong></p>
+            <p>F<sub>t</sub> = 0,3 · 20 N</p>
+
+            <p><strong>Wynik:</strong></p>
+            <p>F<sub>t</sub> = 6 N</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>8. Kiedy tarcie jest pożyteczne?</h2>
+        <ul>
+            <li>Podczas chodzenia i biegania.</li>
+            <li>Podczas hamowania roweru lub samochodu.</li>
+            <li>Podczas pisania ołówkiem po papierze.</li>
+            <li>Podczas chwytania przedmiotów.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>9. Kiedy tarcie przeszkadza?</h2>
+        <ul>
+            <li>Powoduje zużywanie się części maszyn.</li>
+            <li>Utrudnia przesuwanie ciężkich przedmiotów.</li>
+            <li>Powoduje nagrzewanie się stykających powierzchni.</li>
+            <li>Może zmniejszać sprawność urządzeń.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>10. Jak zmniejszamy i zwiększamy tarcie?</h2>
+
+        <h3>Zmniejszanie tarcia:</h3>
+        <ul>
+            <li>Stosowanie smarów, na przykład oleju.</li>
+            <li>Używanie łożysk i kół.</li>
+            <li>Wygładzanie powierzchni.</li>
+        </ul>
+
+        <h3>Zwiększanie tarcia:</h3>
+        <ul>
+            <li>Stosowanie bieżnika w oponach.</li>
+            <li>Używanie podeszew z odpowiednim wzorem.</li>
+            <li>Posypywanie śliskich dróg piaskiem lub żwirem.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>11. Tarcie a temperatura</h2>
+        <p>
+            Podczas pocierania dwóch powierzchni część energii mechanicznej
+            zamienia się w energię wewnętrzną. Dlatego stykające się
+            powierzchnie mogą się nagrzewać.
+        </p>
+        <div class="example">
+            <strong>Przykład:</strong> Kiedy szybko pocierasz dłonie
+            o siebie, po chwili stają się cieplejsze.
+        </div>
+    </section>
+
+    <section>
+        <h2>12. Słowniczek</h2>
+        <ul>
+            <li><strong>Tarcie</strong> – zjawisko związane z oddziaływaniem stykających się powierzchni.</li>
+            <li><strong>Siła tarcia</strong> – siła przeciwdziałająca przesuwaniu się powierzchni względem siebie.</li>
+            <li><strong>Współczynnik tarcia</strong> – liczba opisująca właściwości stykających się powierzchni w modelu tarcia.</li>
+            <li><strong>Siła nacisku</strong> – siła, z jaką jedna powierzchnia naciska na drugą.</li>
+            <li><strong>Tarcie toczne</strong> – opór występujący podczas toczenia się ciała.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>13. Sprawdź swoją wiedzę</h2>
+
+        <div class="task">
+            <p><strong>1. W jakim kierunku działa siła tarcia podczas przesuwania pudełka?</strong></p>
+            <button onclick="showAnswer('a1')">Pokaż odpowiedź</button>
+            <div class="answer" id="a1">
+                Przeciwnie do kierunku przesuwania pudełka.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>2. Podaj przykład tarcia pożytecznego.</strong></p>
+            <button onclick="showAnswer('a2')">Pokaż odpowiedź</button>
+            <div class="answer" id="a2">
+                Na przykład tarcie między butami a podłożem podczas chodzenia.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>3. Jak nazywa się tarcie występujące podczas toczenia koła?</strong></p>
+            <button onclick="showAnswer('a3')">Pokaż odpowiedź</button>
+            <div class="answer" id="a3">
+                Tarcie toczne.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>4. Co może zmniejszać tarcie w maszynach?</strong></p>
+            <button onclick="showAnswer('a4')">Pokaż odpowiedź</button>
+            <div class="answer" id="a4">
+                Na przykład smarowanie części olejem.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>5. Jaka jest jednostka siły tarcia?</strong></p>
+            <button onclick="showAnswer('a5')">Pokaż odpowiedź</button>
+            <div class="answer" id="a5">
+                Niuton (N).
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>6. Co oznacza symbol μ we wzorze na siłę tarcia?</strong></p>
+            <button onclick="showAnswer('a6')">Pokaż odpowiedź</button>
+            <div class="answer" id="a6">
+                Współczynnik tarcia.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>7. Dlaczego dłonie nagrzewają się podczas pocierania?</strong></p>
+            <button onclick="showAnswer('a7')">Pokaż odpowiedź</button>
+            <div class="answer" id="a7">
+                Ponieważ część energii mechanicznej zamienia się w energię wewnętrzną.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>14. Podsumowanie</h2>
+        <ul>
+            <li>Tarcie występuje między stykającymi się powierzchniami.</li>
+            <li>Najczęściej przeciwdziała przesuwaniu się powierzchni.</li>
+            <li>Wyróżniamy między innymi tarcie statyczne, kinetyczne i toczne.</li>
+            <li>Tarcie może być zarówno pożyteczne, jak i szkodliwe.</li>
+            <li>Możemy je zwiększać lub zmniejszać zależnie od potrzeb.</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena – Nauka fizyki dla klas 7 i 8</p>
+</footer>
+
+<script>
+    function showAnswer(id) {
+        const answer = document.getElementById(id);
+
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+        } else {
+            answer.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>

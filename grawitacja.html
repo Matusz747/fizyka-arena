@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grawitacja | Fizyka Arena</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: #f1f5f9;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #172554, #1d4ed8);
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        header h1 { font-size: 36px; margin: 0 0 10px; }
+        header p { color: #dbeafe; margin: 0; }
+
+        nav {
+            background: #111827;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #93c5fd;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover { color: white; }
+
+        main {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 0 18px;
+        }
+
+        section {
+            background: #172033;
+            padding: 24px;
+            margin-bottom: 22px;
+            border-radius: 14px;
+            border: 1px solid #293750;
+        }
+
+        h2 { color: #60a5fa; margin-top: 0; }
+        h3 { color: #bfdbfe; }
+
+        .formula {
+            background: #0f2747;
+            border-left: 5px solid #3b82f6;
+            padding: 18px;
+            margin: 15px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .example {
+            background: #102b25;
+            border-left: 5px solid #22c55e;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .tip {
+            background: #30264a;
+            border-left: 5px solid #a78bfa;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .task {
+            background: #202c40;
+            padding: 16px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        details {
+            margin-top: 12px;
+            background: #111827;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        summary {
+            color: #93c5fd;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+            background: #080d18;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 29px; }
+            nav a { display: inline-block; margin: 6px; }
+            section { padding: 18px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌍 Grawitacja</h1>
+    <p>Odkryj, dlaczego ciała przyciągają się nawzajem.</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Wszystkie lekcje</a>
+    <a href="masa.html">Poprzednia lekcja</a>
+    <a href="tarcie.html">Następna lekcja</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest grawitacja?</h2>
+        <p>
+            Grawitacja to wzajemne przyciąganie się ciał posiadających masę.
+            Dzięki niej przedmioty spadają na Ziemię, a planety krążą wokół Słońca.
+        </p>
+        <div class="example">
+            <strong>Przykład:</strong>
+            Kiedy wypuszczasz piłkę z ręki, zaczyna ona spadać w kierunku Ziemi.
+            Dzieje się tak z powodu oddziaływania grawitacyjnego.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Kto odkrył prawo powszechnego ciążenia?</h2>
+        <p>
+            Jednym z najważniejszych uczonych badających grawitację był
+            <strong>Isaac Newton</strong>.
+            Sformułował on prawo powszechnego ciążenia, które opisuje
+            przyciąganie się dowolnych dwóch ciał posiadających masę.
+        </p>
+        <p>
+            Później Albert Einstein rozwinął opis grawitacji
+            w ogólnej teorii względności.
+        </p>
+    </section>
+
+    <section>
+        <h2>3. Prawo powszechnego ciążenia</h2>
+        <p>
+            Każde dwa ciała posiadające masę przyciągają się.
+            Siła przyciągania zależy od ich mas oraz odległości między nimi.
+        </p>
+        <div class="formula">
+            F = G · (m₁ · m₂) / r²
+        </div>
+        <p>Gdzie:</p>
+        <ul>
+            <li><strong>F</strong> – siła grawitacji,</li>
+            <li><strong>G</strong> – stała grawitacji,</li>
+            <li><strong>m₁ i m₂</strong> – masy przyciągających się ciał,</li>
+            <li><strong>r</strong> – odległość między środkami tych ciał.</li>
+        </ul>
+        <div class="tip">
+            Im większe masy ciał, tym silniejsze przyciąganie.
+            Im większa odległość, tym słabsze przyciąganie.
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Przyspieszenie grawitacyjne</h2>
+        <p>
+            Przyspieszenie grawitacyjne opisuje, jak grawitacja wpływa
+            na ruch swobodnie spadającego ciała.
+        </p>
+        <p>
+            Na powierzchni Ziemi jego wartość wynosi w przybliżeniu:
+        </p>
+        <div class="formula">
+            g ≈ 9,81 m/s²
+        </div>
+        <p>
+            W prostych zadaniach szkolnych często zaokrąglamy tę wartość
+            do 10 m/s².
+        </p>
+    </section>
+
+    <section>
+        <h2>5. Dlaczego przedmioty spadają?</h2>
+        <p>
+            Ziemia przyciąga przedmioty w swoim pobliżu.
+            Dlatego puszczony przedmiot zaczyna poruszać się
+            w kierunku powierzchni Ziemi.
+        </p>
+        <div class="example">
+            <strong>Przykład:</strong>
+            Jabłko spadające z drzewa porusza się w dół pod wpływem
+            przyciągania grawitacyjnego Ziemi.
+        </div>
+        <p>
+            W rzeczywistych warunkach na spadający przedmiot działa
+            również opór powietrza.
+        </p>
+    </section>
+
+    <section>
+        <h2>6. Grawitacja na Ziemi i Księżycu</h2>
+        <p>
+            Księżyc również przyciąga ciała, ale jego przyspieszenie
+            grawitacyjne jest mniejsze niż ziemskie.
+        </p>
+        <ul>
+            <li>Ziemia: około 9,81 m/s².</li>
+            <li>Księżyc: około 1,62 m/s².</li>
+        </ul>
+        <div class="example">
+            <strong>Co to oznacza?</strong>
+            Przedmiot o tej samej masie ma na Księżycu mniejszy ciężar
+            niż na Ziemi.
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Grawitacja a Układ Słoneczny</h2>
+        <p>
+            Grawitacja odgrywa bardzo ważną rolę w kosmosie.
+            Przyciąganie między Słońcem a planetami pomaga utrzymywać
+            planety na ich orbitach.
+        </p>
+        <p>
+            Grawitacja wpływa również na ruch księżyców, komet
+            i innych obiektów kosmicznych.
+        </p>
+    </section>
+
+    <section>
+        <h2>8. Stan nieważkości</h2>
+        <p>
+            Stan nieważkości występuje wtedy, gdy ciało nie naciska
+            na podłoże ani nie napina zawieszenia, na przykład podczas
+            swobodnego spadania.
+        </p>
+        <p>
+            Astronauci na pokładzie Międzynarodowej Stacji Kosmicznej
+            unoszą się, ponieważ stacja i jej załoga nieustannie
+            znajdują się w stanie swobodnego spadania wokół Ziemi.
+        </p>
+        <div class="tip">
+            Grawitacja na wysokości stacji kosmicznej nadal działa.
+            Astronauci nie unoszą się dlatego, że grawitacja całkowicie znika.
+        </div>
+    </section>
+
+    <section>
+        <h2>9. Grawitacja w życiu codziennym</h2>
+        <ul>
+            <li>Utrzymuje nas na powierzchni Ziemi.</li>
+            <li>Sprawia, że deszcz spada na ziemię.</li>
+            <li>Wpływa na ruch wody w rzekach i wodospadach.</li>
+            <li>Utrzymuje Księżyc na orbicie wokół Ziemi.</li>
+            <li>Pomaga utrzymywać planety na orbitach wokół Słońca.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>10. Słowniczek pojęć</h2>
+        <ul>
+            <li><strong>Grawitacja</strong> – wzajemne przyciąganie się ciał posiadających masę.</li>
+            <li><strong>Ciężar</strong> – siła związana z oddziaływaniem grawitacyjnym.</li>
+            <li><strong>Przyspieszenie grawitacyjne</strong> – przyspieszenie związane z działaniem grawitacji.</li>
+            <li><strong>Orbita</strong> – tor ruchu jednego ciała wokół drugiego.</li>
+            <li><strong>Stan nieważkości</strong> – stan, w którym ciało nie naciska na podłoże ani nie napina zawieszenia.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>11. Sprawdź swoją wiedzę!</h2>
+
+        <div class="task">
+            <p><strong>1.</strong> Czym jest grawitacja?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                To wzajemne przyciąganie się ciał posiadających masę.
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>2.</strong> Kto sformułował prawo powszechnego ciążenia?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                Isaac Newton.
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>3.</strong> Jaka jest przybliżona wartość przyspieszenia grawitacyjnego na Ziemi?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                Około 9,81 m/s².
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>4.</strong> Czy grawitacja działa na Księżycu?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                Tak. Księżyc również przyciąga ciała.
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>5.</strong> Dlaczego przedmioty spadają na Ziemię?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                Ponieważ Ziemia przyciąga je grawitacyjnie.
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>6.</strong> Czy w kosmosie grawitacja całkowicie znika?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                Nie. Grawitacja działa również w kosmosie.
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>7.</strong> Od czego zależy siła przyciągania grawitacyjnego?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                Od mas przyciągających się ciał i odległości między nimi.
+            </details>
+        </div>
+    </section>
+
+    <section>
+        <h2>12. Podsumowanie</h2>
+        <p>
+            Grawitacja jest powszechnym oddziaływaniem między ciałami
+            posiadającymi masę. Dzięki niej przedmioty spadają na Ziemię,
+            a planety i księżyce poruszają się po orbitach.
+        </p>
+        <p>
+            Grawitacja działa zarówno na Ziemi, jak i w kosmosie.
+            Jej skutki obserwujemy każdego dnia.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena | Nauka fizyki może być ciekawa! 🚀</p>
+</footer>
+
+</body>
+</html>

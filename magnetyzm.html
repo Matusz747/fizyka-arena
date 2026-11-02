@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Magnetyzm | Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            color: #263238;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1565c0, #42a5f5);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background: #0d47a1;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1565c0;
+        }
+
+        .important {
+            background: #e8f5e9;
+            padding: 15px;
+            border-left: 5px solid #43a047;
+            border-radius: 5px;
+        }
+
+        .example {
+            background: #fff8e1;
+            padding: 15px;
+            border-left: 5px solid #ffb300;
+            border-radius: 5px;
+        }
+
+        .diagram {
+            background: #e3f2fd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 1.2em;
+        }
+
+        details {
+            background: #f5f5f5;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #1565c0;
+        }
+
+        /* Przyciski nawigacyjne */
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .navigation-buttons a {
+            display: inline-block;
+            background: #1565c0;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .navigation-buttons a:hover {
+            background: #0d47a1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #263238;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🧲 Magnetyzm</h1>
+    <p>Fizyka Arena – klasa 8</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Lekcje</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest magnetyzm?</h2>
+
+        <p>
+            <strong>Magnetyzm</strong> to zjawisko związane
+            z oddziaływaniem magnetycznym.
+            Niektóre materiały i przedmioty mogą przyciągać
+            inne dzięki właściwościom magnetycznym.
+        </p>
+
+        <p>
+            Najbardziej znanym przykładem jest magnes,
+            który może przyciągać przedmioty wykonane
+            z niektórych metali.
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Magnesy</h2>
+
+        <p>
+            <strong>Magnes</strong> to przedmiot, który
+            wytwarza pole magnetyczne.
+        </p>
+
+        <p>Magnesy mogą mieć różne kształty:</p>
+
+        <ul>
+            <li>magnes sztabkowy,</li>
+            <li>magnes podkowiasty,</li>
+            <li>magnes pierścieniowy,</li>
+            <li>magnesy neodymowe.</li>
+        </ul>
+
+        <div class="diagram">
+            🧲 Magnes sztabkowy
+            <br>
+            N ━━━━━━━━━ S
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Bieguny magnetyczne</h2>
+
+        <p>
+            Każdy zwykły magnes ma dwa bieguny:
+        </p>
+
+        <ul>
+            <li><strong>biegun północny</strong> – N,</li>
+            <li><strong>biegun południowy</strong> – S.</li>
+        </ul>
+
+        <p>
+            Bieguny magnetyczne występują zawsze parami.
+            Nie można uzyskać pojedynczego bieguna
+            przez zwykłe przecięcie magnesu.
+        </p>
+
+        <div class="important">
+            Po przecięciu magnesu powstaną dwa mniejsze
+            magnesy, każdy z biegunem N i S.
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Oddziaływanie magnesów</h2>
+
+        <p>
+            Magnesy mogą się przyciągać lub odpychać.
+        </p>
+
+        <div class="diagram">
+            N + S → Przyciąganie
+            <br><br>
+            N + N → Odpychanie
+            <br><br>
+            S + S → Odpychanie
+        </div>
+
+        <ul>
+            <li>Bieguny różnoimienne przyciągają się.</li>
+            <li>Bieguny jednoimienne odpychają się.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>5. Jakie materiały przyciąga magnes?</h2>
+
+        <p>
+            Magnes silnie przyciąga niektóre materiały,
+            na przykład:
+        </p>
+
+        <ul>
+            <li>żelazo,</li>
+            <li>nikiel,</li>
+            <li>kobalt,</li>
+            <li>niektóre stopy zawierające te metale.</li>
+        </ul>
+
+        <p>
+            Magnes nie przyciąga silnie wszystkich metali.
+            Na przykład aluminium i miedź nie są
+            przyciągane tak jak żelazo.
+        </p>
+
+        <div class="example">
+            <strong>Przykład:</strong>
+            Magnes może przyciągnąć stalowy spinacz,
+            ale zwykła miedziana moneta nie zostanie
+            przyciągnięta w taki sam sposób.
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Ziemia jako wielki magnes</h2>
+
+        <p>
+            Ziemia posiada własne pole magnetyczne.
+            Dzięki niemu działa kompas.
+        </p>
+
+        <p>
+            Igła kompasu ustawia się w przybliżeniu
+            w kierunku północ–południe.
+        </p>
+
+        <div class="important">
+            Kompas pomaga określić kierunki geograficzne,
+            ponieważ jego igła reaguje na pole magnetyczne Ziemi.
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Zastosowania magnetyzmu</h2>
+
+        <p>Magnetyzm wykorzystujemy między innymi w:</p>
+
+        <ul>
+            <li>kompasach,</li>
+            <li>silnikach elektrycznych,</li>
+            <li>głośnikach,</li>
+            <li>magnetycznych zamknięciach,</li>
+            <li>urządzeniach medycznych,</li>
+            <li>magnetycznych nośnikach danych.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>8. Słowniczek</h2>
+
+        <ul>
+            <li><strong>Magnes</strong> – przedmiot wytwarzający pole magnetyczne.</li>
+            <li><strong>Biegun magnetyczny</strong> – jeden z dwóch końców magnesu.</li>
+            <li><strong>Przyciąganie</strong> – zbliżanie się do siebie magnesów.</li>
+            <li><strong>Odpychanie</strong> – oddalanie się od siebie magnesów.</li>
+            <li><strong>Kompas</strong> – przyrząd wskazujący kierunki dzięki polu magnetycznemu.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>9. Sprawdź swoją wiedzę</h2>
+
+        <details>
+            <summary>1. Ile biegunów ma zwykły magnes?</summary>
+            <p>Dwa: północny N i południowy S.</p>
+        </details>
+
+        <details>
+            <summary>2. Co się dzieje z biegunami jednoimiennymi?</summary>
+            <p>Odpychają się.</p>
+        </details>
+
+        <details>
+            <summary>3. Co się dzieje z biegunami różnoimiennymi?</summary>
+            <p>Przyciągają się.</p>
+        </details>
+
+        <details>
+            <summary>4. Czy magnes przyciąga każdy metal?</summary>
+            <p>Nie. Silnie przyciąga między innymi żelazo, nikiel i kobalt.</p>
+        </details>
+
+        <details>
+            <summary>5. Dlaczego kompas wskazuje kierunki?</summary>
+            <p>Igła kompasu reaguje na pole magnetyczne Ziemi.</p>
+        </details>
+    </section>
+
+    <!-- Nawigacja między lekcjami -->
+
+    <section>
+        <div class="navigation-buttons">
+            <a href="polaczenia-rownolegle.html">← Poprzednia lekcja</a>
+            <a href="pole-magnetyczne.html">Następna lekcja →</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena</p>
+</footer>
+
+</body>
+</html>

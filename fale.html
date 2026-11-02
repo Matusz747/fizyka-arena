@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale - Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef4f9;
+            color: #263238;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1565c0, #42a5f5);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        nav {
+            background: #0d47a1;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #1565c0;
+        }
+
+        h3 {
+            color: #1976d2;
+        }
+
+        .card {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .formula {
+            background: #bbdefb;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .navigation-buttons a {
+            display: inline-block;
+            background: #1565c0;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .navigation-buttons a:hover {
+            background: #0d47a1;
+        }
+
+        footer {
+            background: #0d47a1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        details {
+            background: #f5f9ff;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #1565c0;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌊 Fale</h1>
+    <p>Fizyka Arena – klasa 8</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Lekcje</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest fala?</h2>
+
+        <p>
+            Fala to rozchodzące się zaburzenie, które przenosi energię
+            z jednego miejsca do drugiego.
+        </p>
+
+        <p>
+            Fale możemy obserwować na wodzie, słyszeć jako dźwięk
+            lub wykorzystywać w komunikacji.
+        </p>
+
+        <div class="card">
+            <strong>Przykład:</strong>
+            Gdy wrzucisz kamyk do wody, powstają fale,
+            które rozchodzą się od miejsca uderzenia.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Rodzaje fal</h2>
+
+        <div class="card">
+            <h3>Fale mechaniczne</h3>
+            <p>
+                Do rozchodzenia się potrzebują ośrodka materialnego,
+                na przykład powietrza, wody lub ciała stałego.
+            </p>
+            <p>Przykłady: fale dźwiękowe i fale na wodzie.</p>
+        </div>
+
+        <div class="card">
+            <h3>Fale elektromagnetyczne</h3>
+            <p>
+                Nie potrzebują ośrodka materialnego.
+                Mogą rozchodzić się również w próżni.
+            </p>
+            <p>Przykłady: światło widzialne, fale radiowe i promieniowanie rentgenowskie.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Fala poprzeczna i podłużna</h2>
+
+        <div class="card">
+            <h3>Fala poprzeczna</h3>
+            <p>
+                Drgania ośrodka są prostopadłe do kierunku
+                rozchodzenia się fali.
+            </p>
+            <p>Przykład: fala na napiętej strunie.</p>
+        </div>
+
+        <div class="card">
+            <h3>Fala podłużna</h3>
+            <p>
+                Drgania ośrodka odbywają się równolegle
+                do kierunku rozchodzenia się fali.
+            </p>
+            <p>Przykład: fala dźwiękowa w powietrzu.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Najważniejsze wielkości opisujące fale</h2>
+
+        <div class="card">
+            <h3>Długość fali (λ)</h3>
+            <p>
+                Odległość między dwoma najbliższymi punktami
+                fali drgającymi w taki sam sposób.
+            </p>
+            <p>Jednostka: metr (m).</p>
+        </div>
+
+        <div class="card">
+            <h3>Częstotliwość (f)</h3>
+            <p>
+                Liczba drgań wykonanych w ciągu jednej sekundy.
+            </p>
+            <p>Jednostka: herc (Hz).</p>
+        </div>
+
+        <div class="card">
+            <h3>Okres (T)</h3>
+            <p>
+                Czas potrzebny na wykonanie jednego pełnego drgania.
+            </p>
+            <p>Jednostka: sekunda (s).</p>
+        </div>
+
+        <div class="card">
+            <h3>Prędkość fali (v)</h3>
+            <p>
+                Szybkość, z jaką fala rozchodzi się w ośrodku.
+            </p>
+            <p>Jednostka: metr na sekundę (m/s).</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Zależność między prędkością, długością i częstotliwością</h2>
+
+        <p>Prędkość fali obliczamy ze wzoru:</p>
+
+        <div class="formula">
+            v = λ · f
+        </div>
+
+        <p>
+            Gdzie:
+        </p>
+
+        <ul>
+            <li>v – prędkość fali w m/s,</li>
+            <li>λ – długość fali w metrach,</li>
+            <li>f – częstotliwość w hercach.</li>
+        </ul>
+
+        <div class="card">
+            <strong>Przykład:</strong>
+            Fala ma długość 2 m i częstotliwość 3 Hz.
+            <br>
+            v = 2 m · 3 Hz = 6 m/s
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Gdzie spotykamy fale?</h2>
+
+        <div class="card">
+            <h3>🌊 Woda</h3>
+            <p>Fale rozchodzą się po powierzchni jezior i mórz.</p>
+        </div>
+
+        <div class="card">
+            <h3>🔊 Dźwięk</h3>
+            <p>Dźwięk rozchodzi się w postaci fal mechanicznych.</p>
+        </div>
+
+        <div class="card">
+            <h3>📻 Radio</h3>
+            <p>Fale radiowe umożliwiają przesyłanie informacji.</p>
+        </div>
+
+        <div class="card">
+            <h3>☀️ Światło</h3>
+            <p>Światło jest falą elektromagnetyczną.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Najważniejsze informacje</h2>
+
+        <ul>
+            <li>Fale przenoszą energię.</li>
+            <li>Fale mechaniczne potrzebują ośrodka materialnego.</li>
+            <li>Fale elektromagnetyczne mogą rozchodzić się w próżni.</li>
+            <li>Fale mogą być poprzeczne lub podłużne.</li>
+            <li>Prędkość fali obliczamy ze wzoru v = λ · f.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>8. Sprawdź swoją wiedzę</h2>
+
+        <details>
+            <summary>Co przenosi fala?</summary>
+            <p>Fala przenosi energię.</p>
+        </details>
+
+        <details>
+            <summary>Czy dźwięk jest falą mechaniczną?</summary>
+            <p>Tak, dźwięk jest falą mechaniczną.</p>
+        </details>
+
+        <details>
+            <summary>Co oznacza częstotliwość fali?</summary>
+            <p>To liczba drgań w ciągu jednej sekundy.</p>
+        </details>
+
+        <details>
+            <summary>Jaki jest wzór na prędkość fali?</summary>
+            <p>v = λ · f</p>
+        </details>
+
+        <details>
+            <summary>Czy światło może rozchodzić się w próżni?</summary>
+            <p>Tak, ponieważ jest falą elektromagnetyczną.</p>
+        </details>
+    </section>
+
+    <!-- Nawigacja między lekcjami -->
+    <section>
+        <div class="navigation-buttons">
+            <a href="silnik.html">← Poprzednia lekcja</a>
+            <a href="dzwiek.html">Następna lekcja →</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena | Ucz się fizyki w ciekawy sposób!</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciśnienie – Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+        }
+
+        nav {
+            background: #1e293b;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 12px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        }
+
+        h2 {
+            color: #1d4ed8;
+            margin-top: 0;
+        }
+
+        .formula {
+            background: #dbeafe;
+            padding: 16px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 23px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .example {
+            background: #ecfdf5;
+            border-left: 5px solid #10b981;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .note {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .task {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 12px 0;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 9px 15px;
+            border-radius: 7px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 10px;
+            color: #047857;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 29px;
+            }
+
+            section {
+                padding: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>📐 Ciśnienie</h1>
+    <p>Poznaj ciśnienie, jego jednostki i zastosowanie w życiu codziennym.</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Lekcje</a>
+    <a href="tarcie.html">Poprzednia lekcja</a>
+    <a href="cisnienie-cieczy.html">Następna lekcja</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest ciśnienie?</h2>
+        <p>
+            Ciśnienie informuje nas, jak duża siła nacisku przypada
+            na określoną powierzchnię.
+        </p>
+        <p>
+            Jeśli ta sama siła działa na mniejszą powierzchnię,
+            ciśnienie jest większe. Jeśli działa na większą powierzchnię,
+            ciśnienie jest mniejsze.
+        </p>
+        <div class="example">
+            <strong>Przykład:</strong> Ostry gwóźdź łatwiej wbija się
+            w drewno niż tępy, ponieważ jego końcówka ma mniejszą
+            powierzchnię.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Wzór na ciśnienie</h2>
+        <p>Ciśnienie obliczamy, korzystając ze wzoru:</p>
+
+        <div class="formula">
+            p = F / S
+        </div>
+
+        <p>Gdzie:</p>
+        <ul>
+            <li><strong>p</strong> – ciśnienie,</li>
+            <li><strong>F</strong> – siła nacisku,</li>
+            <li><strong>S</strong> – pole powierzchni, na którą działa siła.</li>
+        </ul>
+
+        <div class="note">
+            Pamiętaj: siłę podajemy w niutonach (N), a pole powierzchni
+            w metrach kwadratowych (m²).
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Jednostka ciśnienia</h2>
+        <p>
+            Podstawową jednostką ciśnienia w układzie SI jest paskal (Pa).
+        </p>
+
+        <div class="formula">
+            1 Pa = 1 N / m²
+        </div>
+
+        <p>Oznacza to, że ciśnienie wynosi 1 paskal, gdy siła 1 N
+            działa na powierzchnię 1 m².</p>
+
+        <p>Inne spotykane jednostki to:</p>
+        <ul>
+            <li>kilopaskal (kPa),</li>
+            <li>megapaskal (MPa),</li>
+            <li>hektopaskal (hPa).</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. Od czego zależy ciśnienie?</h2>
+        <p>Ciśnienie zależy od dwóch wielkości:</p>
+
+        <h3>Siła nacisku</h3>
+        <p>
+            Im większa siła nacisku działa na tę samą powierzchnię,
+            tym większe jest ciśnienie.
+        </p>
+
+        <h3>Pole powierzchni</h3>
+        <p>
+            Im większa powierzchnia, na którą działa ta sama siła,
+            tym mniejsze jest ciśnienie.
+        </p>
+
+        <div class="example">
+            <strong>Przykład:</strong> Narty mają szeroką powierzchnię,
+            dzięki czemu ciężar narciarza rozkłada się na większy obszar.
+            Ułatwia to poruszanie się po śniegu.
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Jak zwiększyć ciśnienie?</h2>
+        <p>Możemy zwiększyć ciśnienie na dwa sposoby:</p>
+        <ul>
+            <li>zwiększyć siłę nacisku,</li>
+            <li>zmniejszyć powierzchnię, na którą działa siła.</li>
+        </ul>
+
+        <p>Przykłady:</p>
+        <ul>
+            <li>ostrzenie noża,</li>
+            <li>używanie igły do szycia,</li>
+            <li>stosowanie ostrych gwoździ.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>6. Jak zmniejszyć ciśnienie?</h2>
+        <p>Możemy zmniejszyć ciśnienie, gdy:</p>
+        <ul>
+            <li>zmniejszymy siłę nacisku,</li>
+            <li>zwiększymy powierzchnię nacisku.</li>
+        </ul>
+
+        <p>Przykłady:</p>
+        <ul>
+            <li>szerokie narty,</li>
+            <li>szerokie gąsienice pojazdów,</li>
+            <li>szerokie paski plecaka,</li>
+            <li>fundamenty budynków rozkładające nacisk na podłoże.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>7. Przykład obliczeniowy</h2>
+
+        <div class="example">
+            <p>
+                Na powierzchnię 2 m² działa siła nacisku 100 N.
+                Oblicz ciśnienie.
+            </p>
+
+            <p><strong>Dane:</strong></p>
+            <ul>
+                <li>F = 100 N</li>
+                <li>S = 2 m²</li>
+            </ul>
+
+            <p><strong>Wzór:</strong></p>
+            <p>p = F / S</p>
+
+            <p><strong>Podstawienie:</strong></p>
+            <p>p = 100 N / 2 m²</p>
+
+            <p><strong>Wynik:</strong></p>
+            <p>p = 50 Pa</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>8. Ciśnienie w życiu codziennym</h2>
+        <ul>
+            <li>Opony samochodowe są napełnione powietrzem pod ciśnieniem.</li>
+            <li>Ciśnienie krwi jest ważnym parametrem pracy organizmu.</li>
+            <li>Strzykawka wykorzystuje różnice ciśnienia.</li>
+            <li>Ostre narzędzia wywierają duże ciśnienie na małej powierzchni.</li>
+            <li>Poduszki powietrzne wykorzystują sprężony gaz.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>9. Najczęstsze błędy</h2>
+        <ul>
+            <li>Mylenie ciśnienia z siłą nacisku.</li>
+            <li>Zapominanie o zamianie cm² na m².</li>
+            <li>Podawanie wyniku w niutonach zamiast w paskalach.</li>
+            <li>Dzielenie powierzchni przez siłę zamiast siły przez powierzchnię.</li>
+        </ul>
+
+        <div class="note">
+            <strong>Zapamiętaj:</strong> Ciśnienie to siła nacisku
+            podzielona przez pole powierzchni.
+        </div>
+    </section>
+
+    <section>
+        <h2>10. Słowniczek</h2>
+        <ul>
+            <li><strong>Ciśnienie</strong> – siła nacisku przypadająca na jednostkę powierzchni.</li>
+            <li><strong>Siła nacisku</strong> – siła, z jaką ciało naciska na powierzchnię.</li>
+            <li><strong>Pole powierzchni</strong> – wielkość opisująca rozmiar powierzchni.</li>
+            <li><strong>Paskal</strong> – jednostka ciśnienia.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>11. Sprawdź swoją wiedzę</h2>
+
+        <div class="task">
+            <p><strong>1. Co opisuje ciśnienie?</strong></p>
+            <button onclick="showAnswer('a1')">Pokaż odpowiedź</button>
+            <div class="answer" id="a1">
+                Jak duża siła nacisku przypada na określoną powierzchnię.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>2. Jaki jest wzór na ciśnienie?</strong></p>
+            <button onclick="showAnswer('a2')">Pokaż odpowiedź</button>
+            <div class="answer" id="a2">
+                p = F / S
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>3. Jaka jest jednostka ciśnienia?</strong></p>
+            <button onclick="showAnswer('a3')">Pokaż odpowiedź</button>
+            <div class="answer" id="a3">
+                Paskal (Pa).
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>4. Co się stanie z ciśnieniem, jeśli zwiększymy siłę nacisku, a powierzchnia pozostanie taka sama?</strong></p>
+            <button onclick="showAnswer('a4')">Pokaż odpowiedź</button>
+            <div class="answer" id="a4">
+                Ciśnienie wzrośnie.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>5. Dlaczego narty są szerokie?</strong></p>
+            <button onclick="showAnswer('a5')">Pokaż odpowiedź</button>
+            <div class="answer" id="a5">
+                Ponieważ większa powierzchnia zmniejsza ciśnienie wywierane na śnieg.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>6. Oblicz ciśnienie, jeśli F = 60 N, a S = 3 m².</strong></p>
+            <button onclick="showAnswer('a6')">Pokaż odpowiedź</button>
+            <div class="answer" id="a6">
+                p = 60 N / 3 m² = 20 Pa.
+            </div>
+        </div>
+
+        <div class="task">
+            <p><strong>7. Jak można zmniejszyć ciśnienie?</strong></p>
+            <button onclick="showAnswer('a7')">Pokaż odpowiedź</button>
+            <div class="answer" id="a7">
+                Można zmniejszyć siłę nacisku lub zwiększyć powierzchnię.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>12. Podsumowanie</h2>
+        <ul>
+            <li>Ciśnienie określa siłę nacisku przypadającą na powierzchnię.</li>
+            <li>Obliczamy je ze wzoru p = F / S.</li>
+            <li>Jednostką ciśnienia jest paskal (Pa).</li>
+            <li>Większa siła oznacza większe ciśnienie przy tej samej powierzchni.</li>
+            <li>Większa powierzchnia oznacza mniejsze ciśnienie przy tej samej sile.</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena – Nauka fizyki dla klas 7 i 8</p>
+</footer>
+
+<script>
+    function showAnswer(id) {
+        const answer = document.getElementById(id);
+
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+        } else {
+            answer.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>

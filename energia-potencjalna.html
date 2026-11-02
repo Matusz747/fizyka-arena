@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energia potencjalna – Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 38px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 34px;
+        }
+
+        nav {
+            background: #1e293b;
+            text-align: center;
+            padding: 13px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 12px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 0 18px;
+        }
+
+        section {
+            background: white;
+            padding: 23px;
+            margin-bottom: 22px;
+            border-radius: 13px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2563eb;
+            margin-top: 0;
+        }
+
+        .formula {
+            background: #dbeafe;
+            border-left: 5px solid #2563eb;
+            padding: 18px;
+            margin: 18px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .example {
+            background: #f0fdf4;
+            border-left: 5px solid #16a34a;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .important {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        details {
+            background: #f8fafc;
+            padding: 13px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .navigation-buttons a {
+            background: #2563eb;
+            color: white;
+            padding: 12px 17px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .navigation-buttons a:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 27px;
+            }
+
+            section {
+                padding: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>⛰️ Energia potencjalna grawitacji</h1>
+    <p>Poznaj energię, którą ma ciało dzięki swojemu położeniu.</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Wszystkie lekcje</a>
+    <a href="energia-kinetyczna.html">Poprzednia lekcja</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest energia potencjalna grawitacji?</h2>
+
+        <p>
+            Energia potencjalna grawitacji to energia, którą posiada ciało
+            ze względu na swoje położenie w polu grawitacyjnym,
+            na przykład na określonej wysokości nad powierzchnią Ziemi.
+        </p>
+
+        <p>
+            Przykładem może być książka leżąca na wysokiej półce,
+            piłka trzymana nad ziemią albo woda zgromadzona za tamą.
+        </p>
+
+        <div class="important">
+            <strong>Zapamiętaj:</strong> Im wyżej znajduje się ciało,
+            tym większą ma energię potencjalną grawitacji,
+            jeśli jego masa pozostaje taka sama.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Od czego zależy energia potencjalna?</h2>
+
+        <p>Energia potencjalna grawitacji zależy od:</p>
+
+        <ol>
+            <li><strong>Masy ciała</strong> – im większa masa, tym większa energia.</li>
+            <li><strong>Wysokości</strong> – im wyżej znajduje się ciało, tym większa energia.</li>
+            <li><strong>Przyspieszenia grawitacyjnego</strong> – zależy ono od miejsca, w którym znajduje się ciało.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>3. Wzór na energię potencjalną grawitacji</h2>
+
+        <div class="formula">
+            E<sub>p</sub> = m · g · h
+        </div>
+
+        <ul>
+            <li><strong>E<sub>p</sub></strong> – energia potencjalna grawitacji w dżulach (J),</li>
+            <li><strong>m</strong> – masa ciała w kilogramach (kg),</li>
+            <li><strong>g</strong> – przyspieszenie grawitacyjne w m/s²,</li>
+            <li><strong>h</strong> – wysokość w metrach (m).</li>
+        </ul>
+
+        <p>
+            W zadaniach szkolnych przy powierzchni Ziemi często przyjmujemy
+            g ≈ 10 m/s², chyba że treść zadania podaje inną wartość.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Jednostka energii potencjalnej</h2>
+
+        <p>
+            Jednostką energii potencjalnej grawitacji jest dżul (J).
+            Jest to taka sama jednostka jak w przypadku innych rodzajów energii.
+        </p>
+
+        <ul>
+            <li>1 J – jeden dżul,</li>
+            <li>1 kJ = 1000 J – jeden kilodżul.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>5. Przykład obliczania energii potencjalnej</h2>
+
+        <div class="example">
+            <p><strong>Zadanie:</strong></p>
+
+            <p>
+                Książka o masie 2 kg znajduje się na półce
+                na wysokości 3 m nad podłogą.
+                Oblicz jej energię potencjalną względem podłogi.
+                Przyjmij g = 10 m/s².
+            </p>
+
+            <p><strong>Dane:</strong></p>
+            <ul>
+                <li>m = 2 kg</li>
+                <li>h = 3 m</li>
+                <li>g = 10 m/s²</li>
+            </ul>
+
+            <p><strong>Szukane:</strong></p>
+            <p>E<sub>p</sub> = ?</p>
+
+            <p><strong>Wzór:</strong></p>
+            <p>E<sub>p</sub> = m · g · h</p>
+
+            <p><strong>Obliczenia:</strong></p>
+            <p>E<sub>p</sub> = 2 · 10 · 3</p>
+            <p>E<sub>p</sub> = 60 J</p>
+
+            <p><strong>Odpowiedź:</strong> Energia potencjalna książki względem podłogi wynosi 60 J.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Co się stanie, gdy zwiększymy wysokość?</h2>
+
+        <p>
+            Jeśli masa ciała i wartość przyspieszenia grawitacyjnego
+            pozostają takie same, energia potencjalna jest proporcjonalna
+            do wysokości.
+        </p>
+
+        <ul>
+            <li>Dwukrotnie większa wysokość oznacza dwukrotnie większą energię.</li>
+            <li>Trzykrotnie większa wysokość oznacza trzykrotnie większą energię.</li>
+        </ul>
+
+        <div class="important">
+            <strong>Przykład:</strong> Jeśli podniesiemy ten sam przedmiot
+            dwa razy wyżej, jego energia potencjalna względem tego samego
+            poziomu odniesienia będzie dwa razy większa.
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Energia potencjalna w życiu codziennym</h2>
+
+        <ul>
+            <li>Woda zgromadzona w zbiorniku za tamą.</li>
+            <li>Książka leżąca na wysokiej półce.</li>
+            <li>Piłka trzymana nad ziemią.</li>
+            <li>Wagon kolejki górskiej znajdujący się na szczycie toru.</li>
+            <li>Przedmiot podniesiony na określoną wysokość.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>8. Przemiana energii potencjalnej w kinetyczną</h2>
+
+        <p>
+            Gdy ciało spada, jego energia potencjalna grawitacji
+            zmniejsza się, a energia kinetyczna rośnie.
+        </p>
+
+        <p>
+            Na przykład piłka puszczona z pewnej wysokości
+            podczas spadania porusza się coraz szybciej.
+        </p>
+
+        <p>
+            Jeśli pominiemy opór powietrza, całkowita energia mechaniczna
+            ciała pozostaje stała.
+        </p>
+    </section>
+
+    <section>
+        <h2>9. Energia potencjalna a poziom odniesienia</h2>
+
+        <p>
+            Wysokość w obliczeniach mierzymy względem wybranego poziomu
+            odniesienia. Może nim być na przykład podłoga, powierzchnia
+            ziemi albo inny poziom wskazany w zadaniu.
+        </p>
+
+        <div class="important">
+            <strong>Ważne:</strong> Wartość energii potencjalnej zależy
+            od przyjętego poziomu odniesienia. Dlatego w zadaniu trzeba
+            zwracać uwagę, względem czego mierzona jest wysokość.
+        </div>
+    </section>
+
+    <section>
+        <h2>10. Słowniczek</h2>
+
+        <ul>
+            <li><strong>Energia potencjalna grawitacji</strong> – energia związana z położeniem ciała w polu grawitacyjnym.</li>
+            <li><strong>Masa</strong> – wielkość fizyczna wyrażana w kilogramach.</li>
+            <li><strong>Wysokość</strong> – odległość od wybranego poziomu odniesienia.</li>
+            <li><strong>Przyspieszenie grawitacyjne</strong> – przyspieszenie związane z działaniem grawitacji.</li>
+            <li><strong>Dżul</strong> – jednostka energii.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>11. Sprawdź swoją wiedzę</h2>
+
+        <details>
+            <summary>1. Czym jest energia potencjalna grawitacji?</summary>
+            <p>To energia związana z położeniem ciała w polu grawitacyjnym.</p>
+        </details>
+
+        <details>
+            <summary>2. Od czego zależy energia potencjalna grawitacji?</summary>
+            <p>Od masy ciała, wysokości i przyspieszenia grawitacyjnego.</p>
+        </details>
+
+        <details>
+            <summary>3. Jaki jest wzór na energię potencjalną grawitacji?</summary>
+            <p>E<sub>p</sub> = m · g · h.</p>
+        </details>
+
+        <details>
+            <summary>4. Jaka jest jednostka energii potencjalnej?</summary>
+            <p>Dżul (J).</p>
+        </details>
+
+        <details>
+            <summary>5. Oblicz energię potencjalną ciała o masie 3 kg na wysokości 2 m. Przyjmij g = 10 m/s².</summary>
+            <p>E<sub>p</sub> = 3 · 10 · 2 = 60 J.</p>
+        </details>
+
+        <details>
+            <summary>6. Co dzieje się z energią potencjalną podczas spadania ciała?</summary>
+            <p>Energia potencjalna maleje, a energia kinetyczna rośnie.</p>
+        </details>
+
+        <details>
+            <summary>7. Co stanie się z energią potencjalną, jeśli wysokość zwiększymy dwukrotnie?</summary>
+            <p>Przy tej samej masie i tym samym przyspieszeniu grawitacyjnym energia wzrośnie dwukrotnie.</p>
+        </details>
+    </section>
+
+    <section>
+        <h2>12. Podsumowanie</h2>
+
+        <ul>
+            <li>Energia potencjalna grawitacji jest związana z położeniem ciała.</li>
+            <li>Zależy od masy, wysokości i przyspieszenia grawitacyjnego.</li>
+            <li>Jej jednostką jest dżul (J).</li>
+            <li>Wzór: E<sub>p</sub> = m · g · h.</li>
+            <li>Podczas spadania energia potencjalna może zamieniać się w kinetyczną.</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="navigation-buttons">
+            <a href="energia-kinetyczna.html">← Poprzednia: Energia kinetyczna</a>
+            <a href="zachowanie-energii.html">Następna: Zachowanie energii →</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena</p>
+    <p>Nauka fizyki dla klas 7 i 8</p>
+</footer>
+
+</body>
+</html>

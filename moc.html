@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moc – Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 38px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        nav {
+            background: #1e293b;
+            text-align: center;
+            padding: 13px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 12px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 0 18px;
+        }
+
+        section {
+            background: white;
+            padding: 23px;
+            margin-bottom: 22px;
+            border-radius: 13px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2563eb;
+            margin-top: 0;
+        }
+
+        .formula {
+            background: #dbeafe;
+            border-left: 5px solid #2563eb;
+            padding: 17px;
+            margin: 18px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .example {
+            background: #f0fdf4;
+            border-left: 5px solid #16a34a;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .important {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        details {
+            background: #f8fafc;
+            padding: 13px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            margin-top: 40px;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .navigation-buttons a {
+            background: #2563eb;
+            color: white;
+            padding: 12px 17px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .navigation-buttons a:hover {
+            background: #1d4ed8;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            section {
+                padding: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>⚡ Moc</h1>
+    <p>Dowiedz się, jak szybko wykonywana jest praca.</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Wszystkie lekcje</a>
+    <a href="praca.html">Poprzednia lekcja</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest moc?</h2>
+        <p>
+            Moc to wielkość fizyczna, która informuje nas,
+            jak szybko wykonywana jest praca.
+        </p>
+        <p>
+            Jeżeli dwie osoby wykonują taką samą pracę,
+            ale jedna zrobi to w krótszym czasie, to jej moc jest większa.
+        </p>
+        <div class="important">
+            <strong>Zapamiętaj:</strong> Moc zależy od wykonanej pracy
+            oraz czasu, w którym została wykonana.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Wzór na moc</h2>
+        <p>Moc obliczamy, dzieląc wykonaną pracę przez czas jej wykonania.</p>
+
+        <div class="formula">
+            P = W / t
+        </div>
+
+        <ul>
+            <li><strong>P</strong> – moc,</li>
+            <li><strong>W</strong> – wykonana praca,</li>
+            <li><strong>t</strong> – czas wykonania pracy.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. Jednostka mocy</h2>
+        <p>
+            Podstawową jednostką mocy w układzie SI jest wat,
+            którego symbol to W.
+        </p>
+
+        <ul>
+            <li>1 wat (1 W),</li>
+            <li>1 kilowat (1 kW) = 1000 W,</li>
+            <li>1 megawat (1 MW) = 1 000 000 W.</li>
+        </ul>
+
+        <p>
+            Nazwa jednostki pochodzi od nazwiska szkockiego wynalazcy
+            Jamesa Watta.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Od czego zależy moc?</h2>
+        <p>Moc zależy od dwóch wielkości:</p>
+
+        <ol>
+            <li>Wykonanej pracy – im większa praca w tym samym czasie, tym większa moc.</li>
+            <li>Czasu – im krótszy czas wykonania tej samej pracy, tym większa moc.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>5. Przykład obliczania mocy</h2>
+
+        <div class="example">
+            <p><strong>Zadanie:</strong></p>
+            <p>
+                Urządzenie wykonało pracę 600 J w czasie 10 sekund.
+                Oblicz jego moc.
+            </p>
+
+            <p><strong>Dane:</strong></p>
+            <ul>
+                <li>W = 600 J</li>
+                <li>t = 10 s</li>
+            </ul>
+
+            <p><strong>Wzór:</strong></p>
+            <p>P = W / t</p>
+
+            <p><strong>Obliczenia:</strong></p>
+            <p>P = 600 J / 10 s = 60 W</p>
+
+            <p><strong>Odpowiedź:</strong> Moc urządzenia wynosi 60 W.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Przekształcanie wzoru</h2>
+        <p>Z podstawowego wzoru możemy obliczyć również pracę lub czas.</p>
+
+        <div class="formula">
+            P = W / t
+        </div>
+
+        <div class="formula">
+            W = P · t
+        </div>
+
+        <div class="formula">
+            t = W / P
+        </div>
+
+        <p>
+            Pamiętaj, aby przed obliczeniami sprawdzić,
+            czy wszystkie wielkości są podane w odpowiednich jednostkach.
+        </p>
+    </section>
+
+    <section>
+        <h2>7. Moc w życiu codziennym</h2>
+        <p>Moc spotykamy w wielu urządzeniach i sytuacjach:</p>
+
+        <ul>
+            <li>żarówka ma określoną moc podaną w watach,</li>
+            <li>czajnik elektryczny może mieć moc około 2000 W,</li>
+            <li>silniki samochodów mają moc podawaną często w kilowatach,</li>
+            <li>człowiek wykonujący pracę również może mieć określoną moc.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>8. Moc a energia</h2>
+        <p>
+            Moc i energia to różne wielkości fizyczne.
+            Energia określa zdolność do wykonania pracy,
+            a moc mówi, jak szybko praca jest wykonywana.
+        </p>
+        <p>
+            Urządzenie o większej mocy może wykonać tę samą pracę
+            w krótszym czasie, jeśli warunki działania są takie same.
+        </p>
+    </section>
+
+    <section>
+        <h2>9. Najważniejsze informacje</h2>
+        <ul>
+            <li>Moc informuje o szybkości wykonywania pracy.</li>
+            <li>Symbol mocy to P.</li>
+            <li>Jednostką mocy jest wat (W).</li>
+            <li>Wzór na moc to P = W / t.</li>
+            <li>1 kW = 1000 W.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>10. Słowniczek</h2>
+        <ul>
+            <li><strong>Moc</strong> – praca wykonana w jednostce czasu.</li>
+            <li><strong>Praca</strong> – wielkość fizyczna związana z przekazywaniem energii.</li>
+            <li><strong>Wat</strong> – jednostka mocy.</li>
+            <li><strong>Kilowat</strong> – 1000 watów.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>11. Sprawdź swoją wiedzę</h2>
+
+        <details>
+            <summary>1. Co oznacza moc?</summary>
+            <p>Moc informuje, jak szybko wykonywana jest praca.</p>
+        </details>
+
+        <details>
+            <summary>2. Jaki jest wzór na moc?</summary>
+            <p>P = W / t.</p>
+        </details>
+
+        <details>
+            <summary>3. Jaka jest jednostka mocy?</summary>
+            <p>Wat (W).</p>
+        </details>
+
+        <details>
+            <summary>4. Ile watów ma jeden kilowat?</summary>
+            <p>1000 W.</p>
+        </details>
+
+        <details>
+            <summary>5. Urządzenie wykonało pracę 300 J w 5 sekund. Jaka jest jego moc?</summary>
+            <p>P = 300 J / 5 s = 60 W.</p>
+        </details>
+
+        <details>
+            <summary>6. Co ma większą moc: urządzenie wykonujące tę samą pracę w krótszym czy dłuższym czasie?</summary>
+            <p>Większą moc ma urządzenie wykonujące tę samą pracę w krótszym czasie.</p>
+        </details>
+
+        <details>
+            <summary>7. Ile watów ma urządzenie o mocy 2 kW?</summary>
+            <p>2 kW = 2000 W.</p>
+        </details>
+    </section>
+
+    <section>
+        <h2>12. Podsumowanie</h2>
+        <p>
+            Moc jest ważną wielkością fizyczną, która pozwala określić,
+            jak szybko wykonywana jest praca.
+            Jej jednostką jest wat, a podstawowy wzór to P = W / t.
+        </p>
+        <p>
+            Dzięki znajomości mocy możemy porównywać urządzenia
+            i opisywać wiele zjawisk występujących w codziennym życiu.
+        </p>
+    </section>
+
+    <section>
+        <div class="navigation-buttons">
+            <a href="praca.html">← Poprzednia: Praca</a>
+            <a href="energia-kinetyczna.html">Następna: Energia kinetyczna →</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena</p>
+    <p>Nauka fizyki dla klas 7 i 8</p>
+</footer>
+
+</body>
+</html>

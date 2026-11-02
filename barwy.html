@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barwy światła - Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef3f8;
+            color: #263238;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1565c0, #42a5f5);
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        nav {
+            background: #0d47a1;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1565c0;
+        }
+
+        .highlight {
+            background: #e3f2fd;
+            border-left: 5px solid #2196f3;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .diagram {
+            text-align: center;
+            background: #e8eaf6;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .rainbow {
+            height: 35px;
+            border-radius: 8px;
+            background: linear-gradient(
+                to right,
+                red,
+                orange,
+                yellow,
+                green,
+                blue,
+                indigo,
+                violet
+            );
+            margin: 15px 0;
+        }
+
+        details {
+            background: #f5f5f5;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #0d47a1;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .navigation-buttons a {
+            display: inline-block;
+            background: #1565c0;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .navigation-buttons a:hover {
+            background: #0d47a1;
+        }
+
+        footer {
+            background: #0d47a1;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌈 Barwy światła</h1>
+    <p>Fizyka Arena — Klasa 8</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Lekcje</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Skąd biorą się barwy?</h2>
+
+        <p>
+            Światło widzialne może mieć różne barwy.
+            Każda barwa odpowiada określonej długości fali
+            świetlnej.
+        </p>
+
+        <p>
+            Światło białe jest mieszaniną światła o różnych
+            barwach.
+        </p>
+
+        <div class="highlight">
+            <strong>Ważne:</strong> Światło białe można rozłożyć
+            na wiele barw, na przykład za pomocą pryzmatu.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Widmo światła białego</h2>
+
+        <p>
+            Widmo światła to uporządkowany zbiór barw,
+            na które można rozłożyć światło.
+        </p>
+
+        <p>
+            Barwy widzialnego widma często przedstawiamy
+            w kolejności:
+        </p>
+
+        <div class="rainbow"></div>
+
+        <div class="diagram">
+            <strong>
+                Czerwony → Pomarańczowy → Żółty → Zielony
+                → Niebieski → Indygo → Fioletowy
+            </strong>
+        </div>
+
+        <p>
+            Taki układ barw możemy obserwować w tęczy.
+        </p>
+    </section>
+
+    <section>
+        <h2>3. Pryzmat i rozszczepienie światła</h2>
+
+        <p>
+            Pryzmat to przezroczysty element, który może
+            rozdzielić światło białe na różne barwy.
+        </p>
+
+        <p>
+            Zjawisko to nazywamy rozszczepieniem światła.
+            Poszczególne barwy załamują się pod różnymi kątami.
+        </p>
+
+        <div class="diagram">
+            <pre>
+Światło białe
+      →
+       \
+        \   ◇ Pryzmat
+         \ /
+          ◇
+         / \
+        /   \ → Czerwony
+       /     \ → Żółty
+              \ → Zielony
+               \ → Niebieski
+                \ → Fioletowy
+            </pre>
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Jak widzimy kolory przedmiotów?</h2>
+
+        <p>
+            Przedmioty widzimy dzięki światłu, które dociera
+            do naszych oczu.
+        </p>
+
+        <ul>
+            <li>
+                Czerwony przedmiot odbija głównie światło czerwone,
+                a pochłania wiele innych barw.
+            </li>
+            <li>
+                Biały przedmiot odbija większość barw światła
+                widzialnego.
+            </li>
+            <li>
+                Czarny przedmiot pochłania większość padającego
+                na niego światła widzialnego.
+            </li>
+        </ul>
+
+        <div class="highlight">
+            <strong>
+                Kolor przedmiotu zależy od światła, które odbija
+                i które dociera do naszych oczu.
+            </strong>
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Barwy podstawowe światła</h2>
+
+        <p>
+            W modelu mieszania barw światła RGB barwami
+            podstawowymi są:
+        </p>
+
+        <ul>
+            <li>🔴 Czerwony — Red</li>
+            <li>🟢 Zielony — Green</li>
+            <li>🔵 Niebieski — Blue</li>
+        </ul>
+
+        <p>
+            Łączenie światła tych barw w odpowiednich proporcjach
+            pozwala uzyskać wiele innych kolorów.
+        </p>
+
+        <div class="highlight">
+            Połączenie światła czerwonego, zielonego i niebieskiego
+            w odpowiednich proporcjach może dać światło białe.
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Tęcza</h2>
+
+        <p>
+            Tęcza powstaje, gdy światło słoneczne przechodzi
+            przez krople wody w atmosferze.
+        </p>
+
+        <p>
+            W kroplach światło ulega załamaniu, odbiciu
+            i rozszczepieniu na różne barwy.
+        </p>
+
+        <div class="rainbow"></div>
+
+        <p>
+            Dlatego po deszczu, gdy Słońce świeci i w powietrzu
+            znajdują się krople wody, możemy zobaczyć tęczę.
+        </p>
+    </section>
+
+    <section>
+        <h2>7. Najważniejsze informacje</h2>
+
+        <ul>
+            <li>Światło białe składa się z różnych barw.</li>
+            <li>Pryzmat może rozszczepić światło białe.</li>
+            <li>Widmo światła zawiera barwy od czerwonej do fioletowej.</li>
+            <li>Kolor przedmiotu zależy od odbijanego światła.</li>
+            <li>Podstawowe barwy światła RGB to czerwony, zielony i niebieski.</li>
+            <li>Tęcza powstaje dzięki zjawiskom optycznym w kroplach wody.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>8. Sprawdź swoją wiedzę</h2>
+
+        <details>
+            <summary>1. Z jakich barw składa się widmo światła białego?</summary>
+            <p>
+                Z wielu barw, od czerwonej przez pomarańczową,
+                żółtą, zieloną, niebieską i indygo do fioletowej.
+            </p>
+        </details>
+
+        <details>
+            <summary>2. Co to jest rozszczepienie światła?</summary>
+            <p>
+                Rozdzielenie światła na różne barwy.
+            </p>
+        </details>
+
+        <details>
+            <summary>3. Jakie są podstawowe barwy światła RGB?</summary>
+            <p>
+                Czerwony, zielony i niebieski.
+            </p>
+        </details>
+
+        <details>
+            <summary>4. Dlaczego widzimy czerwony przedmiot?</summary>
+            <p>
+                Ponieważ odbija głównie światło czerwone,
+                które dociera do naszych oczu.
+            </p>
+        </details>
+
+        <details>
+            <summary>5. Jak powstaje tęcza?</summary>
+            <p>
+                Dzięki załamaniu, odbiciu i rozszczepieniu
+                światła w kroplach wody.
+            </p>
+        </details>
+    </section>
+
+    <section>
+        <div class="navigation-buttons">
+            <a href="soczewki.html">← Poprzednia lekcja</a>
+            <a href="astronomia.html">Następna lekcja →</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    © 2026 Fizyka Arena | Ucz się fizyki!
+</footer>
+
+</body>
+</html>

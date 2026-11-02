@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zasada zachowania energii – Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 38px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 34px;
+        }
+
+        nav {
+            background: #1e293b;
+            text-align: center;
+            padding: 13px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 12px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 0 18px;
+        }
+
+        section {
+            background: white;
+            padding: 23px;
+            margin-bottom: 22px;
+            border-radius: 13px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2563eb;
+            margin-top: 0;
+        }
+
+        .formula {
+            background: #dbeafe;
+            border-left: 5px solid #2563eb;
+            padding: 18px;
+            margin: 18px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .example {
+            background: #f0fdf4;
+            border-left: 5px solid #16a34a;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .important {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        details {
+            background: #f8fafc;
+            padding: 13px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .navigation-buttons a {
+            background: #2563eb;
+            color: white;
+            padding: 12px 17px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .navigation-buttons a:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 27px;
+            }
+
+            section {
+                padding: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🔄 Zasada zachowania energii</h1>
+    <p>Odkryj, jak energia zmienia swoją postać.</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Wszystkie lekcje</a>
+    <a href="energia-potencjalna.html">Poprzednia lekcja</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest zasada zachowania energii?</h2>
+
+        <p>
+            Zasada zachowania energii mówi, że energia nie powstaje
+            z niczego i nie znika. Może natomiast zmieniać swoją postać
+            oraz być przekazywana między ciałami.
+        </p>
+
+        <div class="important">
+            <strong>Zapamiętaj:</strong> W układzie izolowanym całkowita
+            energia pozostaje stała.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Energia może zmieniać swoją postać</h2>
+
+        <p>
+            W przyrodzie energia występuje w różnych postaciach.
+            Może na przykład zmieniać się z energii potencjalnej
+            w kinetyczną.
+        </p>
+
+        <ul>
+            <li>Energia potencjalna – związana między innymi z położeniem ciała.</li>
+            <li>Energia kinetyczna – związana z ruchem ciała.</li>
+            <li>Energia wewnętrzna – związana z ruchem i oddziaływaniami cząsteczek.</li>
+            <li>Energia elektryczna – związana z oddziaływaniami ładunków elektrycznych.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. Przemiana energii potencjalnej w kinetyczną</h2>
+
+        <p>
+            Wyobraź sobie piłkę znajdującą się na pewnej wysokości.
+            Gdy ją puścimy, zaczyna spadać.
+        </p>
+
+        <ol>
+            <li>Na początku piłka ma energię potencjalną grawitacji.</li>
+            <li>Podczas spadania jej wysokość maleje.</li>
+            <li>Jednocześnie prędkość piłki rośnie, więc rośnie jej energia kinetyczna.</li>
+            <li>Tuż przed uderzeniem w podłoże energia kinetyczna jest największa.</li>
+        </ol>
+
+        <p>
+            Jeśli pominiemy opór powietrza, suma energii kinetycznej
+            i potencjalnej pozostaje stała.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Energia mechaniczna</h2>
+
+        <p>
+            Energia mechaniczna jest sumą energii kinetycznej
+            i potencjalnej ciała.
+        </p>
+
+        <div class="formula">
+            E = E<sub>k</sub> + E<sub>p</sub>
+        </div>
+
+        <ul>
+            <li><strong>E</strong> – energia mechaniczna,</li>
+            <li><strong>E<sub>k</sub></strong> – energia kinetyczna,</li>
+            <li><strong>E<sub>p</sub></strong> – energia potencjalna.</li>
+        </ul>
+
+        <div class="important">
+            Jeżeli na układ nie działają siły powodujące straty energii
+            mechanicznej, na przykład tarcie, energia mechaniczna pozostaje stała.
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Przykład – spadająca piłka</h2>
+
+        <div class="example">
+            <p>
+                Piłka zostaje puszczona z pewnej wysokości.
+                Pomijamy opór powietrza.
+            </p>
+
+            <p><strong>Na początku:</strong></p>
+            <ul>
+                <li>energia potencjalna jest duża,</li>
+                <li>energia kinetyczna wynosi zero, jeśli piłka zaczyna spadać z bezruchu.</li>
+            </ul>
+
+            <p><strong>Podczas spadania:</strong></p>
+            <ul>
+                <li>energia potencjalna maleje,</li>
+                <li>energia kinetyczna rośnie.</li>
+            </ul>
+
+            <p><strong>Tuż przed uderzeniem:</strong></p>
+            <ul>
+                <li>energia potencjalna względem podłoża jest mała,</li>
+                <li>energia kinetyczna jest duża.</li>
+            </ul>
+
+            <p>
+                <strong>Wniosek:</strong> Energia zmienia postać,
+                ale całkowita energia mechaniczna pozostaje taka sama.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Przemiany energii w życiu codziennym</h2>
+
+        <ul>
+            <li>
+                <strong>Latarka:</strong> energia chemiczna baterii
+                przekształca się w energię elektryczną, a następnie
+                w energię światła i energię wewnętrzną.
+            </li>
+            <li>
+                <strong>Czajnik:</strong> energia elektryczna zmienia się
+                w energię wewnętrzną wody i urządzenia.
+            </li>
+            <li>
+                <strong>Huśtawka:</strong> energia potencjalna i kinetyczna
+                zmieniają się podczas ruchu.
+            </li>
+            <li>
+                <strong>Samochód:</strong> energia chemiczna paliwa
+                przekształca się między innymi w energię ruchu i energię wewnętrzną.
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>7. Czy energia może być tracona?</h2>
+
+        <p>
+            Często mówimy, że energia jest tracona, na przykład przez tarcie.
+            W rzeczywistości energia nie znika, lecz zmienia swoją postać.
+        </p>
+
+        <p>
+            Podczas hamowania roweru energia kinetyczna zmienia się
+            między innymi w energię wewnętrzną hamulców i otoczenia.
+        </p>
+
+        <div class="important">
+            <strong>Ważne:</strong> Energia mechaniczna może się zmniejszać,
+            ale całkowita energia układu wraz z otoczeniem jest zachowana.
+        </div>
+    </section>
+
+    <section>
+        <h2>8. Zasada zachowania energii a tarcie</h2>
+
+        <p>
+            Gdy występuje tarcie, część energii mechanicznej
+            przekształca się w energię wewnętrzną.
+        </p>
+
+        <p>
+            Dlatego poruszający się przedmiot może stopniowo zwalniać,
+            aż w końcu się zatrzyma. Nie oznacza to, że energia zniknęła.
+        </p>
+    </section>
+
+    <section>
+        <h2>9. Najważniejsze informacje</h2>
+
+        <ul>
+            <li>Energia nie powstaje z niczego i nie znika.</li>
+            <li>Energia może zmieniać swoją postać.</li>
+            <li>Energia może być przekazywana między ciałami.</li>
+            <li>Energia mechaniczna to suma energii kinetycznej i potencjalnej.</li>
+            <li>Tarcie może powodować przemianę energii mechanicznej w energię wewnętrzną.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>10. Słowniczek</h2>
+
+        <ul>
+            <li><strong>Zasada zachowania energii</strong> – całkowita energia układu izolowanego pozostaje stała.</li>
+            <li><strong>Energia kinetyczna</strong> – energia związana z ruchem.</li>
+            <li><strong>Energia potencjalna</strong> – energia związana z położeniem lub konfiguracją ciała.</li>
+            <li><strong>Energia mechaniczna</strong> – suma energii kinetycznej i potencjalnej.</li>
+            <li><strong>Przemiana energii</strong> – zmiana jednej postaci energii w inną.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>11. Sprawdź swoją wiedzę</h2>
+
+        <details>
+            <summary>1. Co mówi zasada zachowania energii?</summary>
+            <p>Energia nie powstaje z niczego i nie znika, lecz może zmieniać postać i być przekazywana.</p>
+        </details>
+
+        <details>
+            <summary>2. Z czego składa się energia mechaniczna?</summary>
+            <p>Z energii kinetycznej i energii potencjalnej.</p>
+        </details>
+
+        <details>
+            <summary>3. Co dzieje się z energią potencjalną podczas spadania piłki?</summary>
+            <p>Energia potencjalna maleje.</p>
+        </details>
+
+        <details>
+            <summary>4. Co dzieje się z energią kinetyczną podczas spadania piłki?</summary>
+            <p>Energia kinetyczna rośnie.</p>
+        </details>
+
+        <details>
+            <summary>5. Czy energia znika podczas hamowania roweru?</summary>
+            <p>Nie. Energia kinetyczna zmienia się między innymi w energię wewnętrzną hamulców i otoczenia.</p>
+        </details>
+
+        <details>
+            <summary>6. Jaki jest wzór na energię mechaniczną?</summary>
+            <p>E = E<sub>k</sub> + E<sub>p</sub>.</p>
+        </details>
+
+        <details>
+            <summary>7. Co dzieje się z energią podczas ruchu huśtawki?</summary>
+            <p>Energia potencjalna i kinetyczna zmieniają się wzajemnie podczas ruchu.</p>
+        </details>
+    </section>
+
+    <section>
+        <h2>12. Podsumowanie</h2>
+
+        <p>
+            Zasada zachowania energii jest jedną z najważniejszych zasad
+            fizyki. Mówi, że energia nie znika i nie powstaje z niczego.
+            Może natomiast zmieniać swoją postać i być przekazywana.
+        </p>
+
+        <p>
+            Dzięki tej zasadzie możemy wyjaśnić między innymi ruch
+            spadających przedmiotów, działanie urządzeń i wiele zjawisk
+            występujących w przyrodzie.
+        </p>
+    </section>
+
+    <section>
+        <div class="navigation-buttons">
+            <a href="energia-potencjalna.html">← Poprzednia: Energia potencjalna</a>
+            <a href="ladunki.html">Następna: Ładunki elektryczne →</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena</p>
+    <p>Nauka fizyki dla klas 7 i 8</p>
+</footer>
+
+</body>
+</html>

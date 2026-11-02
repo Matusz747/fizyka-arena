@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natężenie prądu – Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 38px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 34px;
+        }
+
+        nav {
+            background: #1e293b;
+            text-align: center;
+            padding: 13px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 12px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 0 18px;
+        }
+
+        section {
+            background: white;
+            padding: 23px;
+            margin-bottom: 22px;
+            border-radius: 13px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2563eb;
+            margin-top: 0;
+        }
+
+        .important {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .example {
+            background: #f0fdf4;
+            border-left: 5px solid #16a34a;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .formula {
+            background: #dbeafe;
+            border-left: 5px solid #2563eb;
+            padding: 18px;
+            margin: 18px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        details {
+            background: #f8fafc;
+            padding: 13px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .navigation-buttons a {
+            background: #2563eb;
+            color: white;
+            padding: 12px 17px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .navigation-buttons a:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 27px;
+            }
+
+            section {
+                padding: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>📏 Natężenie prądu</h1>
+    <p>Poznaj wielkość fizyczną, która opisuje przepływ ładunków elektrycznych.</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Wszystkie lekcje</a>
+    <a href="prad.html">Poprzednia lekcja</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Co to jest natężenie prądu?</h2>
+
+        <p>
+            Natężenie prądu elektrycznego informuje, jaki ładunek
+            elektryczny przepływa przez przekrój przewodnika
+            w określonym czasie.
+        </p>
+
+        <p>
+            Im większy ładunek przepływa w tej samej jednostce czasu,
+            tym większe jest natężenie prądu.
+        </p>
+
+        <div class="important">
+            <strong>Zapamiętaj:</strong> Natężenie prądu oznaczamy
+            literą I.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Wzór na natężenie prądu</h2>
+
+        <div class="formula">
+            I = Q / t
+        </div>
+
+        <p>We wzorze:</p>
+
+        <ul>
+            <li><strong>I</strong> – natężenie prądu,</li>
+            <li><strong>Q</strong> – ładunek elektryczny,</li>
+            <li><strong>t</strong> – czas przepływu ładunku.</li>
+        </ul>
+
+        <p>
+            Wzór mówi, że natężenie prądu obliczamy,
+            dzieląc przepływający ładunek przez czas.
+        </p>
+    </section>
+
+    <section>
+        <h2>3. Jednostka natężenia prądu</h2>
+
+        <p>
+            Podstawową jednostką natężenia prądu w układzie SI
+            jest amper, którego symbol to A.
+        </p>
+
+        <div class="formula">
+            1 A = 1 C / 1 s
+        </div>
+
+        <p>Oznacza to, że natężenie wynosi 1 amper, gdy w ciągu
+        jednej sekundy przepływa ładunek 1 kulomba.</p>
+
+        <p>Spotykamy również mniejsze jednostki:</p>
+
+        <ul>
+            <li>1 miliamper (mA) = 0,001 A,</li>
+            <li>1 mikroamper (µA) = 0,000001 A.</li>
+        </ul>
+
+        <div class="example">
+            <strong>Przykład:</strong>
+            500 mA = 0,5 A.
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Jak mierzymy natężenie prądu?</h2>
+
+        <p>
+            Do pomiaru natężenia prądu służy amperomierz.
+            Wynik pomiaru odczytujemy w amperach lub ich podwielokrotnościach.
+        </p>
+
+        <p>
+            Amperomierz włącza się szeregowo z elementem,
+            przez który mierzymy przepływ prądu.
+        </p>
+
+        <div class="important">
+            <strong>Ważne:</strong> Nie podłączaj amperomierza
+            samodzielnie do domowego gniazdka elektrycznego.
+            Pomiary wykonuj tylko pod nadzorem nauczyciela,
+            na bezpiecznych zestawach edukacyjnych.
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Przykład obliczeniowy</h2>
+
+        <div class="example">
+            <strong>Zadanie:</strong>
+            Przez przewodnik w czasie 4 sekund przepłynął ładunek
+            12 kulombów. Oblicz natężenie prądu.
+
+            <p><strong>Dane:</strong></p>
+            <ul>
+                <li>Q = 12 C</li>
+                <li>t = 4 s</li>
+            </ul>
+
+            <p><strong>Szukane:</strong></p>
+            <p>I = ?</p>
+
+            <p><strong>Wzór:</strong></p>
+            <p>I = Q / t</p>
+
+            <p><strong>Obliczenia:</strong></p>
+            <p>I = 12 C / 4 s</p>
+            <p>I = 3 A</p>
+
+            <strong>Odpowiedź:</strong>
+            Natężenie prądu wynosi 3 ampery.
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Jak przekształcać wzór?</h2>
+
+        <p>Podstawowy wzór to:</p>
+
+        <div class="formula">
+            I = Q / t
+        </div>
+
+        <p>Możemy go przekształcić, aby obliczyć pozostałe wielkości:</p>
+
+        <div class="formula">
+            Q = I · t
+        </div>
+
+        <div class="formula">
+            t = Q / I
+        </div>
+
+        <ul>
+            <li>Gdy szukamy natężenia, dzielimy ładunek przez czas.</li>
+            <li>Gdy szukamy ładunku, mnożymy natężenie przez czas.</li>
+            <li>Gdy szukamy czasu, dzielimy ładunek przez natężenie.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>7. Drugi przykład obliczeniowy</h2>
+
+        <div class="example">
+            <strong>Zadanie:</strong>
+            Prąd o natężeniu 2 A płynie przez przewodnik przez 5 sekund.
+            Jaki ładunek przepłynie przez przewodnik?
+
+            <p><strong>Dane:</strong></p>
+            <ul>
+                <li>I = 2 A</li>
+                <li>t = 5 s</li>
+            </ul>
+
+            <p><strong>Wzór:</strong></p>
+            <p>Q = I · t</p>
+
+            <p><strong>Obliczenia:</strong></p>
+            <p>Q = 2 A · 5 s = 10 C</p>
+
+            <strong>Odpowiedź:</strong>
+            Przepłynie ładunek 10 kulombów.
+        </div>
+    </section>
+
+    <section>
+        <h2>8. Słowniczek</h2>
+
+        <ul>
+            <li><strong>Natężenie prądu</strong> – ładunek przepływający w jednostce czasu.</li>
+            <li><strong>Amper (A)</strong> – jednostka natężenia prądu.</li>
+            <li><strong>Ładunek (Q)</strong> – wielkość opisująca ilość ładunku elektrycznego.</li>
+            <li><strong>Kulomb (C)</strong> – jednostka ładunku elektrycznego.</li>
+            <li><strong>Amperomierz</strong> – przyrząd do pomiaru natężenia prądu.</li>
+            <li><strong>Miliamper (mA)</strong> – jedna tysięczna ampera.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>9. Sprawdź swoją wiedzę</h2>
+
+        <details>
+            <summary>1. Jaką literą oznaczamy natężenie prądu?</summary>
+            <p>Literą I.</p>
+        </details>
+
+        <details>
+            <summary>2. Jaka jest jednostka natężenia prądu?</summary>
+            <p>Amper (A).</p>
+        </details>
+
+        <details>
+            <summary>3. Jak nazywa się przyrząd do pomiaru natężenia?</summary>
+            <p>Amperomierz.</p>
+        </details>
+
+        <details>
+            <summary>4. Jaki jest wzór na natężenie prądu?</summary>
+            <p>I = Q / t.</p>
+        </details>
+
+        <details>
+            <summary>5. Ile amperów to 500 mA?</summary>
+            <p>0,5 A.</p>
+        </details>
+
+        <details>
+            <summary>6. Przez przewodnik przepłynęło 8 C w czasie 2 s. Jakie było natężenie?</summary>
+            <p>I = 8 C / 2 s = 4 A.</p>
+        </details>
+
+        <details>
+            <summary>7. Jak włącza się amperomierz do obwodu?</summary>
+            <p>Szeregowo z elementem, przez który mierzymy prąd.</p>
+        </details>
+    </section>
+
+    <section>
+        <h2>10. Podsumowanie</h2>
+
+        <ul>
+            <li>Natężenie prądu opisuje przepływ ładunku w czasie.</li>
+            <li>Oznaczamy je literą I.</li>
+            <li>Jednostką jest amper (A).</li>
+            <li>Do pomiaru służy amperomierz.</li>
+            <li>Wzór na natężenie: I = Q / t.</li>
+            <li>Amperomierz włącza się szeregowo.</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="navigation-buttons">
+            <a href="prad.html">← Poprzednia: Prąd elektryczny</a>
+            <a href="napiecie.html">Następna: Napięcie elektryczne →</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena</p>
+    <p>Nauka fizyki dla klas 7 i 8</p>
+</footer>
+
+</body>
+</html>

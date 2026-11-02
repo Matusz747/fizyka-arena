@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Połączenia równoległe | Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            color: #263238;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1565c0, #42a5f5);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background: #0d47a1;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1565c0;
+        }
+
+        .formula {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #0d47a1;
+        }
+
+        .example {
+            background: #fff8e1;
+            padding: 15px;
+            border-left: 5px solid #ffb300;
+            border-radius: 5px;
+        }
+
+        .important {
+            background: #e8f5e9;
+            padding: 15px;
+            border-left: 5px solid #43a047;
+            border-radius: 5px;
+        }
+
+        .diagram {
+            background: #e3f2fd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        details {
+            background: #f5f5f5;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #1565c0;
+        }
+
+        /* Przyciski nawigacyjne */
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .navigation-buttons a {
+            display: inline-block;
+            background: #1565c0;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .navigation-buttons a:hover {
+            background: #0d47a1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #263238;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🔌 Połączenia równoległe</h1>
+    <p>Fizyka Arena – klasa 8</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Lekcje</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest połączenie równoległe?</h2>
+
+        <p>
+            <strong>Połączenie równoległe</strong> to sposób
+            łączenia elementów obwodu elektrycznego, w którym
+            każdy element jest podłączony do tych samych
+            dwóch punktów obwodu.
+        </p>
+
+        <p>
+            Prąd może przepływać kilkoma osobnymi drogami.
+        </p>
+
+        <div class="diagram">
+            🔋 Bateria → ┬ → 💡 Żarówka 1
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ → 💡 Żarówka 2
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Napięcie w połączeniu równoległym</h2>
+
+        <p>
+            W połączeniu równoległym napięcie na każdym
+            odbiorniku jest takie samo.
+        </p>
+
+        <div class="formula">
+            U = U₁ = U₂
+        </div>
+
+        <p>
+            Jeśli bateria ma napięcie 12 V, to na każdym
+            odbiorniku podłączonym równolegle do niej
+            występuje napięcie 12 V.
+        </p>
+    </section>
+
+    <section>
+        <h2>3. Natężenie prądu</h2>
+
+        <p>
+            W połączeniu równoległym prąd rozdziela się
+            między poszczególne gałęzie obwodu.
+        </p>
+
+        <div class="formula">
+            I = I₁ + I₂
+        </div>
+
+        <p>
+            Natężenie prądu płynącego przez źródło
+            jest sumą natężeń prądów w poszczególnych
+            gałęziach.
+        </p>
+
+        <div class="important">
+            Im więcej gałęzi obwodu, tym więcej osobnych
+            dróg przepływu prądu.
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Opór zastępczy</h2>
+
+        <p>
+            Opór zastępczy połączenia równoległego
+            obliczamy inaczej niż w połączeniu szeregowym.
+        </p>
+
+        <div class="formula">
+            1 / R = 1 / R₁ + 1 / R₂
+        </div>
+
+        <p>
+            Dla dwóch oporników można również użyć wzoru:
+        </p>
+
+        <div class="formula">
+            R = (R₁ · R₂) / (R₁ + R₂)
+        </div>
+
+        <div class="important">
+            Opór zastępczy połączenia równoległego
+            jest mniejszy od oporu każdego z jego
+            pojedynczych oporników.
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Przykład obliczeniowy</h2>
+
+        <div class="example">
+            <p><strong>Zadanie:</strong></p>
+
+            <p>
+                Dwa oporniki o oporach 6 Ω i 3 Ω
+                połączono równolegle. Oblicz opór zastępczy.
+            </p>
+
+            <p><strong>Dane:</strong></p>
+            <p>R₁ = 6 Ω</p>
+            <p>R₂ = 3 Ω</p>
+
+            <p><strong>Wzór:</strong></p>
+
+            <p>
+                R = (R₁ · R₂) / (R₁ + R₂)
+            </p>
+
+            <p><strong>Obliczenia:</strong></p>
+
+            <p>
+                R = (6 · 3) / (6 + 3)
+            </p>
+
+            <p>
+                R = 18 / 9 = 2 Ω
+            </p>
+
+            <p><strong>Odpowiedź:</strong></p>
+            <p>Opór zastępczy wynosi 2 Ω.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Co się stanie, gdy jedna żarówka się przepali?</h2>
+
+        <p>
+            W połączeniu równoległym przepalenie jednej
+            żarówki nie musi powodować zgaśnięcia pozostałych.
+        </p>
+
+        <p>
+            Pozostałe żarówki mogą nadal świecić,
+            ponieważ mają własne drogi przepływu prądu.
+        </p>
+
+        <div class="important">
+            Dlatego w domowych instalacjach odbiorniki
+            są zazwyczaj połączone równolegle.
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Słowniczek</h2>
+
+        <ul>
+            <li><strong>Połączenie równoległe</strong> – elementy podłączone do tych samych dwóch punktów obwodu.</li>
+            <li><strong>Gałąź obwodu</strong> – osobna droga przepływu prądu.</li>
+            <li><strong>Opór zastępczy</strong> – opór całego połączenia.</li>
+            <li><strong>Natężenie</strong> – w połączeniu równoległym rozdziela się między gałęzie.</li>
+            <li><strong>Napięcie</strong> – jest jednakowe na wszystkich gałęziach.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>8. Sprawdź swoją wiedzę</h2>
+
+        <details>
+            <summary>1. Czym jest połączenie równoległe?</summary>
+            <p>
+                To połączenie, w którym elementy są podłączone
+                do tych samych dwóch punktów obwodu.
+            </p>
+        </details>
+
+        <details>
+            <summary>2. Jakie jest napięcie na odbiornikach równoległych?</summary>
+            <p>Jest takie samo na każdym odbiorniku.</p>
+        </details>
+
+        <details>
+            <summary>3. Co dzieje się z natężeniem prądu?</summary>
+            <p>Prąd rozdziela się między gałęzie obwodu.</p>
+        </details>
+
+        <details>
+            <summary>4. Oblicz opór zastępczy: R₁ = 4 Ω, R₂ = 4 Ω.</summary>
+            <p>
+                R = (4 · 4) / (4 + 4) = 16 / 8 = 2 Ω.
+            </p>
+        </details>
+    </section>
+
+    <!-- Nawigacja między lekcjami -->
+
+    <section>
+        <div class="navigation-buttons">
+            <a href="polaczenia-szeregowe.html">← Poprzednia lekcja</a>
+            <a href="magnetyzm.html">Następna lekcja →</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena</p>
+</footer>
+
+</body>
+</html>

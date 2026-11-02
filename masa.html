@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masa i ciężar | Fizyka Arena</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: #f1f5f9;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #172554, #1d4ed8);
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        header h1 { font-size: 36px; margin: 0 0 10px; }
+        header p { color: #dbeafe; margin: 0; }
+
+        nav {
+            background: #111827;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #93c5fd;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover { color: white; }
+
+        main {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 0 18px;
+        }
+
+        section {
+            background: #172033;
+            padding: 24px;
+            margin-bottom: 22px;
+            border-radius: 14px;
+            border: 1px solid #293750;
+        }
+
+        h2 { color: #60a5fa; margin-top: 0; }
+        h3 { color: #bfdbfe; }
+
+        .formula {
+            background: #0f2747;
+            border-left: 5px solid #3b82f6;
+            padding: 18px;
+            margin: 15px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .example {
+            background: #102b25;
+            border-left: 5px solid #22c55e;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .tip {
+            background: #30264a;
+            border-left: 5px solid #a78bfa;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .task {
+            background: #202c40;
+            padding: 16px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        details {
+            margin-top: 12px;
+            background: #111827;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        summary {
+            color: #93c5fd;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+            background: #080d18;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 29px; }
+            nav a { display: inline-block; margin: 6px; }
+            section { padding: 18px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>⚖️ Masa i ciężar</h1>
+    <p>Poznaj różnice między masą a ciężarem.</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Wszystkie lekcje</a>
+    <a href="sila.html">Poprzednia lekcja</a>
+    <a href="grawitacja.html">Następna lekcja</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest masa?</h2>
+        <p>
+            Masa to wielkość fizyczna określająca ilość materii
+            w ciele. Oznaczamy ją literą <strong>m</strong>.
+        </p>
+        <p>
+            Masa informuje nas, jak dużo materii zawiera dany przedmiot.
+            Im większa masa, tym trudniej zmienić jego ruch.
+        </p>
+        <div class="example">
+            <strong>Przykład:</strong>
+            Piłka o masie 1 kg ma mniejszą masę niż plecak
+            o masie 5 kg.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Jednostki masy</h2>
+        <p>Podstawową jednostką masy w układzie SI jest kilogram (kg).</p>
+        <ul>
+            <li>1 tona (t) = 1000 kg</li>
+            <li>1 kilogram (kg) = 1000 gramów (g)</li>
+            <li>1 gram (g) = 1000 miligramów (mg)</li>
+        </ul>
+        <div class="example">
+            <strong>Przykłady:</strong>
+            <p>3 kg = 3000 g</p>
+            <p>500 g = 0,5 kg</p>
+            <p>2 t = 2000 kg</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Jak mierzymy masę?</h2>
+        <p>
+            Masę możemy mierzyć za pomocą wagi, na przykład
+            wagi kuchennej, łazienkowej lub laboratoryjnej.
+        </p>
+        <p>
+            Waga pokazuje wynik najczęściej w gramach albo kilogramach.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Czym jest ciężar?</h2>
+        <p>
+            W szkolnym ujęciu ciężar ciała to siła, z jaką ciało
+            naciska na podłoże lub działa na zawieszenie wskutek
+            oddziaływania grawitacyjnego.
+        </p>
+        <p>
+            Ciężar jest siłą, dlatego jego jednostką jest niuton (N).
+        </p>
+        <div class="tip">
+            <strong>Ważne:</strong>
+            Masa i ciężar to różne wielkości fizyczne.
+            Nie należy używać tych pojęć zamiennie.
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Wzór na ciężar ciała</h2>
+        <p>
+            W pobliżu powierzchni Ziemi ciężar ciała można obliczyć,
+            korzystając ze wzoru:
+        </p>
+        <div class="formula">
+            Fg = m · g
+        </div>
+        <ul>
+            <li><strong>Fg</strong> – ciężar ciała w niutonach (N),</li>
+            <li><strong>m</strong> – masa w kilogramach (kg),</li>
+            <li><strong>g</strong> – przyspieszenie grawitacyjne.</li>
+        </ul>
+        <p>
+            Na powierzchni Ziemi przyjmujemy w przybliżeniu:
+        </p>
+        <div class="formula">
+            g ≈ 10 N/kg
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Przykład obliczania ciężaru</h2>
+        <div class="example">
+            <strong>Zadanie:</strong>
+            <p>Oblicz ciężar plecaka o masie 4 kg.</p>
+            <p>Dane:</p>
+            <p>m = 4 kg</p>
+            <p>g = 10 N/kg</p>
+            <p>Szukane: Fg</p>
+            <p>Wzór: Fg = m · g</p>
+            <p>Obliczenie: Fg = 4 · 10</p>
+            <p><strong>Odpowiedź: Fg = 40 N.</strong></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Czy masa i ciężar są zawsze takie same?</h2>
+        <p>
+            Masa ciała nie zmienia się tylko dlatego, że przeniesiemy
+            je w inne miejsce.
+        </p>
+        <p>
+            Ciężar zależy natomiast od wartości przyspieszenia
+            grawitacyjnego w danym miejscu.
+        </p>
+        <div class="example">
+            <strong>Przykład:</strong>
+            Przedmiot o masie 10 kg ma taką samą masę na Ziemi
+            i na Księżycu. Jego ciężar na Księżycu jest jednak
+            mniejszy, ponieważ grawitacja jest tam słabsza.
+        </div>
+    </section>
+
+    <section>
+        <h2>8. Masa i ciężar na różnych planetach</h2>
+        <p>
+            Masa pozostaje taka sama, ale ciężar zależy od
+            przyspieszenia grawitacyjnego.
+        </p>
+        <ul>
+            <li><strong>Ziemia:</strong> g ≈ 9,81 N/kg</li>
+            <li><strong>Księżyc:</strong> g ≈ 1,62 N/kg</li>
+            <li><strong>Mars:</strong> g ≈ 3,71 N/kg</li>
+            <li><strong>Jowisz:</strong> g ≈ 24,79 N/kg</li>
+        </ul>
+        <div class="tip">
+            Na Księżycu człowiek ważyłby mniej niż na Ziemi,
+            ale jego masa pozostałaby taka sama.
+        </div>
+    </section>
+
+    <section>
+        <h2>9. Porównanie masy i ciężaru</h2>
+        <ul>
+            <li>Masa jest oznaczana literą m, a ciężar symbolem Fg.</li>
+            <li>Jednostką masy jest kilogram (kg).</li>
+            <li>Jednostką ciężaru jest niuton (N).</li>
+            <li>Masę mierzymy wagą.</li>
+            <li>Ciężar jest siłą związaną z oddziaływaniem grawitacyjnym.</li>
+            <li>Masa nie zależy od miejsca, a ciężar zależy od grawitacji.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>10. Masa i ciężar w życiu codziennym</h2>
+        <ul>
+            <li>W sklepie sprawdzamy masę produktów.</li>
+            <li>W plecaku nosimy przedmioty o określonej masie.</li>
+            <li>Podczas skoku odczuwamy działanie grawitacji.</li>
+            <li>W kosmosie ciężar astronauty zależy od grawitacji.</li>
+            <li>Inżynierowie uwzględniają ciężar konstrukcji i urządzeń.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>11. Słowniczek pojęć</h2>
+        <ul>
+            <li><strong>Masa</strong> – wielkość fizyczna oznaczana literą m.</li>
+            <li><strong>Ciężar</strong> – siła związana z oddziaływaniem grawitacyjnym.</li>
+            <li><strong>Kilogram</strong> – jednostka masy.</li>
+            <li><strong>Niuton</strong> – jednostka siły.</li>
+            <li><strong>Grawitacja</strong> – wzajemne przyciąganie się ciał posiadających masę.</li>
+            <li><strong>Przyspieszenie grawitacyjne</strong> – przyspieszenie związane z działaniem grawitacji.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>12. Sprawdź swoją wiedzę!</h2>
+
+        <div class="task">
+            <p><strong>1.</strong> Jaką literą oznaczamy masę?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                Masę oznaczamy literą m.
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>2.</strong> Jaka jest podstawowa jednostka masy?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                Kilogram (kg).
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>3.</strong> Jaka jest jednostka ciężaru?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                Niuton (N).
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>4.</strong> Oblicz ciężar ciała o masie 3 kg. Przyjmij g = 10 N/kg.</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                Fg = m · g = 3 · 10 = 30 N.
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>5.</strong> Czy masa człowieka na Księżycu jest mniejsza niż na Ziemi?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                Nie. Masa pozostaje taka sama.
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>6.</strong> Dlaczego ciężar na Księżycu jest mniejszy?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                Ponieważ przyspieszenie grawitacyjne na Księżycu
+                jest mniejsze niż na Ziemi.
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>7.</strong> Oblicz ciężar ciała o masie 8 kg, jeśli g = 10 N/kg.</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                Fg = 8 · 10 = 80 N.
+            </details>
+        </div>
+    </section>
+
+    <section>
+        <h2>13. Podsumowanie</h2>
+        <p>
+            Masa i ciężar to dwie różne wielkości fizyczne.
+            Masa określa ilość materii w ciele, a ciężar jest
+            siłą związaną z oddziaływaniem grawitacyjnym.
+        </p>
+        <div class="formula">
+            Fg = m · g
+        </div>
+        <p>
+            Zapamiętaj: masę podajemy w kilogramach,
+            a ciężar w niutonach!
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena | Nauka fizyki może być ciekawa! 🚀</p>
+</footer>
+
+</body>
+</html>

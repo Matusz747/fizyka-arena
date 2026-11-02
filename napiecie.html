@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napięcie elektryczne – Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 38px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 34px;
+        }
+
+        nav {
+            background: #1e293b;
+            text-align: center;
+            padding: 13px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 12px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 0 18px;
+        }
+
+        section {
+            background: white;
+            padding: 23px;
+            margin-bottom: 22px;
+            border-radius: 13px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2563eb;
+            margin-top: 0;
+        }
+
+        .important {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .example {
+            background: #f0fdf4;
+            border-left: 5px solid #16a34a;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .formula {
+            background: #dbeafe;
+            border-left: 5px solid #2563eb;
+            padding: 18px;
+            margin: 18px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        details {
+            background: #f8fafc;
+            padding: 13px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .navigation-buttons a {
+            background: #2563eb;
+            color: white;
+            padding: 12px 17px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .navigation-buttons a:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 27px;
+            }
+
+            section {
+                padding: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🔋 Napięcie elektryczne</h1>
+    <p>Poznaj napięcie i dowiedz się, jak je obliczać.</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Wszystkie lekcje</a>
+    <a href="natezenie.html">Poprzednia lekcja</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest napięcie elektryczne?</h2>
+
+        <p>
+            Napięcie elektryczne opisuje różnicę potencjałów
+            elektrycznych między dwoma punktami obwodu.
+        </p>
+
+        <p>
+            Napięcie jest związane z energią przekazywaną
+            ładunkom elektrycznym.
+        </p>
+
+        <div class="important">
+            <strong>Zapamiętaj:</strong>
+            Napięcie elektryczne oznaczamy literą U.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Jednostka napięcia</h2>
+
+        <p>
+            Jednostką napięcia elektrycznego jest wolt,
+            którego symbol to V.
+        </p>
+
+        <div class="formula">
+            1 V = 1 J / 1 C
+        </div>
+
+        <p>
+            Oznacza to, że napięcie wynosi 1 wolt,
+            gdy na każdy kulomb ładunku przypada
+            1 dżul energii.
+        </p>
+
+        <p>Przykładowe napięcia:</p>
+
+        <ul>
+            <li>mała bateria – około 1,5 V,</li>
+            <li>typowy akumulator samochodowy – 12 V,</li>
+            <li>domowa sieć elektryczna w Polsce – około 230 V.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. Wzór na napięcie</h2>
+
+        <div class="formula">
+            U = W / Q
+        </div>
+
+        <p>Gdzie:</p>
+
+        <ul>
+            <li><strong>U</strong> – napięcie elektryczne,</li>
+            <li><strong>W</strong> – praca wykonana przy przemieszczaniu ładunku,</li>
+            <li><strong>Q</strong> – ładunek elektryczny.</li>
+        </ul>
+
+        <p>
+            Napięcie obliczamy, dzieląc pracę przez
+            przemieszczony ładunek.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Przykład obliczeniowy</h2>
+
+        <div class="example">
+            <strong>Zadanie:</strong>
+            Podczas przemieszczania ładunku 4 C wykonano
+            pracę 20 J. Oblicz napięcie.
+
+            <p><strong>Dane:</strong></p>
+            <ul>
+                <li>W = 20 J</li>
+                <li>Q = 4 C</li>
+            </ul>
+
+            <p><strong>Wzór:</strong></p>
+            <p>U = W / Q</p>
+
+            <p><strong>Obliczenia:</strong></p>
+            <p>U = 20 J / 4 C</p>
+            <p>U = 5 V</p>
+
+            <strong>Odpowiedź:</strong>
+            Napięcie wynosi 5 V.
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Jak mierzymy napięcie?</h2>
+
+        <p>
+            Do pomiaru napięcia służy woltomierz.
+            Wynik odczytujemy w woltach.
+        </p>
+
+        <p>
+            Woltomierz podłącza się równolegle do elementu,
+            na którym mierzymy napięcie.
+        </p>
+
+        <div class="important">
+            <strong>Ważne:</strong>
+            Nie wykonuj samodzielnych pomiarów
+            w domowych gniazdkach elektrycznych.
+            Korzystaj wyłącznie z bezpiecznych zestawów
+            edukacyjnych pod nadzorem nauczyciela.
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Napięcie a natężenie</h2>
+
+        <p>
+            Napięcie i natężenie to dwie różne wielkości fizyczne.
+        </p>
+
+        <ul>
+            <li><strong>Napięcie U</strong> – mierzymy w woltach (V).</li>
+            <li><strong>Natężenie I</strong> – mierzymy w amperach (A).</li>
+        </ul>
+
+        <p>
+            Napięcie opisuje różnicę potencjałów,
+            a natężenie opisuje przepływ ładunku w czasie.
+        </p>
+    </section>
+
+    <section>
+        <h2>7. Słowniczek</h2>
+
+        <ul>
+            <li><strong>Napięcie</strong> – różnica potencjałów elektrycznych.</li>
+            <li><strong>Wolt (V)</strong> – jednostka napięcia.</li>
+            <li><strong>Woltomierz</strong> – przyrząd do pomiaru napięcia.</li>
+            <li><strong>Ładunek (Q)</strong> – wielkość opisująca ładunek elektryczny.</li>
+            <li><strong>Dżul (J)</strong> – jednostka energii i pracy.</li>
+            <li><strong>Natężenie (I)</strong> – wielkość opisująca przepływ ładunku w czasie.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>8. Sprawdź swoją wiedzę</h2>
+
+        <details>
+            <summary>1. Jak oznaczamy napięcie elektryczne?</summary>
+            <p>Literą U.</p>
+        </details>
+
+        <details>
+            <summary>2. Jaka jest jednostka napięcia?</summary>
+            <p>Wolt (V).</p>
+        </details>
+
+        <details>
+            <summary>3. Jak nazywa się przyrząd do pomiaru napięcia?</summary>
+            <p>Woltomierz.</p>
+        </details>
+
+        <details>
+            <summary>4. Jaki jest wzór na napięcie?</summary>
+            <p>U = W / Q.</p>
+        </details>
+
+        <details>
+            <summary>5. Jak podłącza się woltomierz?</summary>
+            <p>Równolegle do elementu, na którym mierzymy napięcie.</p>
+        </details>
+
+        <details>
+            <summary>6. Ile woltów wynosi 1 kilowolt?</summary>
+            <p>1000 V.</p>
+        </details>
+
+        <details>
+            <summary>7. Czym różni się napięcie od natężenia?</summary>
+            <p>Napięcie opisuje różnicę potencjałów, a natężenie przepływ ładunku w czasie.</p>
+        </details>
+    </section>
+
+    <section>
+        <h2>9. Podsumowanie</h2>
+
+        <ul>
+            <li>Napięcie oznaczamy literą U.</li>
+            <li>Jednostką napięcia jest wolt (V).</li>
+            <li>Do pomiaru napięcia służy woltomierz.</li>
+            <li>Woltomierz podłącza się równolegle.</li>
+            <li>Wzór na napięcie: U = W / Q.</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="navigation-buttons">
+            <a href="natezenie.html">← Poprzednia lekcja</a>
+            <a href="opor.html">Następna lekcja →</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena</p>
+    <p>Nauka fizyki dla klas 7 i 8</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,614 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prędkość – Fizyka Arena</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef3f8;
+    color: #263445;
+    line-height: 1.75;
+}
+
+header {
+    background: #173b63;
+    color: white;
+    text-align: center;
+    padding: 32px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 35px;
+}
+
+nav {
+    background: #102d4b;
+    padding: 14px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px 12px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #a9d5ff;
+}
+
+main {
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 0 18px;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 22px;
+    border-radius: 13px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+
+h2 {
+    color: #173b63;
+}
+
+h3 {
+    color: #285d8c;
+}
+
+.formula {
+    background: #e8f2fb;
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 18px 0;
+}
+
+.example {
+    background: #edf5fc;
+    border-left: 5px solid #397db5;
+    padding: 16px;
+    margin: 17px 0;
+    border-radius: 7px;
+}
+
+.note {
+    background: #fff5df;
+    border-left: 5px solid #e3aa39;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 7px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+}
+
+th, td {
+    border: 1px solid #d5e0eb;
+    padding: 11px;
+    text-align: left;
+}
+
+th {
+    background: #e8f2fb;
+}
+
+summary {
+    cursor: pointer;
+    color: #173b63;
+    font-weight: bold;
+    padding: 8px 0;
+}
+
+details {
+    margin: 12px 0;
+    padding: 10px;
+    background: #f3f7fb;
+    border-radius: 8px;
+}
+
+footer {
+    background: #173b63;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>⚛ FIZYKA ARENA</h1>
+    <p>Klasa 7 – Mechanika i energia</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Wszystkie lekcje</a>
+    <a href="ruch.html">Poprzednia lekcja</a>
+</nav>
+
+<main>
+
+<section>
+<h2>🚀 1. Czym jest prędkość?</h2>
+
+<p>
+Prędkość jest jedną z podstawowych wielkości fizycznych
+opisujących ruch. Informuje nas, jak szybko porusza się
+dane ciało. Dzięki niej możemy porównywać ruch różnych
+obiektów, na przykład samochodów, rowerów, pociągów
+czy biegaczy.
+</p>
+
+<p>
+Wyobraź sobie dwóch rowerzystów. Pierwszy przejeżdża
+w ciągu jednej godziny 10 kilometrów, a drugi w tym
+samym czasie 20 kilometrów. Drugi rowerzysta pokonuje
+w takim samym czasie większą drogę, dlatego porusza
+się szybciej.
+</p>
+
+<p>
+Prędkość pozwala więc określić, jaką drogę ciało pokonuje
+w określonym czasie. Im większą drogę ciało pokonuje
+w tej samej jednostce czasu, tym większa jest jego prędkość.
+</p>
+
+<div class="example">
+<b>Przykład z życia:</b><br>
+Samochód jadący z prędkością 60 km/h pokonuje
+w ciągu jednej godziny 60 kilometrów, jeżeli
+utrzymuje stałą prędkość.
+</div>
+</section>
+
+<section>
+<h2>📐 2. Wzór na prędkość</h2>
+
+<p>
+Aby obliczyć prędkość średnią na przebytej drodze,
+dzielimy drogę przez czas jej pokonania.
+</p>
+
+<div class="formula">
+v = s / t
+</div>
+
+<p><b>Oznaczenia:</b></p>
+<ul>
+<li><b>v</b> – prędkość,</li>
+<li><b>s</b> – droga,</li>
+<li><b>t</b> – czas.</li>
+</ul>
+
+<p>
+W praktyce oznacza to, że musimy wiedzieć, jak daleko
+przemieściło się ciało oraz ile czasu zajęło mu pokonanie
+tej drogi.
+</p>
+
+<div class="note">
+<b>Zapamiętaj:</b> Prędkość obliczamy, dzieląc drogę
+przez czas. Zawsze sprawdzaj jednostki przed wykonaniem
+obliczeń.
+</div>
+</section>
+
+<section>
+<h2>🧮 3. Przykłady obliczania prędkości</h2>
+
+<h3>Przykład 1 – rowerzysta</h3>
+
+<p>
+Rowerzysta przejechał 30 kilometrów w ciągu 2 godzin.
+Oblicz jego średnią prędkość.
+</p>
+
+<p><b>Dane:</b></p>
+<ul>
+<li>s = 30 km</li>
+<li>t = 2 h</li>
+</ul>
+
+<p><b>Rozwiązanie:</b></p>
+<p>v = s / t</p>
+<p>v = 30 km / 2 h</p>
+<p><b>v = 15 km/h</b></p>
+
+<div class="example">
+<b>Odpowiedź:</b> Średnia prędkość rowerzysty wynosi 15 km/h.
+</div>
+
+<h3>Przykład 2 – samochód</h3>
+
+<p>
+Samochód przejechał 120 kilometrów w ciągu 2 godzin.
+Oblicz jego średnią prędkość.
+</p>
+
+<p><b>Rozwiązanie:</b></p>
+<p>v = 120 km / 2 h</p>
+<p><b>v = 60 km/h</b></p>
+
+<div class="example">
+<b>Odpowiedź:</b> Średnia prędkość samochodu wynosi 60 km/h.
+</div>
+
+<h3>Przykład 3 – biegacz</h3>
+
+<p>
+Biegacz przebiegł 400 metrów w ciągu 100 sekund.
+Oblicz jego średnią prędkość w metrach na sekundę.
+</p>
+
+<p><b>Rozwiązanie:</b></p>
+<p>v = 400 m / 100 s</p>
+<p><b>v = 4 m/s</b></p>
+
+<div class="example">
+<b>Odpowiedź:</b> Średnia prędkość biegacza wynosi 4 m/s.
+</div>
+</section>
+
+<section>
+<h2>📏 4. Jednostki prędkości</h2>
+
+<p>
+Prędkość można wyrażać w różnych jednostkach.
+W fizyce najczęściej spotykamy metry na sekundę
+oraz kilometry na godzinę.
+</p>
+
+<table>
+<tr>
+<th>Jednostka</th>
+<th>Znaczenie</th>
+<th>Przykład zastosowania</th>
+</tr>
+<tr>
+<td>m/s</td>
+<td>metry na sekundę</td>
+<td>Prędkość biegnącego człowieka</td>
+</tr>
+<tr>
+<td>km/h</td>
+<td>kilometry na godzinę</td>
+<td>Prędkość samochodu</td>
+</tr>
+<tr>
+<td>cm/s</td>
+<td>centymetry na sekundę</td>
+<td>Powolny ruch małych obiektów</td>
+</tr>
+</table>
+
+<p>
+Jednostka m/s informuje, ile metrów ciało pokonuje
+w ciągu jednej sekundy. Jednostka km/h informuje,
+ile kilometrów pokonuje w ciągu jednej godziny.
+</p>
+</section>
+
+<section>
+<h2>🔄 5. Zamiana km/h na m/s</h2>
+
+<p>
+Czasami w zadaniu prędkość jest podana w kilometrach
+na godzinę, a potrzebujemy wyniku w metrach na sekundę.
+Wtedy musimy zamienić jednostkę.
+</p>
+
+<div class="formula">
+km/h ÷ 3,6 = m/s
+</div>
+
+<p>
+Aby zamienić kilometry na godzinę na metry na sekundę,
+dzielimy wartość prędkości przez 3,6.
+</p>
+
+<div class="example">
+<b>Przykład:</b><br>
+Zamień 72 km/h na m/s.<br><br>
+72 ÷ 3,6 = 20<br><br>
+<b>Odpowiedź: 72 km/h = 20 m/s.</b>
+</div>
+
+<h3>Zamiana m/s na km/h</h3>
+
+<div class="formula">
+m/s × 3,6 = km/h
+</div>
+
+<p>
+W drugą stronę mnożymy wartość prędkości przez 3,6.
+</p>
+
+<div class="example">
+<b>Przykład:</b><br>
+Zamień 10 m/s na km/h.<br><br>
+10 × 3,6 = 36<br><br>
+<b>Odpowiedź: 10 m/s = 36 km/h.</b>
+</div>
+
+<table>
+<tr>
+<th>km/h</th>
+<th>m/s</th>
+</tr>
+<tr><td>18 km/h</td><td>5 m/s</td></tr>
+<tr><td>36 km/h</td><td>10 m/s</td></tr>
+<tr><td>54 km/h</td><td>15 m/s</td></tr>
+<tr><td>72 km/h</td><td>20 m/s</td></tr>
+<tr><td>90 km/h</td><td>25 m/s</td></tr>
+<tr><td>108 km/h</td><td>30 m/s</td></tr>
+</table>
+</section>
+
+<section>
+<h2>⏱️ 6. Prędkość średnia</h2>
+
+<p>
+Prędkość średnia określa stosunek całkowitej przebytej
+drogi do całkowitego czasu jej pokonania.
+Jest szczególnie przydatna wtedy, gdy ciało nie porusza
+się przez cały czas z taką samą prędkością.
+</p>
+
+<p>
+Na przykład samochód może przez kilka minut jechać
+szybko, później zwolnić, a następnie zatrzymać się
+na światłach. W takiej sytuacji możemy obliczyć
+jego średnią prędkość na całej trasie.
+</p>
+
+<div class="formula">
+v średnia = całkowita droga / całkowity czas
+</div>
+
+<div class="example">
+<b>Przykład:</b><br>
+Samochód przejechał 100 km w ciągu 2 godzin,
+wliczając krótki postój.<br><br>
+v = 100 km / 2 h = 50 km/h<br><br>
+<b>Odpowiedź:</b> Średnia prędkość wynosi 50 km/h.
+</div>
+</section>
+
+<section>
+<h2>🏎️ 7. Prędkość chwilowa</h2>
+
+<p>
+Prędkość chwilowa informuje nas, jak szybko porusza się
+ciało w danej chwili. Możemy ją odczytać na przykład
+z prędkościomierza w samochodzie.
+</p>
+
+<p>
+Podczas jazdy samochodem wskazówka prędkościomierza
+może się zmieniać. Gdy kierowca przyspiesza, wskazanie
+rośnie. Gdy hamuje, wskazanie maleje.
+</p>
+
+<p>
+Prędkość chwilowa różni się od średniej. Średnia opisuje
+cały rozpatrywany odcinek ruchu, a chwilowa dotyczy
+konkretnego momentu.
+</p>
+</section>
+
+<section>
+<h2>🚴 8. Co wpływa na prędkość?</h2>
+
+<p>
+Prędkość poruszającego się ciała może zależeć od wielu
+czynników. W przypadku pojazdów znaczenie mają między
+innymi moc silnika, opory ruchu, stan nawierzchni,
+warunki pogodowe oraz masa pojazdu.
+</p>
+
+<ul>
+<li><b>Napęd</b> – umożliwia pojazdowi poruszanie się i przyspieszanie.</li>
+<li><b>Opory ruchu</b> – mogą utrudniać poruszanie się.</li>
+<li><b>Tarcie</b> – wpływa na ruch i hamowanie.</li>
+<li><b>Nachylenie drogi</b> – może wpływać na prędkość pojazdu.</li>
+<li><b>Warunki pogodowe</b> – wiatr, deszcz i śnieg mogą zmieniać warunki jazdy.</li>
+</ul>
+</section>
+
+<section>
+<h2>🌍 9. Prędkość w życiu codziennym</h2>
+
+<p>
+Prędkość spotykamy w wielu sytuacjach. Na drogach
+odczytujemy ją z prędkościomierzy. W sporcie mierzymy
+czas biegu i pokonaną odległość. W transporcie
+wykorzystujemy ją do szacowania czasu podróży.
+</p>
+
+<p>
+Dzięki znajomości prędkości możemy porównywać
+sposób poruszania się różnych obiektów. Możemy
+również przewidywać, ile czasu zajmie pokonanie
+określonej trasy, jeśli znamy drogę i prędkość.
+</p>
+
+<div class="example">
+<b>Przykład:</b><br>
+Jeżeli pociąg porusza się ze średnią prędkością
+100 km/h, to w ciągu dwóch godzin pokona 200 km,
+jeżeli utrzyma taką średnią prędkość.
+</div>
+</section>
+
+<section>
+<h2>💡 10. Ciekawostki o prędkości</h2>
+
+<ul>
+<li>Prędkość światła w próżni wynosi około 300 000 km/s.</li>
+<li>Prędkość dźwięku w powietrzu w temperaturze około 20°C wynosi około 343 m/s.</li>
+<li>Prędkość samochodów mierzy się zwykle w km/h.</li>
+<li>W fizyce do wielu obliczeń wykorzystuje się jednostkę m/s.</li>
+<li>Prędkość może zmieniać się w czasie, dlatego warto odróżniać prędkość chwilową od średniej.</li>
+</ul>
+</section>
+
+<section>
+<h2>📖 11. Najważniejsze pojęcia</h2>
+
+<ul>
+<li><b>Prędkość</b> – wielkość opisująca, jak szybko ciało pokonuje drogę.</li>
+<li><b>Droga</b> – długość toru przebytego przez ciało.</li>
+<li><b>Czas</b> – okres, w którym odbywa się ruch.</li>
+<li><b>Prędkość średnia</b> – całkowita droga podzielona przez całkowity czas ruchu.</li>
+<li><b>Prędkość chwilowa</b> – prędkość ciała w danej chwili.</li>
+<li><b>m/s</b> – metry na sekundę.</li>
+<li><b>km/h</b> – kilometry na godzinę.</li>
+</ul>
+</section>
+
+<section>
+<h2>📝 12. Zadania do samodzielnego rozwiązania</h2>
+
+<h3>Zadanie 1</h3>
+<p>
+Rowerzysta przejechał 40 km w ciągu 2 godzin.
+Oblicz jego średnią prędkość.
+</p>
+<details>
+<summary>Zobacz odpowiedź</summary>
+<p>v = 40 km / 2 h = 20 km/h.</p>
+</details>
+
+<h3>Zadanie 2</h3>
+<p>
+Samochód przejechał 180 km w ciągu 3 godzin.
+Oblicz jego średnią prędkość.
+</p>
+<details>
+<summary>Zobacz odpowiedź</summary>
+<p>v = 180 km / 3 h = 60 km/h.</p>
+</details>
+
+<h3>Zadanie 3</h3>
+<p>
+Zamień 36 km/h na m/s.
+</p>
+<details>
+<summary>Zobacz odpowiedź</summary>
+<p>36 ÷ 3,6 = 10 m/s.</p>
+</details>
+
+<h3>Zadanie 4</h3>
+<p>
+Zamień 15 m/s na km/h.
+</p>
+<details>
+<summary>Zobacz odpowiedź</summary>
+<p>15 × 3,6 = 54 km/h.</p>
+</details>
+
+<h3>Zadanie 5</h3>
+<p>
+Biegacz przebiegł 200 metrów w czasie 40 sekund.
+Oblicz jego średnią prędkość w m/s.
+</p>
+<details>
+<summary>Zobacz odpowiedź</summary>
+<p>v = 200 m / 40 s = 5 m/s.</p>
+</details>
+
+<h3>Zadanie 6</h3>
+<p>
+Pociąg przejechał 240 km w ciągu 4 godzin.
+Oblicz jego średnią prędkość.
+</p>
+<details>
+<summary>Zobacz odpowiedź</summary>
+<p>v = 240 km / 4 h = 60 km/h.</p>
+</details>
+
+<h3>Zadanie 7</h3>
+<p>
+Wyjaśnij różnicę między prędkością średnią
+a prędkością chwilową.
+</p>
+<details>
+<summary>Zobacz przykładową odpowiedź</summary>
+<p>
+Prędkość średnia opisuje stosunek całej przebytej drogi
+do całego czasu, a prędkość chwilowa określa szybkość
+ruchu w konkretnym momencie.
+</p>
+</details>
+
+<h3>Zadanie 8</h3>
+<p>
+Samochód porusza się ze średnią prędkością 80 km/h.
+Jaką drogę pokona w ciągu 3 godzin, jeśli utrzyma
+taką prędkość?
+</p>
+<details>
+<summary>Zobacz odpowiedź</summary>
+<p>s = v × t = 80 km/h × 3 h = 240 km.</p>
+</details>
+
+</section>
+
+<section>
+<h2>⭐ 13. Podsumowanie lekcji</h2>
+
+<p>
+Prędkość opisuje, jak szybko porusza się ciało.
+Obliczamy ją, dzieląc przebytą drogę przez czas.
+Najczęściej używamy jednostek m/s oraz km/h.
+Pamiętamy, że prędkość średnia opisuje cały rozpatrywany
+ruch, a chwilowa dotyczy konkretnego momentu.
+</p>
+
+<p>
+Umiejętność obliczania prędkości przydaje się
+w nauce fizyki, sporcie, podróżowaniu i codziennym życiu.
+</p>
+</section>
+
+<section style="text-align:center;">
+<h2>🎓 Koniec lekcji!</h2>
+<p>Gratulacje! Znasz już podstawy prędkości w fizyce.</p>
+<a href="lekcje.html">⬅ Wróć do wszystkich lekcji</a>
+</section>
+<div class="navigation-buttons">
+    <a href="prad.html">← Poprzednia lekcja</a>
+    <a href="natezenie.html">Następna lekcja →</a>
+</div>
+
+</main>
+
+<footer>
+<p>© 2026 Fizyka Arena – Nauka fizyki może być ciekawa!</p>
+</footer>
+
+</body>
+</html>

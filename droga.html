@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Droga i czas | Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: #f1f5f9;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #172554, #1d4ed8);
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin: 0 0 10px;
+        }
+
+        header p {
+            color: #dbeafe;
+            margin: 0;
+        }
+
+        nav {
+            background: #111827;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #93c5fd;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 0 18px;
+        }
+
+        section {
+            background: #172033;
+            padding: 24px;
+            margin-bottom: 22px;
+            border-radius: 14px;
+            border: 1px solid #293750;
+        }
+
+        h2 {
+            color: #60a5fa;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #bfdbfe;
+        }
+
+        .formula {
+            background: #0f2747;
+            border-left: 5px solid #3b82f6;
+            padding: 18px;
+            margin: 15px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .example {
+            background: #102b25;
+            border-left: 5px solid #22c55e;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .tip {
+            background: #30264a;
+            border-left: 5px solid #a78bfa;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .task {
+            background: #202c40;
+            padding: 16px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        details {
+            margin-top: 12px;
+            background: #111827;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        summary {
+            color: #93c5fd;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+            background: #080d18;
+        }
+
+        a {
+            color: #93c5fd;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 29px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
+            section {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>📏 Droga i czas</h1>
+    <p>Poznaj wielkości fizyczne opisujące ruch.</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Wszystkie lekcje</a>
+    <a href="predkosc.html">Poprzednia lekcja</a>
+    <a href="sila.html">Następna lekcja</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest droga?</h2>
+        <p>
+            Droga to długość trasy, którą pokonuje poruszające się ciało.
+            Oznaczamy ją małą literą <strong>s</strong>.
+        </p>
+        <p>
+            Na przykład jeśli idziesz przez park i pokonujesz trasę
+            o długości 500 metrów, to przebyta droga wynosi 500 metrów.
+        </p>
+        <p>Droga jest wielkością fizyczną, którą można zmierzyć.</p>
+    </section>
+
+    <section>
+        <h2>2. Jednostki drogi</h2>
+        <p>Podstawową jednostką drogi w układzie SI jest metr (m).</p>
+
+        <ul>
+            <li>1 kilometr (km) = 1000 metrów (m)</li>
+            <li>1 metr (m) = 100 centymetrów (cm)</li>
+            <li>1 centymetr (cm) = 10 milimetrów (mm)</li>
+        </ul>
+
+        <div class="example">
+            <strong>Przykład:</strong>
+            <p>3 km = 3000 m</p>
+            <p>250 cm = 2,5 m</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Czym jest czas?</h2>
+        <p>
+            Czas informuje nas, jak długo trwa dane zjawisko lub ruch.
+            Oznaczamy go literą <strong>t</strong>.
+        </p>
+        <p>
+            Przykładowo, jeśli jazda rowerem trwa 20 minut,
+            to czas ruchu wynosi 20 minut.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Jednostki czasu</h2>
+        <p>Najczęściej używane jednostki czasu to:</p>
+
+        <ul>
+            <li>sekunda (s)</li>
+            <li>minuta (min)</li>
+            <li>godzina (h)</li>
+        </ul>
+
+        <div class="formula">
+            1 min = 60 s
+            <br>
+            1 h = 60 min = 3600 s
+        </div>
+
+        <div class="example">
+            <strong>Przykłady:</strong>
+            <p>2 min = 120 s</p>
+            <p>3 h = 180 min</p>
+            <p>0,5 h = 30 min</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Związek drogi, czasu i prędkości</h2>
+        <p>
+            Droga, czas i prędkość są ze sobą powiązane.
+            Dzięki nim możemy opisywać ruch różnych obiektów.
+        </p>
+
+        <div class="formula">
+            s = v · t
+        </div>
+
+        <p>Gdzie:</p>
+        <ul>
+            <li><strong>s</strong> – droga</li>
+            <li><strong>v</strong> – prędkość</li>
+            <li><strong>t</strong> – czas</li>
+        </ul>
+
+        <div class="tip">
+            <strong>Pamiętaj!</strong>
+            <p>
+                Jeśli prędkość podana jest w km/h, czas powinien być
+                wyrażony w godzinach, aby drogę otrzymać w kilometrach.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Jak obliczyć drogę?</h2>
+        <p>Jeśli znamy prędkość i czas, możemy obliczyć drogę.</p>
+
+        <div class="formula">
+            s = v · t
+        </div>
+
+        <div class="example">
+            <strong>Przykład:</strong>
+            <p>Samochód jedzie z prędkością 60 km/h przez 2 godziny.</p>
+            <p>v = 60 km/h</p>
+            <p>t = 2 h</p>
+            <p>s = 60 · 2</p>
+            <p><strong>s = 120 km</strong></p>
+            <p>Samochód pokonał 120 kilometrów.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Jak obliczyć czas?</h2>
+        <p>Jeśli znamy drogę i prędkość, możemy obliczyć czas.</p>
+
+        <div class="formula">
+            t = s / v
+        </div>
+
+        <div class="example">
+            <strong>Przykład:</strong>
+            <p>Rowerzysta pokonał 30 km z prędkością 15 km/h.</p>
+            <p>s = 30 km</p>
+            <p>v = 15 km/h</p>
+            <p>t = 30 / 15</p>
+            <p><strong>t = 2 h</strong></p>
+            <p>Rowerzysta jechał 2 godziny.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>8. Ruch jednostajny</h2>
+        <p>
+            Ruch jednostajny to ruch, w którym ciało porusza się
+            ze stałą prędkością.
+        </p>
+        <p>
+            Oznacza to, że w równych odstępach czasu pokonuje
+            równe odcinki drogi.
+        </p>
+
+        <div class="example">
+            <strong>Przykład:</strong>
+            <p>
+                Pociąg jedzie ze stałą prędkością 80 km/h.
+                W każdej godzinie pokonuje 80 kilometrów.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>9. Droga a przemieszczenie</h2>
+        <p>
+            Droga to całkowita długość przebytej trasy.
+            Przemieszczenie opisuje zmianę położenia ciała
+            od punktu początkowego do końcowego.
+        </p>
+
+        <div class="example">
+            <strong>Przykład:</strong>
+            <p>
+                Idziesz 100 metrów do sklepu, a następnie wracasz
+                tą samą trasą.
+            </p>
+            <p>Przebyta droga wynosi 200 metrów.</p>
+            <p>Przemieszczenie wynosi 0 metrów, ponieważ wróciłeś
+                do miejsca startu.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>10. Wykres drogi od czasu</h2>
+        <p>
+            Wykres drogi od czasu pokazuje, jak zmienia się droga
+            wraz z upływem czasu.
+        </p>
+
+        <ul>
+            <li>Linia pozioma oznacza, że ciało stoi w miejscu.</li>
+            <li>Linia rosnąca oznacza, że ciało pokonuje kolejne odcinki drogi.</li>
+            <li>Im bardziej stroma linia, tym większa prędkość.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>11. Droga i czas w życiu codziennym</h2>
+        <ul>
+            <li>Podczas jazdy samochodem mierzymy przebytą drogę i czas podróży.</li>
+            <li>Sportowcy mierzą czas biegu i długość trasy.</li>
+            <li>Mapy pomagają określić odległość między miejscami.</li>
+            <li>Zegarki i stopery pozwalają mierzyć czas.</li>
+            <li>W transporcie droga i czas pomagają planować podróże.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>12. Najważniejsze wzory</h2>
+
+        <div class="formula">
+            Droga: s = v · t
+        </div>
+
+        <div class="formula">
+            Czas: t = s / v
+        </div>
+
+        <div class="formula">
+            Prędkość: v = s / t
+        </div>
+
+        <p>
+            Przed obliczeniami zawsze sprawdź jednostki.
+            Jeśli nie pasują do siebie, najpierw je zamień.
+        </p>
+    </section>
+
+    <section>
+        <h2>13. Słowniczek pojęć</h2>
+        <ul>
+            <li><strong>Droga</strong> – długość przebytej trasy.</li>
+            <li><strong>Czas</strong> – okres trwania zjawiska lub ruchu.</li>
+            <li><strong>Prędkość</strong> – informacja o tym, jak szybko porusza się ciało.</li>
+            <li><strong>Ruch jednostajny</strong> – ruch ze stałą prędkością.</li>
+            <li><strong>Przemieszczenie</strong> – zmiana położenia ciała.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>14. Sprawdź swoją wiedzę!</h2>
+
+        <div class="task">
+            <p><strong>1.</strong> Jaką literą oznaczamy drogę?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                Drogę oznaczamy literą s.
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>2.</strong> Ile metrów ma 4 km?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                4 km = 4000 m.
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>3.</strong> Ile sekund ma 5 minut?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                5 · 60 = 300 sekund.
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>4.</strong> Samochód jedzie 50 km/h przez 3 godziny. Jaką drogę pokona?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                s = v · t = 50 · 3 = 150 km.
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>5.</strong> Rowerzysta przejechał 40 km z prędkością 20 km/h. Ile trwała jazda?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                t = s / v = 40 / 20 = 2 godziny.
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>6.</strong> Co oznacza pozioma linia na wykresie drogi od czasu?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                Oznacza, że ciało pozostaje w spoczynku.
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>7.</strong> Czym różni się droga od przemieszczenia?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                Droga to długość całej trasy, a przemieszczenie
+                opisuje zmianę położenia od początku do końca ruchu.
+            </details>
+        </div>
+
+        <div class="task">
+            <p><strong>8.</strong> Jaki wzór pozwala obliczyć drogę?</p>
+            <details>
+                <summary>Zobacz odpowiedź</summary>
+                s = v · t
+            </details>
+        </div>
+    </section>
+
+    <section>
+        <h2>15. Podsumowanie</h2>
+        <p>
+            Droga i czas to podstawowe wielkości fizyczne opisujące ruch.
+            Drogę oznaczamy literą s, a czas literą t.
+        </p>
+        <p>
+            Znając drogę i czas, możemy obliczyć prędkość.
+            Znając prędkość i czas, możemy obliczyć drogę.
+        </p>
+        <div class="formula">
+            s = v · t
+        </div>
+        <p>
+            Zapamiętaj wzory i zawsze zwracaj uwagę na jednostki!
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena | Ucz się fizyki krok po kroku 🚀</p>
+</footer>
+
+</body>
+</html>

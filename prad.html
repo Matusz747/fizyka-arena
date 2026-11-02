@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prąd elektryczny – Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 38px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 34px;
+        }
+
+        nav {
+            background: #1e293b;
+            text-align: center;
+            padding: 13px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 12px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 0 18px;
+        }
+
+        section {
+            background: white;
+            padding: 23px;
+            margin-bottom: 22px;
+            border-radius: 13px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2563eb;
+            margin-top: 0;
+        }
+
+        .important {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .example {
+            background: #f0fdf4;
+            border-left: 5px solid #16a34a;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .formula {
+            background: #dbeafe;
+            border-left: 5px solid #2563eb;
+            padding: 18px;
+            margin: 18px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        details {
+            background: #f8fafc;
+            padding: 13px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .navigation-buttons a {
+            background: #2563eb;
+            color: white;
+            padding: 12px 17px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .navigation-buttons a:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 27px;
+            }
+
+            section {
+                padding: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🔌 Prąd elektryczny</h1>
+    <p>Dowiedz się, czym jest prąd i jak płynie w obwodzie elektrycznym.</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Wszystkie lekcje</a>
+    <a href="ladunki.html">Poprzednia lekcja</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest prąd elektryczny?</h2>
+
+        <p>
+            Prąd elektryczny to uporządkowany ruch ładunków elektrycznych.
+            W metalowych przewodnikach prąd jest związany z ruchem elektronów.
+        </p>
+
+        <p>
+            Dzięki przepływowi prądu mogą działać między innymi:
+        </p>
+
+        <ul>
+            <li>żarówki,</li>
+            <li>telewizory,</li>
+            <li>komputery,</li>
+            <li>ładowarki,</li>
+            <li>silniki elektryczne.</li>
+        </ul>
+
+        <div class="important">
+            <strong>Zapamiętaj:</strong> Prąd elektryczny to uporządkowany
+            ruch ładunków elektrycznych.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Co jest potrzebne, aby płynął prąd?</h2>
+
+        <p>Aby w prostym obwodzie płynął prąd, potrzebujemy:</p>
+
+        <ul>
+            <li><strong>Źródła napięcia</strong> – na przykład baterii.</li>
+            <li><strong>Przewodów</strong> – które łączą elementy obwodu.</li>
+            <li><strong>Odbiornika</strong> – na przykład żarówki.</li>
+            <li><strong>Zamkniętego obwodu</strong> – aby ładunki mogły przepływać.</li>
+        </ul>
+
+        <div class="example">
+            <strong>Przykład:</strong>
+            Po połączeniu baterii, przewodów i żarówki w zamknięty obwód
+            żarówka może się zaświecić.
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Obwód otwarty i zamknięty</h2>
+
+        <h3>Obwód zamknięty</h3>
+        <p>
+            To obwód, w którym wszystkie elementy są połączone
+            w ciągłą drogę. Prąd może przez niego płynąć.
+        </p>
+
+        <h3>Obwód otwarty</h3>
+        <p>
+            To obwód, w którym droga przepływu prądu jest przerwana.
+            Prąd nie płynie przez cały obwód.
+        </p>
+
+        <div class="important">
+            Przełącznik może otwierać i zamykać obwód.
+            W ten sposób włączamy i wyłączamy urządzenia.
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Kierunek przepływu prądu</h2>
+
+        <p>
+            Umownie przyjmuje się, że prąd w obwodzie zewnętrznym
+            płynie od bieguna dodatniego źródła napięcia do bieguna ujemnego.
+        </p>
+
+        <p>
+            W metalowym przewodniku elektrony przemieszczają się
+            w kierunku przeciwnym do umownego kierunku prądu.
+        </p>
+
+        <div class="formula">
+            Kierunek umowny: + → −
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Źródła prądu elektrycznego</h2>
+
+        <p>
+            Źródła prądu dostarczają energię potrzebną do działania
+            obwodu elektrycznego.
+        </p>
+
+        <ul>
+            <li><strong>Bateria</strong> – może zasilać latarkę lub pilot.</li>
+            <li><strong>Akumulator</strong> – można go ponownie ładować.</li>
+            <li><strong>Prądnica</strong> – zamienia energię mechaniczną na elektryczną.</li>
+            <li><strong>Ogniwo słoneczne</strong> – zamienia energię światła na energię elektryczną.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>6. Prąd stały i przemienny</h2>
+
+        <h3>Prąd stały (DC)</h3>
+        <p>
+            Prąd stały płynie w jednym kierunku.
+            Przykładem źródła prądu stałego jest bateria.
+        </p>
+
+        <h3>Prąd przemienny (AC)</h3>
+        <p>
+            Prąd przemienny okresowo zmienia kierunek przepływu.
+            Jest wykorzystywany w domowej sieci elektrycznej.
+        </p>
+
+        <div class="important">
+            <strong>Ważne:</strong> Baterie dostarczają prąd stały,
+            a gniazdka domowe są źródłem prądu przemiennego.
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Natężenie prądu</h2>
+
+        <p>
+            Natężenie prądu informuje, jaki ładunek elektryczny
+            przepływa przez przekrój przewodnika w określonym czasie.
+        </p>
+
+        <div class="formula">
+            I = Q / t
+        </div>
+
+        <p>Gdzie:</p>
+
+        <ul>
+            <li><strong>I</strong> – natężenie prądu,</li>
+            <li><strong>Q</strong> – ładunek elektryczny,</li>
+            <li><strong>t</strong> – czas przepływu ładunku.</li>
+        </ul>
+
+        <p>
+            Jednostką natężenia prądu jest amper (A).
+        </p>
+
+        <p>
+            Dokładniej: 1 A oznacza przepływ 1 kulomba ładunku
+            w czasie 1 sekundy.
+        </p>
+    </section>
+
+    <section>
+        <h2>8. Przykład obliczeniowy</h2>
+
+        <div class="example">
+            <strong>Zadanie:</strong>
+            Przez przewodnik w czasie 2 sekund przepłynął ładunek
+            6 kulombów. Oblicz natężenie prądu.
+
+            <p><strong>Dane:</strong></p>
+            <ul>
+                <li>Q = 6 C</li>
+                <li>t = 2 s</li>
+            </ul>
+
+            <p><strong>Wzór:</strong></p>
+            <p>I = Q / t</p>
+
+            <p><strong>Obliczenia:</strong></p>
+            <p>I = 6 C / 2 s = 3 A</p>
+
+            <strong>Odpowiedź:</strong>
+            Natężenie prądu wynosi 3 A.
+        </div>
+    </section>
+
+    <section>
+        <h2>9. Bezpieczeństwo</h2>
+
+        <p>
+            Prąd elektryczny może być niebezpieczny.
+            Podczas korzystania z urządzeń elektrycznych należy
+            przestrzegać zasad bezpieczeństwa.
+        </p>
+
+        <ul>
+            <li>Nie dotykaj uszkodzonych przewodów.</li>
+            <li>Nie wkładaj żadnych przedmiotów do gniazdek.</li>
+            <li>Nie obsługuj urządzeń elektrycznych mokrymi rękami.</li>
+            <li>Nie naprawiaj samodzielnie urządzeń podłączonych do prądu.</li>
+            <li>W razie zauważenia uszkodzenia powiedz o tym dorosłemu.</li>
+        </ul>
+
+        <div class="important">
+            <strong>Pamiętaj:</strong> Nie przeprowadzaj doświadczeń
+            z wykorzystaniem domowego napięcia sieciowego.
+        </div>
+    </section>
+
+    <section>
+        <h2>10. Słowniczek</h2>
+
+        <ul>
+            <li><strong>Prąd elektryczny</strong> – uporządkowany ruch ładunków.</li>
+            <li><strong>Obwód elektryczny</strong> – połączone elementy, przez które może płynąć prąd.</li>
+            <li><strong>Źródło napięcia</strong> – element dostarczający energię do obwodu.</li>
+            <li><strong>Odbiornik</strong> – urządzenie wykorzystujące energię elektryczną.</li>
+            <li><strong>Natężenie</strong> – wielkość opisująca przepływ ładunku w czasie.</li>
+            <li><strong>Amper</strong> – jednostka natężenia prądu.</li>
+            <li><strong>Prąd stały</strong> – prąd płynący w jednym kierunku.</li>
+            <li><strong>Prąd przemienny</strong> – prąd okresowo zmieniający kierunek.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>11. Sprawdź swoją wiedzę</h2>
+
+        <details>
+            <summary>1. Czym jest prąd elektryczny?</summary>
+            <p>Uporządkowanym ruchem ładunków elektrycznych.</p>
+        </details>
+
+        <details>
+            <summary>2. Co musi być zamknięte, aby płynął prąd?</summary>
+            <p>Obwód elektryczny.</p>
+        </details>
+
+        <details>
+            <summary>3. Jaka jest jednostka natężenia prądu?</summary>
+            <p>Amper (A).</p>
+        </details>
+
+        <details>
+            <summary>4. Jak oznaczamy natężenie prądu?</summary>
+            <p>Literą I.</p>
+        </details>
+
+        <details>
+            <summary>5. Jakiego rodzaju prąd dostarcza bateria?</summary>
+            <p>Prąd stały.</p>
+        </details>
+
+        <details>
+            <summary>6. Co się dzieje w obwodzie otwartym?</summary>
+            <p>Droga przepływu prądu jest przerwana.</p>
+        </details>
+
+        <details>
+            <summary>7. Jaki wzór opisuje natężenie prądu?</summary>
+            <p>I = Q / t.</p>
+        </details>
+    </section>
+
+    <section>
+        <h2>12. Podsumowanie</h2>
+
+        <ul>
+            <li>Prąd elektryczny to uporządkowany ruch ładunków.</li>
+            <li>Do przepływu prądu w prostym obwodzie potrzebna jest zamknięta droga.</li>
+            <li>Źródłem prądu może być bateria lub akumulator.</li>
+            <li>Wyróżniamy prąd stały i przemienny.</li>
+            <li>Natężenie prądu oznaczamy literą I.</li>
+            <li>Jednostką natężenia jest amper (A).</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="navigation-buttons">
+            <a href="ladunki.html">← Poprzednia: Ładunki elektryczne</a>
+            <a href="natezenie.html">Następna: Natężenie prądu →</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena</p>
+    <p>Nauka fizyki dla klas 7 i 8</p>
+</footer>
+
+</body>
+</html>

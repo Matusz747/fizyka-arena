@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fizyka Arena — Wzory i kalkulatory</title>
+<style>
+:root {
+ --bg:#071225;
+ --panel:#10213a;
+ --line:#29496b;
+ --cyan:#35d9f5;
+ --blue:#438cff;
+ --text:#edf6ff;
+ --muted:#a9bdd4;
+ --green:#54e0a0;
+ --yellow:#ffd166;
+ --red:#ff7185;
+}
+*{box-sizing:border-box}
+body{
+ margin:0;
+ background:radial-gradient(ellipse at top,#12335a 0,#071225 48%,#050c19 100%);
+ color:var(--text);
+ font-family:Arial,sans-serif;
+ min-height:100vh;
+}
+header{
+ padding:34px 20px 24px;
+ text-align:center;
+ border-bottom:1px solid #23415f;
+ background:#08172bd9;
+}
+.logo{color:var(--cyan);font-size:13px;letter-spacing:4px;font-weight:bold}
+.hero{font-size:clamp(28px,5vw,46px);margin:12px 0 8px}
+.hero span{color:var(--cyan)}
+header p{color:var(--muted);margin:0}
+.wrap{max-width:1180px;margin:auto;padding:24px 18px 60px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:8px 0 24px}
+.tab{
+ border:1px solid var(--line);
+ background:#0d1c32;
+ color:var(--text);
+ padding:11px 17px;
+ border-radius:12px;
+ cursor:pointer;
+ font-weight:bold;
+}
+.tab.active,.tab:hover{border-color:var(--cyan);background:#123653}
+.section{display:none}
+.section.active{display:block}
+.intro{
+ display:flex;
+ justify-content:space-between;
+ align-items:end;
+ gap:16px;
+ flex-wrap:wrap;
+ margin:10px 0 18px;
+}
+h2{margin:0;font-size:25px}
+.sub{color:var(--muted);margin:7px 0 0}
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(255px,1fr));
+ gap:15px;
+}
+.card{
+ background:linear-gradient(145deg,#132945,#0d1b30);
+ border:1px solid var(--line);
+ border-radius:17px;
+ padding:19px;
+ box-shadow:0 12px 30px #0002;
+}
+.card h3{margin:0 0 10px;color:#fff;font-size:18px}
+.tag{
+ display:inline-block;
+ font-size:11px;
+ letter-spacing:1px;
+ color:var(--cyan);
+ border:1px solid #27617b;
+ border-radius:20px;
+ padding:5px 9px;
+ margin-bottom:12px;
+}
+.formula{font-size:24px;color:var(--yellow);font-weight:bold;margin:10px 0}
+.desc{color:var(--muted);line-height:1.5;font-size:14px}
+.symbols{font-size:13px;color:#c8d8e9;line-height:1.7;margin-top:10px}
+select,input{
+ width:100%;
+ padding:12px 13px;
+ border-radius:10px;
+ border:1px solid #315477;
+ background:#08172a;
+ color:var(--text);
+ font-size:15px;
+ outline:none;
+}
+.fields{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+ gap:12px;
+ margin:17px 0;
+}
+.field label{
+ display:block;
+ font-size:13px;
+ color:var(--muted);
+ margin:0 0 7px;
+}
+.calc-card,.quizbox{max-width:800px;margin:auto}
+.primary{
+ background:linear-gradient(90deg,#1679df,#16b8d4);
+ border:0;
+ color:white;
+ font-weight:bold;
+ padding:12px 20px;
+ border-radius:11px;
+ cursor:pointer;
+ font-size:15px;
+}
+.secondary{
+ background:#102844;
+ border:1px solid var(--line);
+ color:var(--text);
+ padding:11px 14px;
+ border-radius:10px;
+ cursor:pointer;
+ margin-left:7px;
+}
+.result{
+ display:none;
+ margin-top:17px;
+ padding:17px;
+ border-radius:13px;
+ background:#0b2b35;
+ border:1px solid #267d7b;
+}
+.result.show{display:block}
+.result strong{color:var(--green);font-size:25px}
+.result p{margin:8px 0 0;color:#c8e5e5;line-height:1.5}
+.note{
+ background:#102844;
+ border-left:3px solid var(--cyan);
+ padding:13px 15px;
+ border-radius:8px;
+ color:var(--muted);
+ font-size:13px;
+ line-height:1.5;
+ margin:18px 0;
+}
+.progress{
+ height:8px;
+ background:#203a59;
+ border-radius:10px;
+ overflow:hidden;
+ margin:14px 0 20px;
+}
+.progress div{
+ height:100%;
+ width:0;
+ background:linear-gradient(90deg,var(--blue),var(--cyan));
+ transition:width .2s;
+}
+.question{font-size:21px;line-height:1.45;margin:14px 0 20px}
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.answer{
+ padding:14px;
+ text-align:left;
+ border:1px solid var(--line);
+ background:#0b1b30;
+ color:var(--text);
+ border-radius:11px;
+ cursor:pointer;
+ font-size:15px;
+}
+.answer:hover{border-color:var(--cyan);background:#123653}
+.answer:disabled{cursor:default;opacity:.95}
+.answer.good{border-color:var(--green);background:#10372f}
+.answer.bad{border-color:var(--red);background:#3a1d2b}
+.feedback{min-height:25px;color:var(--muted);margin:15px 0}
+.score{font-size:30px;color:var(--green);font-weight:bold}
+.small{font-size:13px;color:var(--muted)}
+footer{
+ text-align:center;
+ color:#819ab5;
+ padding:25px;
+ border-top:1px solid #203b59;
+ font-size:13px;
+}
+@media(max-width:560px){
+ .wrap{padding:18px 12px 40px}
+ .card{padding:16px}
+ .tab{flex:1}
+ .answers{grid-template-columns:1fr}
+ .question{font-size:18px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="logo">FIZYKA ARENA • STREFA NAUKI</div>
+ <h1 class="hero">WZORY <span>&</span> KALKULATORY</h1>
+ <p>Fizyka i matematyka dla klas 6, 7 i 8</p>
+</header>
+
+<main class="wrap">
+
+<nav class="tabs">
+ <button class="tab active" data-tab="formulas">Biblioteka wzorów</button>
+ <button class="tab" data-tab="calculator">Kalkulatory</button>
+ <button class="tab" data-tab="mathquiz">Quiz z matematyki</button>
+ <button class="tab" data-tab="guide">Jak korzystać?</button>
+</nav>
+
+<section class="section active" id="formulas">
+
+ <div class="intro">
+  <div>
+   <h2>Biblioteka wzorów</h2>
+   <p class="sub">Najważniejsze zależności z fizyki — wybierz klasę.</p>
+  </div>
+
+  <select id="gradeFilter" style="max-width:210px">
+   <option value="all">Wszystkie klasy</option>
+   <option value="6">Klasa 6</option>
+   <option value="7">Klasa 7</option>
+   <option value="8">Klasa 8</option>
+  </select>
+ </div>
+
+ <div class="grid" id="formulaGrid"></div>
+</section>
+
+<section class="section" id="calculator">
+
+ <div class="intro">
+  <div>
+   <h2>Kalkulatory fizyczne</h2>
+   <p class="sub">Wpisz dane, a kalkulator obliczy brakującą wielkość.</p>
+  </div>
+ </div>
+
+ <div class="card calc-card">
+  <h3 id="calcTitle">Prędkość</h3>
+  <span class="tag" id="calcGrade">KLASA 6</span>
+
+  <div class="field">
+   <label for="calcSelect">Wybierz kalkulator</label>
+   <select id="calcSelect"></select>
+  </div>
+
+  <div class="fields" id="calcFields"></div>
+
+  <button class="primary" id="calculateBtn">Oblicz wynik</button>
+  <button class="secondary" id="clearBtn">Wyczyść</button>
+
+  <div class="result" id="resultBox">
+   <strong id="resultValue"></strong>
+   <p id="resultExplain"></p>
+  </div>
+ </div>
+
+ <div class="note">
+  Wpisuj wartości w jednostkach podanych przy polach.
+  Przykładowo 2 minuty zamień na 120 sekund.
+ </div>
+</section>
+
+<section class="section" id="mathquiz">
+
+ <div class="intro">
+  <div>
+   <h2>Matematyczny trening</h2>
+   <p class="sub">Quiz dla klas 6–8. Wybierz poziom i sprawdź swoją wiedzę!</p>
+  </div>
+
+  <select id="quizGrade" style="max-width:210px">
+   <option value="6">Klasa 6</option>
+   <option value="7">Klasa 7</option>
+   <option value="8">Klasa 8</option>
+   <option value="all">Mix klas 6–8</option>
+  </select>
+ </div>
+
+ <div class="card quizbox">
+
+  <div style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap">
+   <span class="tag" id="quizLevel">KLASA 6</span>
+   <span class="small" id="quizCount">Pytanie 1 z 5</span>
+  </div>
+
+  <div class="progress">
+   <div id="quizProgress"></div>
+  </div>
+
+  <div id="quizArea">
+   <div class="question" id="questionText"></div>
+   <div class="answers" id="answers"></div>
+   <div class="feedback" id="feedback"></div>
+   <button class="primary" id="nextQuestion" disabled>Następne pytanie</button>
+  </div>
+
+  <div id="quizEnd" style="display:none;text-align:center">
+   <h3>Koniec quizu!</h3>
+   <div class="score" id="finalScore"></div>
+   <p class="desc" id="scoreMessage"></p>
+   <button class="primary" id="restartQuiz">Zagraj ponownie</button>
+  </div>
+
+ </div>
+
+ <div class="note">
+  Quiz obejmuje działania na liczbach, ułamki, procenty, geometrię i proste równania.
+  Po każdej odpowiedzi zobaczysz krótkie wyjaśnienie.
+ </div>
+</section>
+
+<section class="section" id="guide">
+
+ <div class="intro">
+  <div>
+   <h2>Jak korzystać z wzorów?</h2>
+   <p class="sub">Prosty sposób na rozwiązywanie zadań.</p>
+  </div>
+ </div>
+
+ <div class="grid">
+  <article class="card">
+   <span class="tag">KROK 01</span>
+   <h3>Wypisz dane</h3>
+   <p class="desc">Zapisz, co podano w zadaniu, razem z jednostkami.</p>
+  </article>
+
+  <article class="card">
+   <span class="tag">KROK 02</span>
+   <h3>Znajdź szukane</h3>
+   <p class="desc">Zastanów się, czego trzeba się dowiedzieć.</p>
+  </article>
+
+  <article class="card">
+   <span class="tag">KROK 03</span>
+   <h3>Wybierz wzór</h3>
+   <p class="desc">Dopasuj wzór do danych i przekształć go, jeśli trzeba.</p>
+  </article>
+
+  <article class="card">
+   <span class="tag">KROK 04</span>
+   <h3>Podstaw i oblicz</h3>
+   <p class="desc">Podstaw liczby, wykonaj obliczenia i zapisz jednostkę.</p>
+  </article>
+ </div>
+
+ <div class="note">
+  <b>Pamiętaj:</b> zakres materiału może się różnić w zależności od podręcznika
+  i tego, co aktualnie omawiacie w szkole.
+ </div>
+</section>
+
+</main>
+
+<footer>FIZYKA ARENA • Ucz się, obliczaj i odkrywaj</footer>
+
+<script>
+const formulas = [
+ {g:6,t:"Ruch",n:"Prędkość",f:"v = s / t",d:"Droga przebyta w jednostce czasu.",s:"v — prędkość [m/s] • s — droga [m] • t — czas [s]"},
+ {g:6,t:"Ruch",n:"Droga",f:"s = v · t",d:"Prędkość pomnożona przez czas.",s:"s — droga [m] • v — prędkość [m/s] • t — czas [s]"},
+ {g:6,t:"Ruch",n:"Czas",f:"t = s / v",d:"Drogę dzielimy przez prędkość.",s:"t — czas [s] • s — droga [m] • v — prędkość [m/s]"},
+ {g:6,t:"Materia",n:"Gęstość",f:"d = m / V",d:"Masa przypadająca na jednostkę objętości.",s:"d — gęstość [kg/m³] • m — masa [kg] • V — objętość [m³]"},
+ {g:7,t:"Siły",n:"Siła",f:"F = m · a",d:"Iloczyn masy i przyspieszenia.",s:"F — siła [N] • m — masa [kg] • a — przyspieszenie [m/s²]"},
+ {g:7,t:"Grawitacja",n:"Ciężar",f:"Fg = m · g",d:"Ciężar zależy od masy i przyspieszenia grawitacyjnego.",s:"Fg — ciężar [N] • m — masa [kg] • g ≈ 10 N/kg"},
+ {g:7,t:"Ciśnienie",n:"Ciśnienie",f:"p = F / S",d:"Siła nacisku przypadająca na jednostkę powierzchni.",s:"p — ciśnienie [Pa] • F — siła [N] • S — pole [m²]"},
+ {g:7,t:"Praca i moc",n:"Praca",f:"W = F · s",d:"Dla siły działającej w kierunku ruchu.",s:"W — praca [J] • F — siła [N] • s — droga [m]"},
+ {g:7,t:"Praca i moc",n:"Moc",f:"P = W / t",d:"Praca wykonana w jednostce czasu.",s:"P — moc [W] • W — praca [J] • t — czas [s]"},
+ {g:8,t:"Energia",n:"Energia kinetyczna",f:"Ek = m · v² / 2",d:"Energia związana z ruchem ciała.",s:"Ek — energia [J] • m — masa [kg] • v — prędkość [m/s]"},
+ {g:8,t:"Energia",n:"Energia potencjalna",f:"Ep = m · g · h",d:"Energia związana z położeniem na wysokości.",s:"Ep — energia [J] • m — masa [kg] • g ≈ 10 N/kg • h — wysokość [m]"},
+ {g:8,t:"Ciepło",n:"Ciepło",f:"Q = m · c · ΔT",d:"Energia potrzebna do zmiany temperatury substancji.",s:"Q — ciepło [J] • m — masa [kg] • c — ciepło właściwe • ΔT — zmiana temperatury"},
+ {g:8,t:"Elektryczność",n:"Prawo Ohma",f:"U = I · R",d:"Zależność napięcia, natężenia i oporu.",s:"U — napięcie [V] • I — natężenie [A] • R — opór [Ω]"},
+ {g:8,t:"Elektryczność",n:"Moc prądu",f:"P = U · I",d:"Iloczyn napięcia i natężenia prądu.",s:"P — moc [W] • U — napięcie [V] • I — natężenie [A]"}
+];
+
+function renderFormulas(){
+ const g=document.getElementById('gradeFilter').value;
+ document.getElementById('formulaGrid').innerHTML=formulas
+ .filter(x=>g==='all'||String(x.g)===g)
+ .map(x=>`
+ <article class="card">
+  <span class="tag">KLASA ${x.g} • ${x.t}</span>
+  <h3>${x.n}</h3>
+  <div class="formula">${x.f}</div>
+  <p class="desc">${x.d}</p>
+  <div class="symbols">${x.s}</div>
+ </article>`).join('');
+}
+document.getElementById('gradeFilter').addEventListener('change',renderFormulas);
+renderFormulas();
+
+const calcs = [
+ {id:"speed",g:6,title:"Prędkość",fields:[["s","Droga","m"],["t","Czas","s"]],out:"m/s",calc:x=>x.s/x.t,ex:x=>`v = s / t = ${x.s} / ${x.t}.`},
+ {id:"distance",g:6,title:"Droga",fields:[["v","Prędkość","m/s"],["t","Czas","s"]],out:"m",calc:x=>x.v*x.t,ex:x=>`s = v · t = ${x.v} · ${x.t}.`},
+ {id:"time",g:6,title:"Czas",fields:[["s","Droga","m"],["v","Prędkość","m/s"]],out:"s",calc:x=>x.s/x.v,ex:x=>`t = s / v = ${x.s} / ${x.v}.`},
+ {id:"density",g:6,title:"Gęstość",fields:[["m","Masa","kg"],["V","Objętość","m³"]],out:"kg/m³",calc:x=>x.m/x.V,ex:x=>`d = m / V = ${x.m} / ${x.V}.`},
+ {id:"force",g:7,title:"Siła",fields:[["m","Masa","kg"],["a","Przyspieszenie","m/s²"]],out:"N",calc:x=>x.m*x.a,ex:x=>`F = m · a = ${x.m} · ${x.a}.`},
+ {id:"weight",g:7,title:"Ciężar",fields:[["m","Masa","kg"]],out:"N",calc:x=>x.m*10,ex:x=>`Fg = m · g = ${x.m} · 10, przyjęto g = 10 N/kg.`},
+ {id:"pressure",g:7,title:"Ciśnienie",fields:[["F","Siła nacisku","N"],["S","Pole powierzchni","m²"]],out:"Pa",calc:x=>x.F/x.S,ex:x=>`p = F / S = ${x.F} / ${x.S}.`},
+ {id:"work",g:7,title:"Praca",fields:[["F","Siła","N"],["s","Droga","m"]],out:"J",calc:x=>x.F*x.s,ex:x=>`W = F · s = ${x.F} · ${x.s}.`},
+ {id:"power",g:7,title:"Moc",fields:[["W","Praca","J"],["t","Czas","s"]],out:"W",calc:x=>x.W/x.t,ex:x=>`P = W / t = ${x.W} / ${x.t}.`},
+ {id:"ohm",g:8,title:"Prawo Ohma — napięcie",fields:[["I","Natężenie","A"],["R","Opór","Ω"]],out:"V",calc:x=>x.I*x.R,ex:x=>`U = I · R = ${x.I} · ${x.R}.`},
+ {id:"current",g:8,title:"Prawo Ohma — natężenie",fields:[["U","Napięcie","V"],["R","Opór","Ω"]],out:"A",calc:x=>x.U/x.R,ex:x=>`I = U / R = ${x.U} / ${x.R}.`},
+ {id:"resistance",g:8,title:"Prawo Ohma — opór",fields:[["U","Napięcie","V"],["I","Natężenie","A"]],out:"Ω",calc:x=>x.U/x.I,ex:x=>`R = U / I = ${x.U} / ${x.I}.`}
+];
+
+const calcSelect=document.getElementById('calcSelect');
+calcSelect.innerHTML=calcs.map(c=>`<option value="${c.id}">Klasa ${c.g} — ${c.title}</option>`).join('');
+
+function loadCalc(){
+ const c=calcs.find(x=>x.id===calcSelect.value);
+ document.getElementById('calcTitle').textContent=c.title;
+ document.getElementById('calcGrade').textContent='KLASA '+c.g;
+ document.getElementById('calcFields').innerHTML=c.fields.map(f=>`
+ <div class="field">
+  <label for="field_${f[0]}">${f[1]} (${f[2]})</label>
+  <input id="field_${f[0]}" type="number" step="any" placeholder="Wpisz wartość">
+ </div>`).join('');
+ document.getElementById('resultBox').classList.remove('show');
+}
+calcSelect.addEventListener('change',loadCalc);
+loadCalc();
+
+document.getElementById('calculateBtn').addEventListener('click',()=>{
+ const c=calcs.find(x=>x.id===calcSelect.value);
+ const x={};
+
+ for(const f of c.fields){
+  const v=document.getElementById('field_'+f[0]).value;
+  if(v===''||!Number.isFinite(Number(v))){
+   alert('Uzupełnij wszystkie pola poprawnymi liczbami.');
+   return;
+  }
+  x[f[0]]=Number(v);
+ }
+
+ const divisors={
+  speed:x.t,
+  time:x.v,
+  density:x.V,
+  pressure:x.S,
+  power:x.t,
+  current:x.R,
+  resistance:x.I
+ };
+
+ if(divisors[c.id]===0){
+  alert('Nie można dzielić przez zero.');
+  return;
+ }
+
+ const value=c.calc(x);
+
+ if(!Number.isFinite(value)){
+  alert('Nie udało się obliczyć wyniku.');
+  return;
+ }
+
+ document.getElementById('resultValue').textContent=
+  Number(value.toFixed(6))+' '+c.out;
+ document.getElementById('resultExplain').textContent=c.ex(x);
+ document.getElementById('resultBox').classList.add('show');
+});
+
+document.getElementById('clearBtn').addEventListener('click',()=>{
+ document.querySelectorAll('#calcFields input').forEach(i=>i.value='');
+ document.getElementById('resultBox').classList.remove('show');
+});
+
+const quizBank = {
+6:[
+ {q:"Oblicz: 48 : 6 + 7 · 2",a:["22","30","18","28"],c:0,e:"Najpierw dzielenie i mnożenie: 48 : 6 = 8 oraz 7 · 2 = 14. Suma to 22."},
+ {q:"Ile wynosi 3/4 z liczby 36?",a:["24","27","18","30"],c:1,e:"36 : 4 = 9, a 9 · 3 = 27."},
+ {q:"Prostokąt ma boki 8 cm i 5 cm. Jakie ma pole?",a:["13 cm²","26 cm²","40 cm²","80 cm²"],c:2,e:"Pole prostokąta to długość razy szerokość: 8 · 5 = 40 cm²."},
+ {q:"Zamień 2,5 m na centymetry.",a:["25 cm","250 cm","2500 cm","205 cm"],c:1,e:"1 m = 100 cm, więc 2,5 · 100 = 250 cm."},
+ {q:"Jaka jest wartość wyrażenia 15 − (3 + 4)?",a:["8","12","16","4"],c:0,e:"Najpierw nawias: 3 + 4 = 7. Następnie 15 − 7 = 8."}
+],
+7:[
+ {q:"Rozwiąż równanie: 3x + 5 = 20.",a:["x = 3","x = 5","x = 8","x = 15"],c:1,e:"Odejmujemy 5: 3x = 15. Dzielimy przez 3: x = 5."},
+ {q:"Ile wynosi 20% z 150?",a:["15","20","30","35"],c:2,e:"20% = 0,2, więc 0,2 · 150 = 30."},
+ {q:"Oblicz: (−4) · 6.",a:["−24","24","−10","10"],c:0,e:"Iloczyn liczby ujemnej i dodatniej jest ujemny: 4 · 6 = 24, czyli −24."},
+ {q:"Trójkąt ma kąty 50° i 60°. Ile wynosi trzeci kąt?",a:["60°","70°","80°","90°"],c:1,e:"Suma kątów w trójkącie wynosi 180°. 180° − 50° − 60° = 70°."},
+ {q:"Uprość wyrażenie 4a + 3a − 2a.",a:["5a","9a","a","6a"],c:0,e:"Dodajemy współczynniki: 4 + 3 − 2 = 5, więc wynik to 5a."}
+],
+8:[
+ {q:"Rozwiąż równanie: 2(x − 3) = 10.",a:["x = 2","x = 5","x = 8","x = 13"],c:2,e:"Dzielimy przez 2: x − 3 = 5. Dodajemy 3: x = 8."},
+ {q:"Jakie jest prawdopodobieństwo wyrzucenia parzystej liczby oczek na uczciwej kostce?",a:["1/6","1/3","1/2","2/3"],c:2,e:"Wyniki parzyste to 2, 4 i 6, czyli 3 z 6 możliwości. 3/6 = 1/2."},
+ {q:"Oblicz: √144 + 2³.",a:["18","20","16","24"],c:1,e:"√144 = 12, a 2³ = 8. Razem 12 + 8 = 20."},
+ {q:"Prosta y = 2x + 3 przecina oś Y w punkcie o współrzędnej…",a:["−2","2","3","−3"],c:2,e:"Współczynnik wolny to 3, więc dla x = 0 otrzymujemy y = 3."},
+ {q:"Cena 200 zł została obniżona o 15%. Ile wynosi nowa cena?",a:["170 zł","185 zł","150 zł","175 zł"],c:0,e:"15% z 200 zł to 30 zł. Nowa cena: 200 − 30 = 170 zł."}
+]
+};
+
+let quizQuestions=[];
+let quizIndex=0;
+let quizScore=0;
+let answered=false;
+
+function startQuiz(){
+ const grade=document.getElementById('quizGrade').value;
+ quizQuestions=(grade==='all'
+  ?[...quizBank[6],...quizBank[7],...quizBank[8]]
+  :quizBank[grade]).slice();
+
+ quizIndex=0;
+ quizScore=0;
+ document.getElementById('quizArea').style.display='block';
+ document.getElementById('quizEnd').style.display='none';
+ showQuestion();
+}
+
+function showQuestion(){
+ answered=false;
+ const q=quizQuestions[quizIndex];
+
+ document.getElementById('quizLevel').textContent=
+  document.getElementById('quizGrade').value==='all'
+  ?'MIX KLAS 6–8'
+  :'KLASA '+document.getElementById('quizGrade').value;
+
+ document.getElementById('quizCount').textContent=
+  `Pytanie ${quizIndex+1} z ${quizQuestions.length}`;
+
+ document.getElementById('quizProgress').style.width=
+  (quizIndex/quizQuestions.length*100)+'%';
+
+ document.getElementById('questionText').textContent=q.q;
+ document.getElementById('feedback').textContent='';
+ document.getElementById('nextQuestion').disabled=true;
+ document.getElementById('nextQuestion').textContent=
+  quizIndex===quizQuestions.length-1?'Zobacz wynik':'Następne pytanie';
+
+ document.getElementById('answers').innerHTML=q.a.map((a,i)=>`
+  <button class="answer" data-index="${i}">
+   ${String.fromCharCode(65+i)}. ${a}
+  </button>`).join('');
+
+ document.querySelectorAll('.answer').forEach(b=>{
+  b.addEventListener('click',()=>chooseAnswer(Number(b.dataset.index)));
+ });
+}
+
+function chooseAnswer(i){
+ if(answered)return;
+ answered=true;
+
+ const q=quizQuestions[quizIndex];
+ const buttons=[...document.querySelectorAll('.answer')];
+
+ buttons.forEach((b,n)=>{
+  b.disabled=true;
+  if(n===q.c)b.classList.add('good');
+  else if(n===i)b.classList.add('bad');
+ });
+
+ if(i===q.c){
+  quizScore++;
+  document.getElementById('feedback').textContent='Dobrze! '+q.e;
+ }else{
+  document.getElementById('feedback').textContent='Tym razem nie. '+q.e;
+ }
+
+ document.getElementById('nextQuestion').disabled=false;
+}
+
+document.getElementById('nextQuestion').addEventListener('click',()=>{
+ if(quizIndex<quizQuestions.length-1){
+  quizIndex++;
+  showQuestion();
+ }else{
+  document.getElementById('quizArea').style.display='none';
+  document.getElementById('quizEnd').style.display='block';
+  document.getElementById('quizProgress').style.width='100%';
+  document.getElementById('finalScore').textContent=
+   quizScore+' / '+quizQuestions.length;
+
+  document.getElementById('scoreMessage').textContent=
+   quizScore===quizQuestions.length
+   ?'Świetny wynik! Masz komplet punktów.'
+   :quizScore>=3
+   ?'Dobra robota! Przejrzyj wyjaśnienia i spróbuj ponownie.'
+   :'Warto poćwiczyć. Sprawdź wyjaśnienia i podejdź do quizu jeszcze raz.';
+ }
+});
+
+document.getElementById('restartQuiz').addEventListener('click',startQuiz);
+document.getElementById('quizGrade').addEventListener('change',startQuiz);
+// OBSŁUGA ZAKŁADEK — POPRAWIONA WERSJA
+
+function showTab(tabName) {
+    const sections = document.querySelectorAll(".section");
+    const tabs = document.querySelectorAll(".tab");
+
+    // Ukryj wszystkie sekcje
+    sections.forEach(section => {
+        section.classList.remove("active");
+    });
+
+    // Wyłącz wszystkie przyciski
+    tabs.forEach(tab => {
+        tab.classList.remove("active");
+    });
+
+    // Pokaż wybraną sekcję
+    const selectedSection = document.getElementById(tabName);
+
+    if (selectedSection) {
+        selectedSection.classList.add("active");
+    }
+
+    // Podświetl wybrany przycisk
+    const selectedTab = document.querySelector(
+        '.tab[data-tab="' + tabName + '"]'
+    );
+
+    if (selectedTab) {
+        selectedTab.classList.add("active");
+    }
+}
+
+// Podłącz kliknięcia do przycisków
+document.querySelectorAll(".tab").forEach(button => {
+    button.addEventListener("click", function() {
+        showTab(this.dataset.tab);
+    });
+});
+
+// Uruchom pierwszą zakładkę
+showTab("formulas");
+
+startQuiz();
+</script>
+</body>
+</html>

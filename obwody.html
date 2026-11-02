@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Obwody elektryczne | Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            color: #263238;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1565c0, #42a5f5);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background: #0d47a1;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1565c0;
+        }
+
+        .important {
+            background: #e8f5e9;
+            padding: 15px;
+            border-left: 5px solid #43a047;
+            border-radius: 5px;
+        }
+
+        .example {
+            background: #fff8e1;
+            padding: 15px;
+            border-left: 5px solid #ffb300;
+            border-radius: 5px;
+        }
+
+        .diagram {
+            background: #e3f2fd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 1.2em;
+        }
+
+        details {
+            background: #f5f5f5;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #1565c0;
+        }
+
+        /* Przyciski nawigacyjne */
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .navigation-buttons a {
+            display: inline-block;
+            background: #1565c0;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .navigation-buttons a:hover {
+            background: #0d47a1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #263238;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🔌 Obwody elektryczne</h1>
+    <p>Fizyka Arena – klasa 8</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Lekcje</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest obwód elektryczny?</h2>
+
+        <p>
+            <strong>Obwód elektryczny</strong> to układ elementów,
+            przez które może przepływać prąd elektryczny.
+        </p>
+
+        <p>Podstawowe elementy obwodu to:</p>
+
+        <ul>
+            <li>źródło napięcia, np. bateria,</li>
+            <li>przewody elektryczne,</li>
+            <li>odbiornik, np. żarówka,</li>
+            <li>łącznik, np. włącznik.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Obwód zamknięty i otwarty</h2>
+
+        <div class="diagram">
+            🔋 Bateria → Przewody → 💡 Żarówka
+        </div>
+
+        <p>
+            <strong>Obwód zamknięty</strong> – prąd może przepływać,
+            ponieważ droga przepływu jest kompletna.
+        </p>
+
+        <p>
+            <strong>Obwód otwarty</strong> – przepływ prądu jest
+            przerwany, np. przez wyłączony włącznik.
+        </p>
+
+        <div class="important">
+            Żarówka świeci, gdy obwód jest zamknięty
+            i pozostałe warunki przepływu prądu są spełnione.
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Źródła napięcia</h2>
+
+        <p>
+            Źródło napięcia dostarcza energię potrzebną
+            do przepływu prądu w obwodzie.
+        </p>
+
+        <p>Przykłady źródeł napięcia:</p>
+
+        <ul>
+            <li>bateria,</li>
+            <li>akumulator,</li>
+            <li>zasilacz,</li>
+            <li>prądnica.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. Odbiorniki elektryczne</h2>
+
+        <p>
+            Odbiorniki zamieniają energię elektryczną
+            na inne rodzaje energii.
+        </p>
+
+        <ul>
+            <li>Żarówka – energia świetlna i cieplna.</li>
+            <li>Silnik – energia mechaniczna.</li>
+            <li>Grzałka – energia cieplna.</li>
+            <li>Głośnik – energia dźwięku.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>5. Natężenie i napięcie w obwodzie</h2>
+
+        <p>
+            Natężenie prądu informuje, jak duży ładunek
+            przepływa przez przewodnik w jednostce czasu.
+        </p>
+
+        <p>
+            Napięcie określa różnicę potencjałów elektrycznych
+            między dwoma punktami obwodu.
+        </p>
+
+        <p>
+            W prostym obwodzie z jednym odbiornikiem
+            możemy badać zależność między napięciem,
+            natężeniem i oporem za pomocą prawa Ohma.
+        </p>
+
+        <div class="example">
+            <strong>Prawo Ohma:</strong>
+
+            <p>I = U / R</p>
+
+            <p>
+                Natężenie jest równe napięciu podzielonemu
+                przez opór.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Bezpieczeństwo elektryczne</h2>
+
+        <div class="important">
+            <ul>
+                <li>Nie dotykaj przewodów pod napięciem.</li>
+                <li>Nie wkładaj przedmiotów do gniazdek.</li>
+                <li>Nie używaj urządzeń elektrycznych mokrymi rękami.</li>
+                <li>Nie naprawiaj samodzielnie instalacji elektrycznej.</li>
+            </ul>
+        </div>
+
+        <p>
+            Doświadczenia szkolne wykonuj wyłącznie pod nadzorem
+            nauczyciela i z użyciem bezpiecznych źródeł napięcia.
+        </p>
+    </section>
+
+    <section>
+        <h2>7. Słowniczek</h2>
+
+        <ul>
+            <li><strong>Obwód elektryczny</strong> – układ elementów, przez który może płynąć prąd.</li>
+            <li><strong>Źródło napięcia</strong> – element dostarczający energię elektryczną.</li>
+            <li><strong>Odbiornik</strong> – element zamieniający energię elektryczną na inną.</li>
+            <li><strong>Obwód zamknięty</strong> – obwód z kompletną drogą przepływu prądu.</li>
+            <li><strong>Obwód otwarty</strong> – obwód z przerwą w drodze przepływu prądu.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>8. Sprawdź swoją wiedzę</h2>
+
+        <details>
+            <summary>1. Co to jest obwód elektryczny?</summary>
+            <p>Układ elementów, przez które może przepływać prąd.</p>
+        </details>
+
+        <details>
+            <summary>2. Kiedy obwód jest zamknięty?</summary>
+            <p>Gdy droga przepływu prądu jest kompletna.</p>
+        </details>
+
+        <details>
+            <summary>3. Podaj przykład źródła napięcia.</summary>
+            <p>Bateria, akumulator lub zasilacz.</p>
+        </details>
+
+        <details>
+            <summary>4. Jaką funkcję pełni odbiornik?</summary>
+            <p>Zamienia energię elektryczną na inną formę energii.</p>
+        </details>
+    </section>
+
+    <!-- Nawigacja między lekcjami -->
+
+    <section>
+        <div class="navigation-buttons">
+            <a href="prawo-ohma.html">← Poprzednia lekcja</a>
+            <a href="polaczenia-szeregowe.html">Następna lekcja →</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena</p>
+</footer>
+
+</body>
+</html>

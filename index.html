@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fizyka Arena | Odkrywaj świat fizyki</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fa;
+    color: #17283d;
+    line-height: 1.6;
+}
+
+header {
+    background: #10243b;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #50c6dc;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #50c6dc;
+}
+
+.hero {
+    background: linear-gradient(120deg, #10243b, #234c68);
+    color: white;
+    padding: 85px 8%;
+    text-align: left;
+}
+
+.hero small {
+    color: #65d3e5;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 62px);
+    margin: 15px 0;
+    line-height: 1.15;
+}
+
+.hero p {
+    max-width: 600px;
+    color: #d5e3ed;
+    font-size: 18px;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 13px 25px;
+    background: #50c6dc;
+    color: #10243b;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+section {
+    padding: 55px 7%;
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    color: #617184;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e0e7ef;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #50c6dc;
+}
+
+.card .symbol {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #173653;
+}
+
+.card p {
+    color: #657487;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.card a {
+    color: #087e9a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card .quiz-link {
+    display: inline-block;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #087d9d, #12bde0);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: transform 0.2s;
+}
+
+.card .quiz-link:hover {
+    color: white;
+    transform: scale(1.05);
+}
+
+.about {
+    background: white;
+}
+
+.about-box {
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-box p {
+    color: #617184;
+    margin-top: 12px;
+}
+
+footer {
+    background: #10243b;
+    color: #c8d5e1;
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 55px 7%;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 40px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">FIZYKA <span>ARENA</span></div>
+
+    <nav>
+        <a href="index.html">Start</a>
+        <a href="lekcje.html">Lekcje</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="laboratorium.html">Laboratorium</a>
+        <a href="quiz-fizyczny.html">Quiz fizyczny</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <small>POZNAJ ŚWIAT NAUKI</small>
+
+    <h1>Fizyka jest<br>wszędzie wokół nas.</h1>
+
+    <p>
+        Odkrywaj prawa natury, poznawaj fascynujące
+        doświadczenia i sprawdzaj, jak działa otaczający
+        nas świat.
+    </p>
+
+    <a href="lekcje.html" class="hero-button">
+        ODKRYWAJ FIZYKĘ →
+    </a>
+</div>
+
+<section>
+    <h2 class="section-title">Odkrywaj FIZYKA ARENA</h2>
+
+    <p class="section-description">
+        Wybierz dział i rozpocznij swoją przygodę z fizyką.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="symbol">📚</div>
+            <h3>Lekcje fizyki</h3>
+            <p>
+                Materiały edukacyjne dla klas 7 i 8.
+                Wyjaśnienia, przykłady i wzory.
+            </p>
+            <a href="lekcje.html">Przejdź do lekcji →</a>
+        </div>
+
+      <div class="card">
+    <div class="symbol">🔬</div>
+    <h3>Nasze doświadczenia</h3>
+    <p>
+        Nie mamy jeszcze żadnych doświadczeń.
+        Wkrótce pojawią się tutaj pierwsze eksperymenty!
+    </p>
+    <span class="coming-soon">WKRÓTCE</span>
+</div>        <div class="card">
+            <div class="symbol">⚗️</div>
+            <h3>Laboratorium online</h3>
+            <p>
+                Poznaj zjawiska fizyczne poprzez
+                interaktywne eksperymenty.
+            </p>
+            <a href="laboratorium.html">Otwórz laboratorium →</a>
+        </div>
+
+        <div class="card">
+            <div class="symbol">🧮</div>
+            <h3>Wzory i kalkulatory</h3>
+            <p>
+                Najważniejsze wzory, jednostki
+                i pomoc w obliczeniach.
+            </p>
+            <a href="wzory.html">Poznaj wzory →</a>
+        </div>
+
+        <div class="card">
+            <div class="symbol">🎮</div>
+            <h3>Quiz fizyczny</h3>
+            <p>
+                Sprawdź swoją wiedzę.
+                Wybierz łatwy, średni lub trudny poziom.
+            </p>
+            <a href="quiz-fizyczny.html" class="quiz-link">
+                ⚡ QUIZ FIZYCZNY →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="about">
+    <div class="about-box">
+        <h2 class="section-title">Fizyka w prawdziwym świecie</h2>
+
+        <p>
+            Fizyka pomaga nam zrozumieć zjawiska,
+            które obserwujemy każdego dnia.
+            Od ruchu samochodów, przez światło,
+            aż po elektryczność.
+        </p>
+
+        <p>
+            Na tej stronie znajdziesz wiedzę,
+            doświadczenia i ciekawostki,
+            które pomogą Ci lepiej poznać świat nauki.
+        </p>
+    </div>
+</section>
+
+<footer>
+    FIZYKA ARENA © 2026
+    <br>
+    Odkrywaj. Eksperymentuj. Zrozum.
+</footer>
+
+</body>
+</html>

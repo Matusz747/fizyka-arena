@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIZYKA ARENA — LABORATORIUM ULTRA</title>
+<style>
+:root {
+  --bg:#070b18;
+  --panel:#101a30;
+  --panel2:#15233d;
+  --blue:#168cff;
+  --cyan:#27dcff;
+  --green:#35e69a;
+  --yellow:#ffd45e;
+  --text:#edf5ff;
+  --muted:#91a7c7;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Arial,sans-serif;
+}
+header{
+  padding:28px 20px;
+  background:linear-gradient(120deg,#071a3c,#0756a8,#092345);
+  border-bottom:1px solid #2476c9;
+}
+.header-inner{max-width:1250px;margin:auto}
+.logo{font-size:13px;letter-spacing:4px;color:#75dfff}
+header h1{font-size:clamp(27px,5vw,48px);margin:12px 0}
+header p{color:#c4ddff}
+.status{
+  display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;
+}
+.status span{
+  background:#071a35;padding:9px 13px;border-radius:9px;
+  border:1px solid #2361a0;font-size:13px;
+}
+.layout{
+  max-width:1250px;margin:25px auto;padding:0 15px;
+  display:grid;grid-template-columns:220px 1fr;gap:20px;
+}
+nav,.panel,.stat{
+  background:var(--panel);border:1px solid #243b60;
+  border-radius:15px;
+}
+nav{padding:13px;height:max-content;position:sticky;top:12px}
+nav button{
+  display:block;width:100%;text-align:left;margin:5px 0;
+  background:transparent;color:#c7dcfa;border:0;
+  padding:14px;border-radius:9px;cursor:pointer;font-size:14px;
+}
+nav button:hover,nav button.active{background:#123e75;color:white}
+main{min-width:0}
+.view{display:none}
+.view.active{display:block}
+.heading{margin:0 0 18px}
+.heading h2{font-size:27px;margin:0 0 8px}
+.heading p{color:var(--muted);line-height:1.5}
+.panel{padding:20px;margin-bottom:18px}
+.panel h3{margin-top:0;color:#78caff}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+.stat{padding:15px}
+.stat small{color:var(--muted)}
+.stat strong{display:block;font-size:25px;margin-top:8px}
+button.action{
+  background:linear-gradient(100deg,#0875e9,#12b9ec);
+  border:0;color:white;padding:11px 16px;border-radius:9px;
+  cursor:pointer;font-weight:bold;margin:4px 3px 4px 0;
+}
+button.secondary{background:#243a5e}
+button.action:hover{filter:brightness(1.2)}
+label{display:block;color:#c2d9f7;margin:13px 0 5px}
+input[type=range]{width:100%;accent-color:var(--cyan)}
+input[type=number]{
+  width:100%;padding:11px;background:#071326;color:white;
+  border:1px solid #34577e;border-radius:8px;
+}
+canvas{
+  width:100%;height:290px;display:block;
+  background:#050d1b;border:1px solid #254365;
+  border-radius:12px;
+}
+.readout{
+  background:#07162b;border:1px solid #20436c;
+  padding:13px;border-radius:10px;margin-top:12px;
+  color:var(--cyan);font-size:17px;
+}
+.muted{color:var(--muted);line-height:1.6}
+.progress{
+  height:10px;background:#263750;border-radius:20px;overflow:hidden;
+}
+.progress div{height:100%;background:linear-gradient(90deg,#0875ef,#28e5d0);width:0}
+.mission{
+  border:1px solid #29466b;border-radius:11px;padding:14px;margin:10px 0;
+}
+.mission.done{border-color:#32dca0;background:#103326}
+.mission small{color:var(--muted)}
+.badge{color:var(--yellow);font-weight:bold}
+footer{text-align:center;color:#7893b8;padding:30px}
+@media(max-width:750px){
+ .layout{grid-template-columns:1fr}
+ nav{position:static;display:grid;grid-template-columns:repeat(2,1fr)}
+ .grid{grid-template-columns:1fr}
+ .stats{grid-template-columns:1fr 1fr}
+ canvas{height:240px}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="header-inner">
+  <div class="logo">FIZYKA ARENA / SCIENCE DIVISION</div>
+  <h1>🧪 LABORATORIUM ULTRA</h1>
+  <p>Interaktywne centrum eksperymentów fizycznych</p>
+  <div class="status">
+   <span>🟢 SYSTEM ONLINE</span>
+   <span>⚡ TRYB EKSPERYMENTALNY</span>
+   <span>🔬 WERSJA 2.0</span>
+  </div>
+ </div>
+</header>
+
+<div class="layout">
+<nav>
+ <button class="active" data-view="home">⌂ Centrum dowodzenia</button>
+ <button data-view="mechanics">🚀 Mechanika 2D</button>
+ <button data-view="gravity">🌍 Grawitacja</button>
+ <button data-view="electric">⚡ Elektryczność</button>
+ <button data-view="waves">〰️ Fale</button>
+ <button data-view="space">🪐 Kosmos</button>
+ <button data-view="missions">🏆 Misje</button>
+ <button data-view="challenges">🎯 Wyzwania rang</button>
+</nav>
+
+<main>
+
+<!-- CENTRUM -->
+<section class="view active" id="home">
+ <div class="heading">
+  <h2>Centrum dowodzenia</h2>
+  <p>Witaj w laboratorium. Wybierz eksperyment, zmień parametry i obserwuj wyniki.</p>
+ </div>
+ <div class="stats">
+  <div class="stat"><small>ZDOBYTE PUNKTY</small><strong id="score">0</strong></div>
+  <div class="stat"><small>WYKONANE MISJE</small><strong id="done">0/6</strong></div>
+  <div class="stat"><small>POZIOM</small><strong id="level">1</strong></div>
+ </div>
+ <div class="panel">
+  <h3>📡 Status laboratorium</h3>
+  <p class="muted">Wszystkie moduły są gotowe do uruchomienia. Wybierz dział w menu po lewej stronie.</p>
+  <div class="progress"><div id="overall"></div></div>
+  <p class="muted" id="progressText">Postęp: 0%</p>
+ </div>
+ <div class="grid">
+  <div class="panel"><h3>🚀 Mechanika</h3><p class="muted">Steruj ruchem obiektu i badaj przyspieszenie.</p><button class="action" onclick="show('mechanics')">Otwórz moduł</button></div>
+  <div class="panel"><h3>🌍 Grawitacja</h3><p class="muted">Obserwuj ruch ciał przyciąganych przez grawitację.</p><button class="action" onclick="show('gravity')">Otwórz moduł</button></div>
+  <div class="panel"><h3>⚡ Elektryczność</h3><p class="muted">Projektuj obwód i obliczaj natężenie prądu.</p><button class="action" onclick="show('electric')">Otwórz moduł</button></div>
+  <div class="panel"><h3>〰️ Fale</h3><p class="muted">Zmieniaj amplitudę i częstotliwość fali.</p><button class="action" onclick="show('waves')">Otwórz moduł</button></div>
+ </div>
+</section>
+
+<!-- MECHANIKA -->
+<section class="view" id="mechanics">
+ <div class="heading"><h2>🚀 Symulator mechaniki 2D</h2><p>Eksperymentuj z ruchem, prędkością i przyspieszeniem.</p></div>
+ <div class="panel">
+  <canvas id="carCanvas"></canvas>
+  <div class="grid">
+   <div>
+    <label>Przyspieszenie: <b id="accVal">2</b> m/s²</label>
+    <input id="acc" type="range" min="-5" max="5" step=".5" value="2">
+   </div>
+   <div>
+    <label>Masa pojazdu: <b id="massVal">1000</b> kg</label>
+    <input id="mass" type="range" min="100" max="3000" step="100" value="1000">
+   </div>
+  </div>
+  <button class="action" id="carStart">▶ Start</button>
+  <button class="action secondary" id="carPause">Ⅱ Pauza</button>
+  <button class="action secondary" id="carReset">↺ Reset</button>
+  <div class="readout" id="carData">Prędkość: 0 m/s | Droga: 0 m</div>
+  <p class="muted">Wskazówka: dodatnie przyspieszenie zwiększa prędkość w prawo. Ujemne zmniejsza ją lub zmienia kierunek.</p>
+ </div>
+ <div class="panel">
+  <h3>📈 Wykres prędkości</h3>
+  <canvas id="carGraph"></canvas>
+ </div>
+</section>
+
+<!-- GRAWITACJA -->
+<section class="view" id="gravity">
+ <div class="heading"><h2>🌍 Laboratorium grawitacji</h2><p>Obserwuj spadanie i sprawdzaj wpływ grawitacji.</p></div>
+ <div class="panel">
+  <canvas id="fallCanvas"></canvas>
+  <label>Przyspieszenie grawitacyjne: <b id="gVal">9.81</b> m/s²</label>
+  <input id="grav" type="range" min="0" max="25" step=".01" value="9.81">
+  <label>Wysokość: <b id="heightVal">100</b> m</label>
+  <input id="height" type="range" min="10" max="200" value="100">
+  <button class="action" id="fallStart">▶ Rozpocznij spadanie</button>
+  <button class="action secondary" id="fallReset">↺ Reset</button>
+  <div class="readout" id="fallData">Gotowy do eksperymentu.</div>
+  <p class="muted">Model pokazuje swobodny spadek bez oporu powietrza. Czas spadania i prędkość są obliczane na podstawie parametrów.</p>
+ </div>
+</section>
+
+<!-- ELEKTRYCZNOŚĆ -->
+<section class="view" id="electric">
+ <div class="heading"><h2>⚡ Laboratorium elektryczności</h2><p>Projektuj prosty obwód i badaj prawo Ohma.</p></div>
+ <div class="panel">
+  <canvas id="circuitCanvas"></canvas>
+  <div class="grid">
+   <div>
+    <label>Napięcie: <b id="voltVal">12</b> V</label>
+    <input id="volt" type="range" min="1" max="24" value="12">
+   </div>
+   <div>
+    <label>Opór: <b id="resVal">6</b> Ω</label>
+    <input id="res" type="range" min="1" max="30" value="6">
+   </div>
+  </div>
+  <div class="readout" id="electricData">Natężenie: 2 A</div>
+  <p class="muted">Model obwodu szeregowego z jednym opornikiem. Zmiana napięcia lub oporu zmienia obliczone natężenie.</p>
+  <button class="action" onclick="complete('electric')">Zakończ eksperyment (+100 pkt)</button>
+ </div>
+</section>
+
+<!-- FALE -->
+<section class="view" id="waves">
+ <div class="heading"><h2>〰️ Studio fal</h2><p>Twórz fale i obserwuj zmiany ich kształtu.</p></div>
+ <div class="panel">
+  <canvas id="waveCanvas"></canvas>
+  <label>Amplituda: <b id="ampVal">50</b></label>
+  <input id="amp" type="range" min="5" max="110" value="50">
+  <label>Częstotliwość przestrzenna: <b id="freqVal">2</b></label>
+  <input id="freq" type="range" min="1" max="8" step=".1" value="2">
+  <label>Szybkość animacji: <b id="speedVal">2</b></label>
+  <input id="waveSpeed" type="range" min="0" max="8" value="2">
+  <button class="action" onclick="complete('waves')">Zakończ eksperyment (+100 pkt)</button>
+  <div class="readout" id="waveData">Fala sinusoidalna</div>
+ </div>
+</section>
+
+<!-- KOSMOS -->
+<section class="view" id="space">
+ <div class="heading"><h2>🪐 Symulator układu planetarnego</h2><p>Obserwuj model orbit i zmieniaj tempo animacji.</p></div>
+ <div class="panel">
+  <canvas id="spaceCanvas"></canvas>
+  <label>Tempo symulacji: <b id="spaceVal">1</b>x</label>
+  <input id="spaceSpeed" type="range" min="0" max="5" step=".1" value="1">
+  <button class="action" onclick="complete('space')">Zakończ eksperyment (+100 pkt)</button>
+  <p class="muted">To uproszczony model edukacyjny orbit. Nie przedstawia rzeczywistych odległości ani proporcji planet.</p>
+ </div>
+</section>
+
+<!-- WYZWANIA RANG -->
+<section class="view" id="challenges">
+ <div class="heading">
+  <h2>🎯 Akademia rang</h2>
+  <p>Każda ranga ma własny egzamin. Zdaj go, aby odblokować kolejny poziom!</p>
+ </div>
+ <div class="panel">
+  <h3 id="rankTitle">Ranga I — Początkujący</h3>
+  <p class="muted" id="rankDescription">Poznaj podstawy fizyki.</p>
+  <div id="challengeArea"></div>
+  <button class="action" id="checkChallenge">Sprawdź odpowiedzi</button>
+  <div class="readout" id="challengeResult">Wybierz odpowiedzi i rozpocznij egzamin.</div>
+ </div>
+</section>
+
+<!-- MISJE -->
+<section class="view" id="missions">
+ <div class="heading"><h2>🏆 Centrum misji</h2><p>Wykonuj eksperymenty, zdobywaj punkty i odblokowuj kolejne poziomy.</p></div>
+ <div class="panel">
+  <h3>Lista misji</h3>
+  <div id="missionList"></div>
+ </div>
+ <div class="panel">
+  <h3>🎖️ Rangi naukowca</h3>
+  <p>0 pkt — Początkujący</p>
+  <p>200 pkt — Odkrywca</p>
+  <p>400 pkt — Badacz</p>
+  <p>600 pkt — Mistrz fizyki</p>
+ </div>
+</section>
+
+</main>
+</div>
+
+<footer>FIZYKA ARENA © 2026 — LABORATORIUM ULTRA</footer>
+
+<script>
+/* NAWIGACJA */
+const views=document.querySelectorAll(".view");
+
+function show(id){
+ const target=document.getElementById(id);
+ if(!target)return;
+
+ views.forEach(v=>v.classList.toggle("active",v.id===id));
+
+ document.querySelectorAll("nav button").forEach(b=>
+  b.classList.toggle("active",b.dataset.view===id)
+ );
+
+ requestAnimationFrame(drawAll);
+}
+
+document.querySelectorAll("nav button").forEach(b=>{
+ b.addEventListener("click",()=>show(b.dataset.view));
+});
+
+/* POSTĘPY */
+const missions=[
+ ["mechanics","Uruchom symulator mechaniki"],
+ ["gravity","Wykonaj eksperyment grawitacyjny"],
+ ["electric","Zbadaj obwód elektryczny"],
+ ["waves","Utwórz falę"],
+ ["space","Uruchom symulację kosmosu"],
+ ["quiz","Rozwiąż wyzwanie naukowe"]
+];
+
+let completed=JSON.parse(localStorage.getItem("ultraDone")||"[]");
+if(!Array.isArray(completed)) completed=[];
+
+let score=Number(localStorage.getItem("ultraScore")||0);
+
+function updateProgress(){
+ document.getElementById("score").textContent=score;
+ document.getElementById("done").textContent=completed.length+"/6";
+ document.getElementById("level").textContent=1+Math.floor(score/200);
+ document.getElementById("overall").style.width=(completed.length/6*100)+"%";
+ document.getElementById("progressText").textContent=
+  "Postęp: "+Math.round(completed.length/6*100)+"%";
+
+ document.getElementById("missionList").innerHTML=missions.map(m=>
+  `<div class="mission ${completed.includes(m[0])?"done":""}">
+   ${completed.includes(m[0])?"✅":"🔒"} ${m[1]}
+   <small>${completed.includes(m[0])?"Wykonano":"Do wykonania"}</small>
+   ${m[0]==="quiz" ? '<br><button class="action" onclick="show(\'challenges\')">🎯 Otwórz wyzwania rang</button>' : ""}
+  </div>`
+ ).join("");
+
+ localStorage.setItem("ultraDone",JSON.stringify(completed));
+ localStorage.setItem("ultraScore",score);
+}
+
+function complete(id){
+ if(completed.includes(id))return alert("Ta misja jest już zaliczona!");
+ completed.push(id);
+ score+=100;
+ updateProgress();
+ alert("Misja wykonana! +100 punktów");
+}
+
+updateProgress();
+
+/* POMOCNICZE CANVAS */
+function setup(id){
+ const c=document.getElementById(id);
+ const ctx=c.getContext("2d");
+ const dpr=window.devicePixelRatio||1;
+ const rect=c.getBoundingClientRect();
+
+ c.width=rect.width*dpr;
+ c.height=rect.height*dpr;
+ ctx.setTransform(dpr,0,0,dpr,0,0);
+
+ return {c,ctx,w:rect.width,h:rect.height};
+}
+
+function line(ctx,x1,y1,x2,y2,color="#345477",width=1){
+ ctx.strokeStyle=color;
+ ctx.lineWidth=width;
+ ctx.beginPath();
+ ctx.moveTo(x1,y1);
+ ctx.lineTo(x2,y2);
+ ctx.stroke();
+}
+
+function circle(ctx,x,y,r,color){
+ ctx.fillStyle=color;
+ ctx.beginPath();
+ ctx.arc(x,y,r,0,Math.PI*2);
+ ctx.fill();
+}
+
+/* MECHANIKA */
+let car={x:0,v:0,s:0,t:0,running:false,last:0,history:[]};
+
+const acc=document.getElementById("acc");
+const mass=document.getElementById("mass");
+
+acc.oninput=()=>document.getElementById("accVal").textContent=acc.value;
+mass.oninput=()=>document.getElementById("massVal").textContent=mass.value;
+
+document.getElementById("carStart").onclick=()=>{car.running=true};
+document.getElementById("carPause").onclick=()=>{car.running=false};
+
+document.getElementById("carReset").onclick=()=>{
+ car={x:0,v:0,s:0,t:0,running:false,last:0,history:[]};
+ drawCar();
+};
+
+function drawCar(){
+ const {ctx,w,h}=setup("carCanvas");
+
+ ctx.fillStyle="#071326";
+ ctx.fillRect(0,0,w,h);
+
+ for(let x=0;x<w;x+=45)line(ctx,x,0,x,h,"#142b45");
+
+ const y=h*.73;
+ line(ctx,0,y+20,w,y+20,"#3d6389",3);
+
+ let px=30+(car.x%Math.max(1,w-100));
+
+ circle(ctx,px,y,19,"#168cff");
+ circle(ctx,px+22,y,19,"#168cff");
+
+ ctx.fillStyle="#d7efff";
+ ctx.font="24px Arial";
+ ctx.fillText("🚗",px-9,y-22);
+
+ document.getElementById("carData").textContent=
+ `Prędkość: ${car.v.toFixed(2)} m/s | Droga: ${car.s.toFixed(2)} m | Czas: ${car.t.toFixed(1)} s`;
+
+ const g=setup("carGraph");
+
+ g.ctx.fillStyle="#071326";
+ g.ctx.fillRect(0,0,g.w,g.h);
+
+ line(g.ctx,35,10,35,g.h-25,"#91a7c7");
+ line(g.ctx,35,g.h-25,g.w-10,g.h-25,"#91a7c7");
+
+ g.ctx.strokeStyle="#28dcff";
+ g.ctx.lineWidth=2;
+ g.ctx.beginPath();
+
+ car.history.forEach((p,i)=>{
+  let x=35+i*(g.w-50)/Math.max(1,car.history.length-1);
+  let y=g.h-25-Math.max(0,Math.min(30,p*2))*(g.h-45)/30;
+
+  if(i===0)g.ctx.moveTo(x,y);
+  else g.ctx.lineTo(x,y);
+ });
+
+ g.ctx.stroke();
+}
+
+let lastFrame=performance.now();
+
+function animateCar(now){
+ let dt=Math.min(.04,(now-lastFrame)/1000);
+ lastFrame=now;
+
+ if(car.running){
+  let a=Number(acc.value);
+  let old=car.v;
+
+  car.v+=a*dt;
+  if(car.v<0)car.v=0;
+
+  car.s+=((old+car.v)/2)*dt;
+  car.x+=car.v*dt*18;
+  car.t+=dt;
+
+  if(car.history.length<150)car.history.push(car.v);
+  if(car.history.length>150)car.history.shift();
+ }
+
+ if(document.getElementById("mechanics").classList.contains("active"))drawCar();
+
+ requestAnimationFrame(animateCar);
+}
+
+document.getElementById("carStart").addEventListener("click",()=>complete("mechanics"));
+
+/* GRAWITACJA */
+let fall={t:0,running:false};
+
+function drawFall(){
+ const {ctx,w,h}=setup("fallCanvas");
+
+ ctx.fillStyle="#071326";
+ ctx.fillRect(0,0,w,h);
+
+ for(let x=0;x<w;x+=40)line(ctx,x,0,x,h,"#142b45");
+
+ let H=Number(document.getElementById("height").value);
+ let g=Number(document.getElementById("grav").value);
+ let t=fall.t;
+
+ let distance=Math.min(H,.5*g*t*t);
+ let y=25+(h-65)*distance/H;
+
+ circle(ctx,w/2,y,13,"#ffd45e");
+
+ ctx.fillStyle="#9bdfff";
+ ctx.font="14px Arial";
+ ctx.fillText("PIŁKA",w/2+20,y+5);
+
+ line(ctx,20,h-25,w-20,h-25,"#35e69a",4);
+
+ document.getElementById("fallData").textContent=
+ `Czas: ${t.toFixed(2)} s | Droga: ${distance.toFixed(2)} m | Prędkość: ${(g*t).toFixed(2)} m/s`+
+ (fall.running?"":" | "+(distance>=H?"Uderzenie w podłoże":"Gotowy"));
+}
+
+document.getElementById("grav").oninput=()=>{
+ document.getElementById("gVal").textContent=Number(grav.value).toFixed(2);
+ drawFall();
+};
+
+document.getElementById("height").oninput=()=>{
+ document.getElementById("heightVal").textContent=height.value;
+ fall.t=0;
+ drawFall();
+};
+
+document.getElementById("fallStart").onclick=()=>{
+ fall.t=0;
+ fall.running=true;
+ complete("gravity");
+};
+
+document.getElementById("fallReset").onclick=()=>{
+ fall.t=0;
+ fall.running=false;
+ drawFall();
+};
+
+function animateFall(dt){
+ if(fall.running){
+  fall.t+=dt;
+
+  let g=Number(grav.value);
+  let H=Number(height.value);
+
+  if(.5*g*fall.t*fall.t>=H)fall.running=false;
+ }
+
+ if(document.getElementById("gravity").classList.contains("active"))drawFall();
+}
+
+/* ELEKTRYCZNOŚĆ */
+const volt=document.getElementById("volt");
+const res=document.getElementById("res");
+
+function drawCircuit(){
+ let U=Number(volt.value);
+ let R=Number(res.value);
+ let I=U/R;
+
+ document.getElementById("voltVal").textContent=U;
+ document.getElementById("resVal").textContent=R;
+ document.getElementById("electricData").textContent=
+ `Natężenie: ${I.toFixed(2)} A | Moc: ${(U*I).toFixed(2)} W`;
+
+ const {ctx,w,h}=setup("circuitCanvas");
+
+ ctx.fillStyle="#071326";
+ ctx.fillRect(0,0,w,h);
+
+ const left=w*.2,right=w*.8,top=h*.28,bottom=h*.75;
+
+ line(ctx,left,top,right,top,"#36e69a",3);
+ line(ctx,right,top,right,bottom,"#36e69a",3);
+ line(ctx,right,bottom,left,bottom,"#36e69a",3);
+ line(ctx,left,bottom,left,top,"#36e69a",3);
+
+ line(ctx,left-12,(top+bottom)/2-12,left+12,(top+bottom)/2-12,"#ffd45e",4);
+ line(ctx,left-7,(top+bottom)/2+10,left+7,(top+bottom)/2+10,"#ffd45e",2);
+
+ ctx.strokeStyle="#ffd45e";
+ ctx.lineWidth=4;
+ ctx.strokeRect(w*.46,top-10,w*.12,20);
+
+ ctx.fillStyle="white";
+ ctx.font="14px Arial";
+ ctx.fillText("Źródło: "+U+" V",left-30,bottom+25);
+ ctx.fillText("Opornik: "+R+" Ω",w*.43,top-22);
+
+ ctx.fillStyle="#35e69a";
+ ctx.fillText("I = "+I.toFixed(2)+" A",w*.43,bottom+35);
+}
+
+volt.oninput=drawCircuit;
+res.oninput=drawCircuit;
+
+/* FALE */
+let waveTime=0;
+
+function drawWave(dt){
+ waveTime+=dt*Number(waveSpeed.value);
+
+ const {ctx,w,h}=setup("waveCanvas");
+
+ ctx.fillStyle="#071326";
+ ctx.fillRect(0,0,w,h);
+
+ let amp=Number(document.getElementById("amp").value);
+ let freq=Number(document.getElementById("freq").value);
+
+ document.getElementById("ampVal").textContent=amp;
+ document.getElementById("freqVal").textContent=freq;
+ document.getElementById("speedVal").textContent=waveSpeed.value;
+
+ line(ctx,0,h/2,w,h/2,"#38516d");
+
+ ctx.strokeStyle="#27dcff";
+ ctx.lineWidth=3;
+ ctx.beginPath();
+
+ for(let x=0;x<w;x++){
+  let y=h/2-Math.sin(x/w*Math.PI*2*freq-waveTime)*amp;
+
+  if(x===0)ctx.moveTo(x,y);
+  else ctx.lineTo(x,y);
+ }
+
+ ctx.stroke();
+
+ document.getElementById("waveData").textContent=
+ `Amplituda: ${amp} | Częstotliwość przestrzenna: ${freq} | Animacja: ${waveSpeed.value}`;
+}
+
+["amp","freq","waveSpeed"].forEach(id=>
+ document.getElementById(id).oninput=()=>drawWave(0)
+);
+
+/* KOSMOS */
+let orbitTime=0;
+
+function drawSpace(dt){
+ orbitTime+=dt*Number(spaceSpeed.value);
+
+ document.getElementById("spaceVal").textContent=spaceSpeed.value;
+
+ const {ctx,w,h}=setup("spaceCanvas");
+
+ ctx.fillStyle="#030817";
+ ctx.fillRect(0,0,w,h);
+
+ for(let i=0;i<90;i++){
+  let x=(i*97)%w;
+  let y=(i*53)%h;
+  circle(ctx,x,y,1,"#9ab6dc");
+ }
+
+ let cx=w/2,cy=h/2;
+
+ circle(ctx,cx,cy,24,"#ffb52e");
+
+ let planets=[
+  [65,5,"#41a9ff"],
+  [100,8,"#d6ac70"],
+  [145,11,"#4bdf9b"]
+ ];
+
+ planets.forEach((p,i)=>{
+  ctx.strokeStyle="#344965";
+  ctx.lineWidth=1;
+  ctx.beginPath();
+  ctx.ellipse(cx,cy,p[0],p[0]*.52,0,0,Math.PI*2);
+  ctx.stroke();
+
+  let a=orbitTime/(i+1.2)+i;
+  let x=cx+Math.cos(a)*p[0];
+  let y=cy+Math.sin(a)*p[0]*.52;
+
+  circle(ctx,x,y,p[1],p[2]);
+ });
+}
+
+spaceSpeed.oninput=()=>
+ document.getElementById("spaceVal").textContent=spaceSpeed.value;
+
+/* SYSTEM WYZWAN RANG */
+const rankTests=[
+ {
+  name:"Ranga I — Początkujący",
+  description:"Podstawowe wiadomości o ruchu i grawitacji.",
+  questions:[
+   {
+    q:"W jakiej jednostce mierzymy prędkość w układzie SI?",
+    a:["Metry na sekundę","Kilogramy","Niutony"],
+    correct:0
+   },
+   {
+    q:"Co przyciąga przedmioty do Ziemi?",
+    a:["Światło","Grawitacja","Dźwięk"],
+    correct:1
+   },
+   {
+    q:"Ile wynosi 2 + 3?",
+    a:["4","5","6"],
+    correct:1
+   }
+  ]
+ },
+ {
+  name:"Ranga II — Odkrywca",
+  description:"Obliczenia dotyczące ruchu i sił.",
+  questions:[
+   {
+    q:"Samochód jedzie 60 km w ciągu godziny. Jaka jest jego prędkość?",
+    a:["30 km/h","60 km/h","120 km/h"],
+    correct:1
+   },
+   {
+    q:"Jaka jest jednostka siły?",
+    a:["Niuton","Wolt","Amper"],
+    correct:0
+   },
+   {
+    q:"Co oznacza przyspieszenie?",
+    a:["Zmianę prędkości w czasie","Wielkość masy","Długość drogi"],
+    correct:0
+   }
+  ]
+ },
+ {
+  name:"Ranga III — Badacz",
+  description:"Elektryczność, energia i fale.",
+  questions:[
+   {
+    q:"Jak nazywa się jednostka napięcia?",
+    a:["Amper","Wolt","Om"],
+    correct:1
+   },
+   {
+    q:"Ile wynosi natężenie przy napięciu 12 V i oporze 4 Ω?",
+    a:["3 A","8 A","48 A"],
+    correct:0
+   },
+   {
+    q:"Co przenosi fala?",
+    a:["Energię","Zawsze materię","Masę planety"],
+    correct:0
+   }
+  ]
+ },
+ {
+  name:"Ranga IV — Mistrz Fizyki",
+  description:"Zaawansowane zagadnienia fizyczne.",
+  questions:[
+   {
+    q:"Ciało o masie 2 kg przyspiesza z wartością 3 m/s². Jaka działa na nie siła?",
+    a:["5 N","6 N","9 N"],
+    correct:1
+   },
+   {
+    q:"Ile wynosi moc urządzenia pobierającego 2 A przy napięciu 10 V?",
+    a:["5 W","12 W","20 W"],
+    correct:2
+   },
+   {
+    q:"Co stanie się z siłą grawitacji między dwoma ciałami, gdy zwiększymy odległość między nimi?",
+    a:["Zmniejszy się","Zwiększy się","Nie zmieni się"],
+    correct:0
+   }
+  ]
+ }
+];
+
+let unlockedRank=Number(localStorage.getItem("ultraRank")||0);
+let activeTest=unlockedRank;
+
+function renderChallenge(){
+ const title=document.getElementById("rankTitle");
+ const desc=document.getElementById("rankDescription");
+ const area=document.getElementById("challengeArea");
+ const result=document.getElementById("challengeResult");
+ const button=document.getElementById("checkChallenge");
+
+ if(unlockedRank>=4){
+  title.textContent="🏆 MISTRZ FIZYKI";
+  desc.textContent="Ukończyłeś wszystkie egzaminy!";
+  area.innerHTML="<h2>Wszystkie rangi zdobyte!</h2>";
+  button.style.display="none";
+  result.textContent="Gratulacje! Jesteś mistrzem Laboratorium ULTRA.";
+  return;
+ }
+
+ activeTest=unlockedRank;
+ const test=rankTests[activeTest];
+
+ title.textContent=test.name;
+ desc.textContent=test.description;
+ button.style.display="inline-block";
+
+ area.innerHTML=test.questions.map((q,i)=>`
+  <div class="mission">
+   <h3>${i+1}. ${q.q}</h3>
+   ${q.a.map((answer,j)=>`
+    <label style="display:block;margin:12px 0">
+     <input type="radio" name="rankQ${i}" value="${j}">
+     ${answer}
+    </label>
+   `).join("")}
+  </div>
+ `).join("");
+
+ result.textContent="Odpowiedz na wszystkie pytania.";
+}
+
+document.getElementById("checkChallenge").onclick=function(){
+ const test=rankTests[activeTest];
+ let points=0;
+ let unanswered=false;
+
+ test.questions.forEach((q,i)=>{
+  const selected=document.querySelector(`input[name="rankQ${i}"]:checked`);
+
+  if(!selected){
+   unanswered=true;
+  }else if(Number(selected.value)===q.correct){
+   points++;
+  }
+ });
+
+ const result=document.getElementById("challengeResult");
+
+ if(unanswered){
+  result.textContent="Odpowiedz na wszystkie pytania!";
+  return;
+ }
+
+ if(points===test.questions.length){
+  unlockedRank++;
+  localStorage.setItem("ultraRank",unlockedRank);
+
+  if(!completed.includes("quiz")){
+   completed.push("quiz");
+   score+=100;
+  }
+
+  localStorage.setItem("ultraDone",JSON.stringify(completed));
+  localStorage.setItem("ultraScore",score);
+
+  updateProgress();
+  renderChallenge();
+
+  result.textContent="🎉 ZDANE! +100 punktów! Misja naukowa zaliczona i odblokowujesz następną rangę!";
+ }else{
+  result.textContent="Nie tym razem! Poprawne odpowiedzi: "+points+
+   "/"+test.questions.length+". Spróbuj ponownie!";
+ }
+};
+
+/* ANIMACJE */
+let previous=performance.now();
+
+function loop(now){
+ let dt=Math.min(.05,(now-previous)/1000);
+ previous=now;
+
+ animateFall(dt);
+
+ if(document.getElementById("waves").classList.contains("active"))drawWave(dt);
+ if(document.getElementById("space").classList.contains("active"))drawSpace(dt);
+
+ requestAnimationFrame(loop);
+}
+
+function drawAll(){
+ drawCar();
+ drawFall();
+ drawCircuit();
+ drawWave(0);
+ drawSpace(0);
+}
+
+window.addEventListener("resize",drawAll);
+
+renderChallenge();
+requestAnimationFrame(animateCar);
+requestAnimationFrame(loop);
+drawAll();
+</script>
+
+</body>
+</html>

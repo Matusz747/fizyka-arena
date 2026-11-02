@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energia kinetyczna – Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 38px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 34px;
+        }
+
+        nav {
+            background: #1e293b;
+            text-align: center;
+            padding: 13px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 12px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 0 18px;
+        }
+
+        section {
+            background: white;
+            padding: 23px;
+            margin-bottom: 22px;
+            border-radius: 13px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2563eb;
+            margin-top: 0;
+        }
+
+        .formula {
+            background: #dbeafe;
+            border-left: 5px solid #2563eb;
+            padding: 18px;
+            margin: 18px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .example {
+            background: #f0fdf4;
+            border-left: 5px solid #16a34a;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .important {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        details {
+            background: #f8fafc;
+            padding: 13px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .navigation-buttons a {
+            background: #2563eb;
+            color: white;
+            padding: 12px 17px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .navigation-buttons a:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 27px;
+            }
+
+            section {
+                padding: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🏎️ Energia kinetyczna</h1>
+    <p>Poznaj energię, którą ma poruszające się ciało.</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Wszystkie lekcje</a>
+    <a href="moc.html">Poprzednia lekcja</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest energia kinetyczna?</h2>
+
+        <p>
+            Energia kinetyczna to energia, którą posiada ciało
+            ze względu na swój ruch.
+        </p>
+
+        <p>
+            Każdy poruszający się przedmiot ma energię kinetyczną.
+            Może to być jadący samochód, lecąca piłka, biegnący człowiek
+            lub płynąca woda.
+        </p>
+
+        <div class="important">
+            <strong>Zapamiętaj:</strong> Ciało, które się nie porusza
+            względem wybranego układu odniesienia, ma zerową energię kinetyczną.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Od czego zależy energia kinetyczna?</h2>
+
+        <p>Energia kinetyczna zależy przede wszystkim od dwóch czynników:</p>
+
+        <ol>
+            <li><strong>Masy ciała</strong> – im większa masa, tym większa energia kinetyczna przy tej samej prędkości.</li>
+            <li><strong>Prędkości ciała</strong> – im większa prędkość, tym większa energia kinetyczna przy tej samej masie.</li>
+        </ol>
+
+        <p>
+            Szczególnie ważne jest to, że energia kinetyczna rośnie
+            z kwadratem prędkości. Oznacza to, że dwukrotne zwiększenie
+            prędkości powoduje czterokrotny wzrost energii kinetycznej.
+        </p>
+    </section>
+
+    <section>
+        <h2>3. Wzór na energię kinetyczną</h2>
+
+        <div class="formula">
+            E<sub>k</sub> = (m · v²) / 2
+        </div>
+
+        <ul>
+            <li><strong>E<sub>k</sub></strong> – energia kinetyczna,</li>
+            <li><strong>m</strong> – masa ciała w kilogramach (kg),</li>
+            <li><strong>v</strong> – prędkość ciała w metrach na sekundę (m/s).</li>
+        </ul>
+
+        <p>
+            Przed obliczeniem energii należy zamienić masę na kilogramy,
+            a prędkość na metry na sekundę.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Jednostka energii kinetycznej</h2>
+
+        <p>
+            Energia kinetyczna jest rodzajem energii, dlatego jej jednostką
+            w układzie SI jest dżul (J).
+        </p>
+
+        <ul>
+            <li>1 J – jeden dżul,</li>
+            <li>1 kJ = 1000 J – jeden kilodżul.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>5. Przykład obliczania energii kinetycznej</h2>
+
+        <div class="example">
+            <p><strong>Zadanie:</strong></p>
+
+            <p>
+                Piłka o masie 2 kg porusza się z prędkością 3 m/s.
+                Oblicz jej energię kinetyczną.
+            </p>
+
+            <p><strong>Dane:</strong></p>
+            <ul>
+                <li>m = 2 kg</li>
+                <li>v = 3 m/s</li>
+            </ul>
+
+            <p><strong>Szukane:</strong></p>
+            <p>E<sub>k</sub> = ?</p>
+
+            <p><strong>Wzór:</strong></p>
+            <p>E<sub>k</sub> = (m · v²) / 2</p>
+
+            <p><strong>Obliczenia:</strong></p>
+            <p>E<sub>k</sub> = (2 · 3²) / 2</p>
+            <p>E<sub>k</sub> = (2 · 9) / 2</p>
+            <p>E<sub>k</sub> = 18 / 2 = 9 J</p>
+
+            <p><strong>Odpowiedź:</strong> Energia kinetyczna piłki wynosi 9 J.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Co się stanie, gdy zwiększymy prędkość?</h2>
+
+        <p>
+            Energia kinetyczna zależy od kwadratu prędkości.
+            Dlatego nawet niewielkie zwiększenie prędkości może
+            wyraźnie zwiększyć energię kinetyczną.
+        </p>
+
+        <ul>
+            <li>Dwukrotnie większa prędkość oznacza czterokrotnie większą energię.</li>
+            <li>Trzykrotnie większa prędkość oznacza dziewięciokrotnie większą energię.</li>
+        </ul>
+
+        <div class="important">
+            <strong>Przykład:</strong> Jeżeli samochód jedzie dwa razy szybciej,
+            jego energia kinetyczna jest cztery razy większa,
+            o ile jego masa pozostaje taka sama.
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Energia kinetyczna w życiu codziennym</h2>
+
+        <ul>
+            <li>Jadący rower ma energię kinetyczną.</li>
+            <li>Lecąca piłka ma energię kinetyczną.</li>
+            <li>Poruszający się pociąg ma energię kinetyczną.</li>
+            <li>Płynąca rzeka ma energię kinetyczną.</li>
+            <li>Wiejący wiatr ma energię kinetyczną.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>8. Energia kinetyczna a bezpieczeństwo</h2>
+
+        <p>
+            Poruszające się pojazdy posiadają energię kinetyczną.
+            Podczas hamowania energia ta jest przekształcana
+            między innymi w energię wewnętrzną hamulców i otoczenia.
+        </p>
+
+        <p>
+            Dlatego należy zachowywać bezpieczną prędkość
+            i odpowiednią odległość od innych pojazdów.
+        </p>
+    </section>
+
+    <section>
+        <h2>9. Energia kinetyczna a inne rodzaje energii</h2>
+
+        <p>
+            Energia kinetyczna jest jednym z rodzajów energii mechanicznej.
+            Innym ważnym rodzajem jest energia potencjalna.
+        </p>
+
+        <p>
+            Podczas ruchu energia może zmieniać swoją postać.
+            Na przykład spadający przedmiot traci energię potencjalną
+            grawitacji, a zyskuje energię kinetyczną.
+        </p>
+    </section>
+
+    <section>
+        <h2>10. Słowniczek</h2>
+
+        <ul>
+            <li><strong>Energia kinetyczna</strong> – energia związana z ruchem ciała.</li>
+            <li><strong>Masa</strong> – wielkość fizyczna wyrażana w kilogramach.</li>
+            <li><strong>Prędkość</strong> – informuje, jak szybko zmienia się położenie ciała.</li>
+            <li><strong>Dżul</strong> – jednostka energii.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>11. Sprawdź swoją wiedzę</h2>
+
+        <details>
+            <summary>1. Czym jest energia kinetyczna?</summary>
+            <p>To energia, którą ciało posiada ze względu na swój ruch.</p>
+        </details>
+
+        <details>
+            <summary>2. Od czego zależy energia kinetyczna?</summary>
+            <p>Od masy ciała i kwadratu jego prędkości.</p>
+        </details>
+
+        <details>
+            <summary>3. Jaki jest wzór na energię kinetyczną?</summary>
+            <p>E<sub>k</sub> = (m · v²) / 2.</p>
+        </details>
+
+        <details>
+            <summary>4. Jaka jest jednostka energii kinetycznej?</summary>
+            <p>Dżul (J).</p>
+        </details>
+
+        <details>
+            <summary>5. Co stanie się z energią, gdy prędkość wzrośnie dwukrotnie?</summary>
+            <p>Energia kinetyczna wzrośnie czterokrotnie.</p>
+        </details>
+
+        <details>
+            <summary>6. Czy stojący przedmiot ma energię kinetyczną?</summary>
+            <p>Jeżeli nie porusza się względem wybranego układu odniesienia, jego energia kinetyczna wynosi zero.</p>
+        </details>
+
+        <details>
+            <summary>7. Oblicz energię kinetyczną ciała o masie 4 kg i prędkości 2 m/s.</summary>
+            <p>E<sub>k</sub> = (4 · 2²) / 2 = 16 / 2 = 8 J.</p>
+        </details>
+    </section>
+
+    <section>
+        <h2>12. Podsumowanie</h2>
+
+        <ul>
+            <li>Energia kinetyczna jest związana z ruchem ciała.</li>
+            <li>Zależy od masy i kwadratu prędkości.</li>
+            <li>Jej jednostką jest dżul (J).</li>
+            <li>Wzór: E<sub>k</sub> = (m · v²) / 2.</li>
+            <li>Dwukrotny wzrost prędkości oznacza czterokrotny wzrost energii kinetycznej.</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="navigation-buttons">
+            <a href="moc.html">← Poprzednia: Moc</a>
+            <a href="energia-potencjalna.html">Następna: Energia potencjalna →</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Fizyka Arena</p>
+    <p>Nauka fizyki dla klas 7 i 8</p>
+</footer>
+
+</body>
+</html>

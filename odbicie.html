@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odbicie światła - Fizyka Arena</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef3f8;
+            color: #263238;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1565c0, #42a5f5);
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.3em;
+        }
+
+        nav {
+            background: #0d47a1;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1565c0;
+        }
+
+        .highlight {
+            background: #e3f2fd;
+            border-left: 5px solid #2196f3;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .example {
+            background: #f1f8e9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .diagram {
+            text-align: center;
+            font-size: 1.2em;
+            background: #e8eaf6;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        details {
+            background: #f5f5f5;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #0d47a1;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .navigation-buttons a {
+            display: inline-block;
+            background: #1565c0;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .navigation-buttons a:hover {
+            background: #0d47a1;
+        }
+
+        footer {
+            background: #0d47a1;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🔦 Odbicie światła</h1>
+    <p>Fizyka Arena — Klasa 8</p>
+</header>
+
+<nav>
+    <a href="index.html">Strona główna</a>
+    <a href="lekcje.html">Lekcje</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>1. Czym jest odbicie światła?</h2>
+
+        <p>
+            Odbicie światła to zjawisko, w którym promień światła
+            pada na powierzchnię i zmienia kierunek, wracając do
+            ośrodka, z którego przyszedł.
+        </p>
+
+        <p>
+            Dzięki odbiciu możemy widzieć przedmioty, które same
+            nie emitują światła, na przykład książkę czy ścianę.
+            Odbijają one światło pochodzące z innych źródeł.
+        </p>
+
+        <div class="highlight">
+            <strong>Przykład:</strong> Widzimy swoje odbicie w lustrze,
+            ponieważ światło odbija się od jego powierzchni i dociera
+            do naszych oczu.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Rodzaje odbicia</h2>
+
+        <h3>Odbicie regularne</h3>
+
+        <p>
+            Występuje na gładkich powierzchniach, takich jak lustro.
+            Promienie odbijają się w uporządkowany sposób.
+        </p>
+
+        <h3>Odbicie rozproszone</h3>
+
+        <p>
+            Występuje na nierównych powierzchniach, takich jak papier,
+            ściana czy asfalt. Promienie odbijają się w różnych kierunkach.
+        </p>
+
+        <div class="diagram">
+            🪞 Gładka powierzchnia → odbicie regularne<br><br>
+            🧱 Chropowata powierzchnia → odbicie rozproszone
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Prawo odbicia światła</h2>
+
+        <p>
+            Odbicie światła opisuje prawo odbicia.
+        </p>
+
+        <div class="highlight">
+            <strong>Prawo odbicia:</strong>
+            Kąt padania jest równy kątowi odbicia.
+        </div>
+
+        <p>
+            Kąty mierzymy względem prostej prostopadłej do powierzchni,
+            zwanej normalną.
+        </p>
+
+        <div class="diagram">
+            Kąt padania = Kąt odbicia<br>
+            <strong>α = β</strong>
+        </div>
+
+        <p>
+            Promień padający, promień odbity i normalna leżą
+            w jednej płaszczyźnie.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Schemat odbicia</h2>
+
+        <div class="diagram">
+            <pre>
+       Promień padający
+              ↘
+               \  α
+                \
+                 |
+                 | Normalna
+                 |
+-----------------+---------------- Powierzchnia
+                 |
+                /  β
+               /
+              ↗
+       Promień odbity
+            </pre>
+        </div>
+
+        <p>
+            Promień padający tworzy z normalną kąt α,
+            a promień odbity tworzy z normalną kąt β.
+            Zgodnie z prawem odbicia kąty te są równe.
+        </p>
+    </section>
+
+    <section>
+        <h2>5. Przykład obliczeniowy</h2>
+
+        <div class="example">
+            <p><strong>Zadanie:</strong></p>
+
+            <p>
+                Promień światła pada na lustro pod kątem 35°
+                względem normalnej. Pod jakim kątem się odbije?
+            </p>
+
+            <p><strong>Rozwiązanie:</strong></p>
+
+            <p>
+                Z prawa odbicia wynika, że kąt padania jest równy
+                kątowi odbicia.
+            </p>
+
+            <p>
+                α = β
+            </p>
+
+            <p>
+                β = 35°
+            </p>
+
+            <strong>Odpowiedź: Promień odbije się pod kątem 35°.</strong>
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Gdzie spotykamy odbicie światła?</h2>
+
+        <ul>
+            <li>W lustrach łazienkowych.</li>
+            <li>W lusterkach samochodowych.</li>
+            <li>Na powierzchni wody.</li>
+            <li>W peryskopach.</li>
+            <li>W reflektorach i urządzeniach optycznych.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>7. Najważniejsze informacje</h2>
+
+        <ul>
+            <li>Odbicie światła polega na zmianie kierunku jego rozchodzenia się.</li>
+            <li>Gładkie powierzchnie dają odbicie regularne.</li>
+            <li>Nierówne powierzchnie powodują odbicie rozproszone.</li>
+            <li>Kąt padania jest równy kątowi odbicia.</li>
+            <li>Kąty mierzymy względem normalnej.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>8. Sprawdź swoją wiedzę</h2>
+
+        <details>
+            <summary>1. Co to jest odbicie światła?</summary>
+            <p>
+                Zjawisko zmiany kierunku rozchodzenia się światła
+                po napotkaniu powierzchni.
+            </p>
+        </details>
+
+        <details>
+            <summary>2. Jak brzmi prawo odbicia?</summary>
+            <p>
+                Kąt padania jest równy kątowi odbicia.
+            </p>
+        </details>
+
+        <details>
+            <summary>3. Od czego mierzymy kąty padania i odbicia?</summary>
+            <p>
+                Od normalnej, czyli prostej prostopadłej do powierzchni.
+            </p>
+        </details>
+
+        <details>
+            <summary>4. Czym różni się odbicie regularne od rozproszonego?</summary>
+            <p>
+                Regularne zachodzi na gładkiej powierzchni,
+                a rozproszone na powierzchni nierównej.
+            </p>
+        </details>
+
+        <details>
+            <summary>5. Kąt padania wynosi 50°. Jaki jest kąt odbicia?</summary>
+            <p>
+                50°, ponieważ kąty padania i odbicia są równe.
+            </p>
+        </details>
+    </section>
+
+    <section>
+        <div class="navigation-buttons">
+            <a href="swiatlo.html">← Poprzednia lekcja</a>
+            <a href="zalamanie.html">Następna lekcja →</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    © 2026 Fizyka Arena | Ucz się fizyki!
+</footer>
+
+</body>
+</html>
