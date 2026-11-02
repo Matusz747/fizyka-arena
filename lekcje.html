@@ -4,114 +4,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lekcje – Fizyka Arena</title>
-
+<title>Wszystkie lekcje – Fizyka Arena</title>
 <style>
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #07111f;
-    color: white;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
 }
 
 header {
-    padding: 35px 20px;
+    background: linear-gradient(135deg, #0f172a, #2563eb);
+    color: white;
     text-align: center;
-    background: linear-gradient(135deg, #102c50, #075985);
+    padding: 45px 20px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 38px;
-}
-
-header p {
-    color: #c8e8ff;
-}
+header h1 { font-size: 38px; margin: 0; }
 
 nav {
-    background: #0d1b2d;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    background: #1e293b;
+    text-align: center;
+    padding: 14px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    margin: 8px 15px;
+    display: inline-block;
 }
 
-nav a:hover {
-    color: #38bdf8;
-}
+nav a:hover { color: #93c5fd; }
 
 main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 25px 18px;
-}
-
-h2 {
-    color: #38bdf8;
-    border-bottom: 2px solid #164e75;
-    padding-bottom: 10px;
-    margin-top: 40px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
 .intro {
-    background: #10243b;
-    padding: 22px;
+    background: white;
+    padding: 25px;
     border-radius: 14px;
     margin-bottom: 30px;
-    line-height: 1.7;
+    text-align: center;
 }
 
-.grid {
+h2 { color: #2563eb; }
+
+.lesson-section { margin-bottom: 45px; }
+
+.lesson-section h2 {
+    border-bottom: 3px solid #2563eb;
+    padding-bottom: 10px;
+}
+
+.cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
 }
 
 .card {
     display: block;
-    background: #10243b;
-    border: 1px solid #244766;
-    border-radius: 12px;
-    padding: 20px;
+    background: white;
+    padding: 22px;
+    border-radius: 13px;
     text-decoration: none;
-    color: white;
+    color: #1e293b;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     transition: 0.2s;
+    border: 1px solid #e2e8f0;
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    border-color: #38bdf8;
-    background: #163653;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(37,99,235,0.15);
+    border-color: #2563eb;
 }
 
-.card h3 {
-    margin: 0 0 10px;
-    color: #7dd3fc;
+.card h3 { color: #2563eb; margin-top: 0; }
+
+.start-button {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
 }
 
-.card p {
-    margin: 0;
-    color: #cbd5e1;
-    line-height: 1.5;
-}
+.start-button:hover { background: #1d4ed8; }
 
 footer {
+    background: #0f172a;
+    color: white;
     text-align: center;
     padding: 25px;
-    color: #94a3b8;
-    margin-top: 40px;
+    margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+    header h1 { font-size: 29px; }
+    .cards { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -119,161 +120,101 @@ footer {
 <body>
 
 <header>
-    <h1>📚 Centrum lekcji fizyki</h1>
-    <p>Fizyka Arena – poznawaj, odkrywaj i eksperymentuj!</p>
+    <h1>📚 Fizyka Arena</h1>
+    <p>Wszystkie lekcje fizyki w jednym miejscu</p>
 </header>
 
 <nav>
     <a href="index.html">Strona główna</a>
-    <a href="lekcje.html">Lekcje</a>
-    <a href="wprowadzenie.html">Wprowadzenie do fizyki</a>
-    <a href="quiz-fizyczny.html">Quiz</a>
+    <a href="lekcje.html">Wszystkie lekcje</a>
+    <a href="fizyka.html">Wprowadzenie do fizyki</a>
 </nav>
 
 <main>
 
 <section class="intro">
-    <h2>Wprowadzenie do fizyki</h2>
-    <p>
-        Fizyka to nauka o przyrodzie, materii, energii i zjawiskach,
-        które zachodzą wokół nas. Dzięki fizyce możemy zrozumieć,
-        dlaczego przedmioty spadają, jak działa światło, skąd bierze
-        się dźwięk i jak funkcjonują urządzenia elektryczne.
-    </p>
-    <a class="card" href="wprowadzenie.html">
-        <h3>Wprowadzenie do fizyki →</h3>
-        <p>Poznaj podstawy fizyki i najważniejsze pojęcia.</p>
-    </a>
+    <h2>Wybierz swoją lekcję</h2>
+    <p>Kolejne tematy są ułożone w odpowiedniej kolejności.</p>
+    <a href="fizyka.html" class="start-button">Wprowadzenie do fizyki →</a>
 </section>
 
-<h2>Klasa 7 – Mechanika i energia</h2>
-<div class="grid">
+<section class="lesson-section">
+<h2>📘 Fizyka – klasa 7</h2>
+<div class="cards">
 
-<a class="card" href="ruch.html">
-<h3>Ruch i spoczynek</h3>
-<p>Poznaj ruch, spoczynek i układ odniesienia.</p>
-</a>
-
-<a class="card" href="predkosc.html">
-<h3>Prędkość</h3>
-<p>Dowiedz się, jak obliczać prędkość.</p>
-</a>
-
-<a class="card" href="droga.html">
-<h3>Droga i czas</h3>
-<p>Poznaj zależność między drogą, czasem i ruchem.</p>
-</a>
-
-<a class="card" href="sila.html">
-<h3>Siła</h3>
-<p>Dowiedz się, jak siły wpływają na ruch ciał.</p>
-</a>
-
-<a class="card" href="masa.html">
-<h3>Masa i ciężar</h3>
-<p>Poznaj masę, ciężar i ich różnice.</p>
-</a>
-
-<a class="card" href="grawitacja.html">
-<h3>Grawitacja</h3>
-<p>Poznaj siłę przyciągania grawitacyjnego.</p>
-</a>
-
-<a class="card" href="tarcie.html">
-<h3>Tarcie</h3>
-<p>Dowiedz się, czym jest siła tarcia.</p>
-</a>
-
-<a class="card" href="cisnienie.html">
-<h3>Ciśnienie</h3>
-<p>Poznaj ciśnienie i sposób jego obliczania.</p>
-</a>
-
-<a class="card" href="cisnienie-cieczy.html">
-<h3>Ciśnienie cieczy</h3>
-<p>Dowiedz się, jak ciśnienie zależy od głębokości.</p>
-</a>
-
-<a class="card" href="prawo-archimedesa.html">
-<h3>Prawo Archimedesa</h3>
-<p>Poznaj siłę wyporu i pływanie ciał.</p>
-</a>
-
-<a class="card" href="praca.html">
-<h3>Praca</h3>
-<p>Dowiedz się, czym jest praca mechaniczna.</p>
-</a>
-
-<a class="card" href="moc.html">
-<h3>Moc</h3>
-<p>Poznaj moc i sposób jej obliczania.</p>
-</a>
-
-<a class="card" href="energia-kinetyczna.html">
-<h3>Energia kinetyczna</h3>
-<p>Dowiedz się, czym jest energia ruchu.</p>
-</a>
-
-<a class="card" href="energia-potencjalna.html">
-<h3>Energia potencjalna</h3>
-<p>Poznaj energię związaną z położeniem.</p>
-</a>
-
-<a class="card" href="zasada-zachowania-energii.html">
-<h3>Zasada zachowania energii</h3>
-<p>Dowiedz się, jak energia zmienia swoje formy.</p>
-</a>
+<a href="ruch.html" class="card"><h3>🏃 Ruch i spoczynek</h3><p>Poznaj ruch, spoczynek i układ odniesienia.</p></a>
+<a href="predkosc.html" class="card"><h3>🚀 Prędkość</h3><p>Dowiedz się, jak obliczać prędkość.</p></a>
+<a href="droga.html" class="card"><h3>📏 Droga i czas</h3><p>Poznaj zależność między drogą, czasem i ruchem.</p></a>
+<a href="sila.html" class="card"><h3>💪 Siła</h3><p>Dowiedz się, jak siły wpływają na ruch ciał.</p></a>
+<a href="masa.html" class="card"><h3>⚖️ Masa i ciężar</h3><p>Poznaj masę, ciężar i ich różnice.</p></a>
+<a href="grawitacja.html" class="card"><h3>🌍 Grawitacja</h3><p>Poznaj siłę przyciągania grawitacyjnego.</p></a>
+<a href="tarcie.html" class="card"><h3>🛞 Tarcie</h3><p>Dowiedz się, czym jest siła tarcia.</p></a>
+<a href="cisnienie.html" class="card"><h3>📐 Ciśnienie</h3><p>Poznaj ciśnienie i wzór p = F / S.</p></a>
+<a href="cisnienie-cieczy.html" class="card"><h3>💧 Ciśnienie cieczy</h3><p>Dowiedz się, jak ciśnienie zależy od głębokości.</p></a>
+<a href="prawo-archimedesa.html" class="card"><h3>🚢 Prawo Archimedesa</h3><p>Poznaj siłę wyporu i pływanie ciał.</p></a>
+<a href="praca.html" class="card"><h3>🔧 Praca</h3><p>Dowiedz się, czym jest praca mechaniczna.</p></a>
+<a href="moc.html" class="card"><h3>⚡ Moc</h3><p>Poznaj moc i sposób jej obliczania.</p></a>
+<a href="energia-kinetyczna.html" class="card"><h3>🏎️ Energia kinetyczna</h3><p>Dowiedz się, czym jest energia ruchu.</p></a>
+<a href="energia-potencjalna.html" class="card"><h3>⛰️ Energia potencjalna</h3><p>Poznaj energię związaną z położeniem.</p></a>
+<a href="zachowanie-energii.html" class="card"><h3>🔄 Zasada zachowania energii</h3><p>Dowiedz się, jak energia zmienia swoje formy.</p></a>
 
 </div>
+</section>
 
-<h2>Klasa 8 – Elektryczność, magnetyzm i optyka</h2>
-<div class="grid">
+<section class="lesson-section">
+<h2>📗 Fizyka – klasa 8</h2>
+<div class="cards">
 
-<a class="card" href="ladunki-elektryczne.html"><h3>Ładunki elektryczne</h3><p>Poznaj ładunki i ich oddziaływanie.</p></a>
-<a class="card" href="prad-elektryczny.html"><h3>Prąd elektryczny</h3><p>Dowiedz się, czym jest prąd.</p></a>
-<a class="card" href="natezenie-pradu.html"><h3>Natężenie prądu</h3><p>Poznaj natężenie prądu elektrycznego.</p></a>
-<a class="card" href="napiecie.html"><h3>Napięcie elektryczne</h3><p>Dowiedz się, czym jest napięcie.</p></a>
-<a class="card" href="opor.html"><h3>Opór elektryczny</h3><p>Poznaj opór przewodników.</p></a>
-<a class="card" href="prawo-ohma.html"><h3>Prawo Ohma</h3><p>Poznaj zależność napięcia, prądu i oporu.</p></a>
-<a class="card" href="obwody.html"><h3>Obwody elektryczne</h3><p>Dowiedz się, jak działają obwody.</p></a>
-<a class="card" href="polaczenie-szeregowe.html"><h3>Połączenie szeregowe</h3><p>Poznaj połączenia szeregowe.</p></a>
-<a class="card" href="polaczenie-rownolegle.html"><h3>Połączenie równoległe</h3><p>Poznaj połączenia równoległe.</p></a>
-<a class="card" href="magnetyzm.html"><h3>Magnetyzm</h3><p>Odkryj właściwości magnesów.</p></a>
-<a class="card" href="pole-magnetyczne.html"><h3>Pole magnetyczne</h3><p>Poznaj pole magnetyczne.</p></a>
-<a class="card" href="elektromagnes.html"><h3>Elektromagnes</h3><p>Dowiedz się, jak działa elektromagnes.</p></a>
-<a class="card" href="silnik-elektryczny.html"><h3>Silnik elektryczny</h3><p>Poznaj zasadę działania silnika.</p></a>
-<a class="card" href="fale.html"><h3>Fale</h3><p>Poznaj rodzaje fal.</p></a>
-<a class="card" href="dzwiek.html"><h3>Dźwięk</h3><p>Dowiedz się, jak powstaje dźwięk.</p></a>
-<a class="card" href="echo.html"><h3>Echo</h3><p>Poznaj zjawisko echa.</p></a>
-<a class="card" href="swiatlo.html"><h3>Światło</h3><p>Poznaj właściwości światła.</p></a>
-<a class="card" href="odbicie-swiatla.html"><h3>Odbicie światła</h3><p>Dowiedz się, jak odbija się światło.</p></a>
-<a class="card" href="zalamanie-swiatla.html"><h3>Załamanie światła</h3><p>Poznaj zjawisko załamania.</p></a>
-<a class="card" href="soczewki.html"><h3>Soczewki</h3><p>Dowiedz się, jak działają soczewki.</p></a>
-<a class="card" href="barwy.html"><h3>Barwy</h3><p>Poznaj powstawanie i mieszanie barw.</p></a>
-
-</div>
-
-<h2>Dodatkowe tematy</h2>
-<div class="grid">
-
-<a class="card" href="astronomia.html"><h3>Astronomia</h3><p>Odkrywaj tajemnice kosmosu.</p></a>
-<a class="card" href="uklad-sloneczny.html"><h3>Układ Słoneczny</h3><p>Poznaj planety i Słońce.</p></a>
-<a class="card" href="gwiazdy.html"><h3>Gwiazdy</h3><p>Dowiedz się więcej o gwiazdach.</p></a>
-<a class="card" href="atom.html"><h3>Atom</h3><p>Poznaj budowę materii.</p></a>
-<a class="card" href="energia-jadrowa.html"><h3>Energia jądrowa</h3><p>Poznaj podstawy energii jądrowej.</p></a>
-<a class="card" href="kosmos.html"><h3>Kosmos</h3><p>Odkrywaj Wszechświat.</p></a>
-<a class="card" href="fizyka-w-sporcie.html"><h3>Fizyka w sporcie</h3><p>Zobacz fizykę podczas uprawiania sportu.</p></a>
-<a class="card" href="fizyka-w-medycynie.html"><h3>Fizyka w medycynie</h3><p>Poznaj zastosowania fizyki w medycynie.</p></a>
-<a class="card" href="fizyka-w-technice.html"><h3>Fizyka w technice</h3><p>Odkryj fizykę w nowoczesnych urządzeniach.</p></a>
-<a class="card" href="wielcy-fizycy.html"><h3>Wielcy fizycy</h3><p>Poznaj naukowców, którzy zmienili świat.</p></a>
+<a href="ladunki.html" class="card"><h3>⚡ Ładunki elektryczne</h3><p>Poznaj ładunki dodatnie i ujemne.</p></a>
+<a href="prad.html" class="card"><h3>🔌 Prąd elektryczny</h3><p>Dowiedz się, czym jest prąd.</p></a>
+<a href="natezenie.html" class="card"><h3>📏 Natężenie prądu</h3><p>Poznaj natężenie i jego jednostkę.</p></a>
+<a href="napiecie.html" class="card"><h3>🔋 Napięcie elektryczne</h3><p>Dowiedz się, czym jest napięcie.</p></a>
+<a href="opor.html" class="card"><h3>🧱 Opór elektryczny</h3><p>Poznaj opór przewodników.</p></a>
+<a href="prawo-ohma.html" class="card"><h3>📐 Prawo Ohma</h3><p>Poznaj zależność między napięciem, prądem i oporem.</p></a>
+<a href="obwody.html" class="card"><h3>🔌 Obwody elektryczne</h3><p>Poznaj elementy obwodów elektrycznych.</p></a>
+<a href="polaczenia-szeregowe.html" class="card"><h3>➖ Połączenie szeregowe</h3><p>Dowiedz się, jak działa połączenie szeregowe.</p></a>
+<a href="polaczenia-rownolegle.html" class="card"><h3>🔀 Połączenie równoległe</h3><p>Poznaj połączenie równoległe.</p></a>
+<a href="magnetyzm.html" class="card"><h3>🧲 Magnetyzm</h3><p>Poznaj magnesy i ich właściwości.</p></a>
+<a href="pole-magnetyczne.html" class="card"><h3>🧲 Pole magnetyczne</h3><p>Dowiedz się, czym jest pole magnetyczne.</p></a>
+<a href="elektromagnes.html" class="card"><h3>🧲 Elektromagnes</h3><p>Poznaj działanie elektromagnesu.</p></a>
+<a href="silnik.html" class="card"><h3>⚙️ Silnik elektryczny</h3><p>Dowiedz się, jak działa silnik elektryczny.</p></a>
+<a href="fale.html" class="card"><h3>🌊 Fale</h3><p>Poznaj fale i ich właściwości.</p></a>
+<a href="dzwiek.html" class="card"><h3>🔊 Dźwięk</h3><p>Dowiedz się, jak powstaje dźwięk.</p></a>
+<a href="echo.html" class="card"><h3>🏔️ Echo</h3><p>Poznaj zjawisko odbicia dźwięku.</p></a>
+<a href="swiatlo.html" class="card"><h3>💡 Światło</h3><p>Dowiedz się, czym jest światło.</p></a>
+<a href="odbicie.html" class="card"><h3>🪞 Odbicie światła</h3><p>Poznaj zasady odbicia światła.</p></a>
+<a href="zalamanie.html" class="card"><h3>🌈 Załamanie światła</h3><p>Dowiedz się, dlaczego światło zmienia kierunek.</p></a>
+<a href="soczewki.html" class="card"><h3>🔍 Soczewki</h3><p>Poznaj soczewki i ich zastosowania.</p></a>
+<a href="barwy.html" class="card"><h3>🎨 Barwy</h3><p>Dowiedz się, jak powstają kolory.</p></a>
 
 </div>
+</section>
+
+<section class="lesson-section">
+<h2>🌌 Dodatkowe tematy</h2>
+<div class="cards">
+
+<a href="astronomia.html" class="card"><h3>🌌 Astronomia</h3><p>Nauka o kosmosie i ciałach niebieskich.</p></a>
+<a href="uklad-sloneczny.html" class="card"><h3>🪐 Układ Słoneczny</h3><p>Poznaj Słońce i planety.</p></a>
+<a href="gwiazdy.html" class="card"><h3>⭐ Gwiazdy</h3><p>Dowiedz się, czym są gwiazdy.</p></a>
+<a href="atom.html" class="card"><h3>⚛️ Atom</h3><p>Poznaj budowę atomu.</p></a>
+<a href="energia-jadrowa.html" class="card"><h3>☢️ Energia jądrowa</h3><p>Dowiedz się, czym jest energia jądrowa.</p></a>
+<a href="kosmos.html" class="card"><h3>🚀 Kosmos</h3><p>Odkrywaj tajemnice Wszechświata.</p></a>
+<a href="sport.html" class="card"><h3>🏆 Fizyka w sporcie</h3><p>Poznaj fizykę podczas uprawiania sportu.</p></a>
+<a href="medycyna.html" class="card"><h3>🩺 Fizyka w medycynie</h3><p>Dowiedz się, jak fizyka pomaga lekarzom.</p></a>
+<a href="technika.html" class="card"><h3>⚙️ Fizyka w technice</h3><p>Poznaj zastosowania fizyki w technice.</p></a>
+<a href="fizycy.html" class="card"><h3>👨‍🔬 Wielcy fizycy</h3><p>Poznaj naukowców, którzy zmienili świat.</p></a>
+
+</div>
+</section>
 
 </main>
 
 <footer>
-    © Fizyka Arena – nauka fizyki w ciekawy sposób
+<p>© 2026 Fizyka Arena</p>
+<p>Nauka fizyki dla klas 7 i 8</p>
 </footer>
 
 </body>
 </html>
+
