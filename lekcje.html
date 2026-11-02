@@ -5,30 +5,62 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wszystkie lekcje – Fizyka Arena</title>
+
 <style>
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f1f5f9;
-    color: #1e293b;
+    background: #071426;
+    color: #eaf4ff;
     line-height: 1.6;
 }
 
-header {
-    background: linear-gradient(135deg, #0f172a, #2563eb);
-    color: white;
-    text-align: center;
-    padding: 45px 20px;
+/* ANIMOWANE TŁO */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 20%, #123d7044, transparent 35%),
+        radial-gradient(circle at 85% 70%, #07598544, transparent 35%);
+    z-index: -1;
+    pointer-events: none;
 }
 
-header h1 { font-size: 38px; margin: 0; }
+header {
+    background: linear-gradient(135deg, #071426, #123c70, #075985);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 44px;
+    margin: 0;
+    animation: fadeDown 1s ease;
+}
+
+header p {
+    color: #c7e7ff;
+    font-size: 18px;
+    animation: fadeUp 1s ease;
+}
 
 nav {
-    background: #1e293b;
+    background: #0b1c31;
     text-align: center;
-    padding: 14px;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #24517b;
 }
 
 nav a {
@@ -36,83 +68,184 @@ nav a {
     text-decoration: none;
     margin: 8px 15px;
     display: inline-block;
+    transition: 0.3s;
 }
 
-nav a:hover { color: #93c5fd; }
+nav a:hover {
+    color: #38bdf8;
+    transform: scale(1.08);
+}
 
 main {
     max-width: 1200px;
-    margin: 30px auto;
+    margin: 35px auto;
     padding: 0 20px;
 }
 
 .intro {
-    background: white;
-    padding: 25px;
-    border-radius: 14px;
-    margin-bottom: 30px;
+    background: linear-gradient(135deg, #102b49, #123c70);
+    padding: 35px 25px;
+    border-radius: 18px;
+    margin-bottom: 40px;
     text-align: center;
+    border: 1px solid #28608d;
+    box-shadow: 0 8px 30px #0005;
+    animation: fadeUp 1s ease;
 }
 
-h2 { color: #2563eb; }
+.intro h2 {
+    color: #7dd3fc;
+    font-size: 28px;
+}
 
-.lesson-section { margin-bottom: 45px; }
+.intro p {
+    color: #d5eaff;
+}
+
+.start-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #0284c7, #2563eb);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+    box-shadow: 0 5px 18px #0284c755;
+}
+
+.start-button:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 10px 25px #0284c799;
+}
+
+.search-box {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto 35px;
+    padding: 15px 20px;
+    border: 2px solid #24517b;
+    border-radius: 12px;
+    background: #10243b;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 15px #38bdf855;
+}
+
+.search-box::placeholder {
+    color: #a5bfd8;
+}
+
+.lesson-section {
+    margin-bottom: 55px;
+}
 
 .lesson-section h2 {
-    border-bottom: 3px solid #2563eb;
-    padding-bottom: 10px;
+    color: #7dd3fc;
+    border-bottom: 3px solid #1686c2;
+    padding-bottom: 12px;
+    font-size: 27px;
 }
 
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 18px;
+    gap: 20px;
 }
 
 .card {
     display: block;
-    background: white;
-    padding: 22px;
-    border-radius: 13px;
+    background: linear-gradient(145deg, #10243b, #142f4d);
+    padding: 23px;
+    border-radius: 15px;
     text-decoration: none;
-    color: #1e293b;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    transition: 0.2s;
-    border: 1px solid #e2e8f0;
+    color: #eaf4ff;
+    border: 1px solid #244766;
+    box-shadow: 0 5px 15px #0003;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    animation: fadeUp 0.7s ease both;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(37,99,235,0.15);
-    border-color: #2563eb;
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+    box-shadow: 0 12px 28px #0284c755;
+    background: linear-gradient(145deg, #153858, #16466c);
 }
 
-.card h3 { color: #2563eb; margin-top: 0; }
-
-.start-button {
-    display: inline-block;
-    background: #2563eb;
-    color: white;
-    padding: 14px 25px;
-    border-radius: 9px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 15px;
+.card h3 {
+    color: #7dd3fc;
+    margin-top: 0;
+    font-size: 19px;
 }
 
-.start-button:hover { background: #1d4ed8; }
+.card p {
+    color: #c6d9eb;
+    margin-bottom: 0;
+}
+
+.card[hidden] {
+    display: none;
+}
 
 footer {
-    background: #0f172a;
-    color: white;
+    background: #06101e;
+    color: #9db8d2;
     text-align: center;
-    padding: 25px;
-    margin-top: 50px;
+    padding: 30px;
+    margin-top: 60px;
+    border-top: 1px solid #244766;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 600px) {
-    header h1 { font-size: 29px; }
-    .cards { grid-template-columns: 1fr; }
+    header h1 {
+        font-size: 31px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        margin: 6px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 </style>
 </head>
@@ -120,8 +253,8 @@ footer {
 <body>
 
 <header>
-    <h1>📚 Fizyka Arena</h1>
-    <p>Wszystkie lekcje fizyki w jednym miejscu</p>
+    <h1>⚡ Fizyka Arena</h1>
+    <p>Odkrywaj prawa fizyki i poznawaj świat!</p>
 </header>
 
 <nav>
@@ -133,10 +266,18 @@ footer {
 <main>
 
 <section class="intro">
-    <h2>Wybierz swoją lekcję</h2>
-    <p>Kolejne tematy są ułożone w odpowiedniej kolejności.</p>
+    <h2>📚 Centrum nauki fizyki</h2>
+    <p>Wybierz temat i rozpocznij odkrywanie fascynującego świata fizyki.</p>
     <a href="fizyka.html" class="start-button">Wprowadzenie do fizyki →</a>
 </section>
+
+<input
+    type="search"
+    id="search"
+    class="search-box"
+    placeholder="🔍 Szukaj tematu, np. prędkość..."
+    aria-label="Szukaj lekcji"
+>
 
 <section class="lesson-section">
 <h2>📘 Fizyka – klasa 7</h2>
@@ -215,6 +356,23 @@ footer {
 <p>Nauka fizyki dla klas 7 i 8</p>
 </footer>
 
+<script>
+const search = document.getElementById("search");
+const cards = document.querySelectorAll(".card");
+
+search.addEventListener("input", function () {
+    const phrase = this.value
+        .toLocaleLowerCase("pl")
+        .trim();
+
+    cards.forEach(card => {
+        const text = card.textContent.toLocaleLowerCase("pl");
+        card.hidden = !text.includes(phrase);
+    });
+});
+</script>
+
 </body>
 </html>
+
 
