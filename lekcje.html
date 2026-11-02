@@ -2,458 +2,277 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lekcje fizyki | Fizyka Arena</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lekcje – Fizyka Arena</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f2f7fc;
-            color: #203047;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #07111f;
+    color: white;
+}
 
-        header {
-            background: linear-gradient(135deg, #075985, #0284c7);
-            color: white;
-            text-align: center;
-            padding: 45px 20px;
-        }
+header {
+    padding: 35px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #102c50, #075985);
+}
 
-        header h1 {
-            margin: 0 0 12px;
-            font-size: 36px;
-        }
+header h1 {
+    margin: 0;
+    font-size: 38px;
+}
 
-        header p {
-            margin: 0;
-            font-size: 17px;
-        }
+header p {
+    color: #c8e8ff;
+}
 
-        nav {
-            background: #064568;
-            padding: 15px;
-            text-align: center;
-        }
+nav {
+    background: #0d1b2d;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-        nav a {
-            display: inline-block;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 5px 10px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+nav a:hover {
+    color: #38bdf8;
+}
 
-        main {
-            max-width: 1150px;
-            margin: 35px auto;
-            padding: 0 18px;
-        }
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 18px;
+}
 
-        .section-title {
-            margin: 40px 0 20px;
-            color: #075985;
-            font-size: 27px;
-            border-bottom: 3px solid #38bdf8;
-            padding-bottom: 10px;
-        }
+h2 {
+    color: #38bdf8;
+    border-bottom: 2px solid #164e75;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
 
-        .lessons {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 18px;
-        }
+.intro {
+    background: #10243b;
+    padding: 22px;
+    border-radius: 14px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
 
-        .lesson {
-            background: white;
-            border-radius: 15px;
-            padding: 22px;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
-            border: 1px solid #e0edf5;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
 
-        .lesson:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.12);
-        }
+.card {
+    display: block;
+    background: #10243b;
+    border: 1px solid #244766;
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
 
-        .lesson-number {
-            display: inline-block;
-            background: #e0f2fe;
-            color: #0369a1;
-            border-radius: 20px;
-            padding: 5px 11px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #38bdf8;
+    background: #163653;
+}
 
-        .lesson h3 {
-            margin: 5px 0 10px;
-            font-size: 19px;
-            color: #123b59;
-        }
+.card h3 {
+    margin: 0 0 10px;
+    color: #7dd3fc;
+}
 
-        .lesson p {
-            color: #536579;
-            line-height: 1.5;
-            margin: 0;
-        }
+.card p {
+    margin: 0;
+    color: #cbd5e1;
+    line-height: 1.5;
+}
 
-        footer {
-            margin-top: 50px;
-            background: #064568;
-            color: white;
-            text-align: center;
-            padding: 22px;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 29px;
-            }
-
-            .section-title {
-                font-size: 23px;
-            }
-        }
-    </style>
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #94a3b8;
+    margin-top: 40px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>📚 Lekcje fizyki</h1>
-    <p>Ucz się fizyki krok po kroku z Fizyka Arena!</p>
+    <h1>📚 Centrum lekcji fizyki</h1>
+    <p>Fizyka Arena – poznawaj, odkrywaj i eksperymentuj!</p>
 </header>
 
 <nav>
     <a href="index.html">Strona główna</a>
     <a href="lekcje.html">Lekcje</a>
-    <a href="galeria.html">Galeria</a>
-    <a href="laboratorium.html">Laboratorium</a>
-    <a href="wzory.html">Wzory</a>
+    <a href="wprowadzenie.html">Wprowadzenie do fizyki</a>
     <a href="quiz-fizyczny.html">Quiz</a>
 </nav>
 
 <main>
 
-    <!-- FIZYKA KLASA 7 -->
+<section class="intro">
+    <h2>Wprowadzenie do fizyki</h2>
+    <p>
+        Fizyka to nauka o przyrodzie, materii, energii i zjawiskach,
+        które zachodzą wokół nas. Dzięki fizyce możemy zrozumieć,
+        dlaczego przedmioty spadają, jak działa światło, skąd bierze
+        się dźwięk i jak funkcjonują urządzenia elektryczne.
+    </p>
+    <a class="card" href="wprowadzenie.html">
+        <h3>Wprowadzenie do fizyki →</h3>
+        <p>Poznaj podstawy fizyki i najważniejsze pojęcia.</p>
+    </a>
+</section>
 
-    <h2 class="section-title">📘 Fizyka – klasa 7</h2>
+<h2>Klasa 7 – Mechanika i energia</h2>
+<div class="grid">
 
-    <div class="lessons">
+<a class="card" href="ruch.html">
+<h3>Ruch i spoczynek</h3>
+<p>Poznaj ruch, spoczynek i układ odniesienia.</p>
+</a>
 
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 1</span>
-            <h3>🏃 Ruch i spoczynek</h3>
-            <p>Poznaj ruch, spoczynek i układ odniesienia.</p>
-        </div>
+<a class="card" href="predkosc.html">
+<h3>Prędkość</h3>
+<p>Dowiedz się, jak obliczać prędkość.</p>
+</a>
 
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 2</span>
-            <h3>🚀 Prędkość</h3>
-            <p>Dowiedz się, jak obliczać prędkość.</p>
-        </div>
+<a class="card" href="droga.html">
+<h3>Droga i czas</h3>
+<p>Poznaj zależność między drogą, czasem i ruchem.</p>
+</a>
 
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 3</span>
-            <h3>📏 Droga i czas</h3>
-            <p>Poznaj zależność między drogą, czasem i ruchem.</p>
-        </div>
+<a class="card" href="sila.html">
+<h3>Siła</h3>
+<p>Dowiedz się, jak siły wpływają na ruch ciał.</p>
+</a>
 
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 4</span>
-            <h3>💪 Siła</h3>
-            <p>Dowiedz się, jak siły wpływają na ruch ciał.</p>
-        </div>
+<a class="card" href="masa.html">
+<h3>Masa i ciężar</h3>
+<p>Poznaj masę, ciężar i ich różnice.</p>
+</a>
 
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 5</span>
-            <h3>⚖️ Masa i ciężar</h3>
-            <p>Poznaj masę, ciężar i ich różnice.</p>
-        </div>
+<a class="card" href="grawitacja.html">
+<h3>Grawitacja</h3>
+<p>Poznaj siłę przyciągania grawitacyjnego.</p>
+</a>
 
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 6</span>
-            <h3>🌍 Grawitacja</h3>
-            <p>Poznaj siłę przyciągania grawitacyjnego.</p>
-        </div>
+<a class="card" href="tarcie.html">
+<h3>Tarcie</h3>
+<p>Dowiedz się, czym jest siła tarcia.</p>
+</a>
 
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 7</span>
-            <h3>🛞 Tarcie</h3>
-            <p>Dowiedz się, czym jest siła tarcia.</p>
-        </div>
+<a class="card" href="cisnienie.html">
+<h3>Ciśnienie</h3>
+<p>Poznaj ciśnienie i sposób jego obliczania.</p>
+</a>
 
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 8</span>
-            <h3>📐 Ciśnienie</h3>
-            <p>Poznaj ciśnienie i wzór p = F / S.</p>
-        </div>
+<a class="card" href="cisnienie-cieczy.html">
+<h3>Ciśnienie cieczy</h3>
+<p>Dowiedz się, jak ciśnienie zależy od głębokości.</p>
+</a>
 
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 9</span>
-            <h3>💧 Ciśnienie cieczy</h3>
-            <p>Dowiedz się, jak ciśnienie zależy od głębokości.</p>
-        </div>
+<a class="card" href="prawo-archimedesa.html">
+<h3>Prawo Archimedesa</h3>
+<p>Poznaj siłę wyporu i pływanie ciał.</p>
+</a>
 
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 10</span>
-            <h3>🚢 Prawo Archimedesa</h3>
-            <p>Poznaj siłę wyporu i pływanie ciał.</p>
-        </div>
+<a class="card" href="praca.html">
+<h3>Praca</h3>
+<p>Dowiedz się, czym jest praca mechaniczna.</p>
+</a>
 
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 11</span>
-            <h3>🔧 Praca</h3>
-            <p>Dowiedz się, czym jest praca mechaniczna.</p>
-        </div>
+<a class="card" href="moc.html">
+<h3>Moc</h3>
+<p>Poznaj moc i sposób jej obliczania.</p>
+</a>
 
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 12</span>
-            <h3>⚡ Moc</h3>
-            <p>Poznaj moc i sposób jej obliczania.</p>
-        </div>
+<a class="card" href="energia-kinetyczna.html">
+<h3>Energia kinetyczna</h3>
+<p>Dowiedz się, czym jest energia ruchu.</p>
+</a>
 
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 13</span>
-            <h3>🏎️ Energia kinetyczna</h3>
-            <p>Dowiedz się, czym jest energia ruchu.</p>
-        </div>
+<a class="card" href="energia-potencjalna.html">
+<h3>Energia potencjalna</h3>
+<p>Poznaj energię związaną z położeniem.</p>
+</a>
 
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 14</span>
-            <h3>⛰️ Energia potencjalna</h3>
-            <p>Poznaj energię związaną z położeniem.</p>
-        </div>
+<a class="card" href="zasada-zachowania-energii.html">
+<h3>Zasada zachowania energii</h3>
+<p>Dowiedz się, jak energia zmienia swoje formy.</p>
+</a>
 
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 15</span>
-            <h3>🔄 Zasada zachowania energii</h3>
-            <p>Dowiedz się, jak energia zmienia swoje formy.</p>
-        </div>
+</div>
 
-    </div>
+<h2>Klasa 8 – Elektryczność, magnetyzm i optyka</h2>
+<div class="grid">
 
+<a class="card" href="ladunki-elektryczne.html"><h3>Ładunki elektryczne</h3><p>Poznaj ładunki i ich oddziaływanie.</p></a>
+<a class="card" href="prad-elektryczny.html"><h3>Prąd elektryczny</h3><p>Dowiedz się, czym jest prąd.</p></a>
+<a class="card" href="natezenie-pradu.html"><h3>Natężenie prądu</h3><p>Poznaj natężenie prądu elektrycznego.</p></a>
+<a class="card" href="napiecie.html"><h3>Napięcie elektryczne</h3><p>Dowiedz się, czym jest napięcie.</p></a>
+<a class="card" href="opor.html"><h3>Opór elektryczny</h3><p>Poznaj opór przewodników.</p></a>
+<a class="card" href="prawo-ohma.html"><h3>Prawo Ohma</h3><p>Poznaj zależność napięcia, prądu i oporu.</p></a>
+<a class="card" href="obwody.html"><h3>Obwody elektryczne</h3><p>Dowiedz się, jak działają obwody.</p></a>
+<a class="card" href="polaczenie-szeregowe.html"><h3>Połączenie szeregowe</h3><p>Poznaj połączenia szeregowe.</p></a>
+<a class="card" href="polaczenie-rownolegle.html"><h3>Połączenie równoległe</h3><p>Poznaj połączenia równoległe.</p></a>
+<a class="card" href="magnetyzm.html"><h3>Magnetyzm</h3><p>Odkryj właściwości magnesów.</p></a>
+<a class="card" href="pole-magnetyczne.html"><h3>Pole magnetyczne</h3><p>Poznaj pole magnetyczne.</p></a>
+<a class="card" href="elektromagnes.html"><h3>Elektromagnes</h3><p>Dowiedz się, jak działa elektromagnes.</p></a>
+<a class="card" href="silnik-elektryczny.html"><h3>Silnik elektryczny</h3><p>Poznaj zasadę działania silnika.</p></a>
+<a class="card" href="fale.html"><h3>Fale</h3><p>Poznaj rodzaje fal.</p></a>
+<a class="card" href="dzwiek.html"><h3>Dźwięk</h3><p>Dowiedz się, jak powstaje dźwięk.</p></a>
+<a class="card" href="echo.html"><h3>Echo</h3><p>Poznaj zjawisko echa.</p></a>
+<a class="card" href="swiatlo.html"><h3>Światło</h3><p>Poznaj właściwości światła.</p></a>
+<a class="card" href="odbicie-swiatla.html"><h3>Odbicie światła</h3><p>Dowiedz się, jak odbija się światło.</p></a>
+<a class="card" href="zalamanie-swiatla.html"><h3>Załamanie światła</h3><p>Poznaj zjawisko załamania.</p></a>
+<a class="card" href="soczewki.html"><h3>Soczewki</h3><p>Dowiedz się, jak działają soczewki.</p></a>
+<a class="card" href="barwy.html"><h3>Barwy</h3><p>Poznaj powstawanie i mieszanie barw.</p></a>
 
-    <!-- FIZYKA KLASA 8 -->
+</div>
 
-    <h2 class="section-title">📗 Fizyka – klasa 8</h2>
+<h2>Dodatkowe tematy</h2>
+<div class="grid">
 
-    <div class="lessons">
+<a class="card" href="astronomia.html"><h3>Astronomia</h3><p>Odkrywaj tajemnice kosmosu.</p></a>
+<a class="card" href="uklad-sloneczny.html"><h3>Układ Słoneczny</h3><p>Poznaj planety i Słońce.</p></a>
+<a class="card" href="gwiazdy.html"><h3>Gwiazdy</h3><p>Dowiedz się więcej o gwiazdach.</p></a>
+<a class="card" href="atom.html"><h3>Atom</h3><p>Poznaj budowę materii.</p></a>
+<a class="card" href="energia-jadrowa.html"><h3>Energia jądrowa</h3><p>Poznaj podstawy energii jądrowej.</p></a>
+<a class="card" href="kosmos.html"><h3>Kosmos</h3><p>Odkrywaj Wszechświat.</p></a>
+<a class="card" href="fizyka-w-sporcie.html"><h3>Fizyka w sporcie</h3><p>Zobacz fizykę podczas uprawiania sportu.</p></a>
+<a class="card" href="fizyka-w-medycynie.html"><h3>Fizyka w medycynie</h3><p>Poznaj zastosowania fizyki w medycynie.</p></a>
+<a class="card" href="fizyka-w-technice.html"><h3>Fizyka w technice</h3><p>Odkryj fizykę w nowoczesnych urządzeniach.</p></a>
+<a class="card" href="wielcy-fizycy.html"><h3>Wielcy fizycy</h3><p>Poznaj naukowców, którzy zmienili świat.</p></a>
 
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 1</span>
-            <h3>⚡ Ładunki elektryczne</h3>
-            <p>Poznaj ładunki dodatnie i ujemne.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 2</span>
-            <h3>🔌 Prąd elektryczny</h3>
-            <p>Dowiedz się, czym jest prąd.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 3</span>
-            <h3>📏 Natężenie prądu</h3>
-            <p>Poznaj natężenie i jego jednostkę.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 4</span>
-            <h3>🔋 Napięcie elektryczne</h3>
-            <p>Dowiedz się, czym jest napięcie.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 5</span>
-            <h3>🧱 Opór elektryczny</h3>
-            <p>Poznaj opór przewodników.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 6</span>
-            <h3>📐 Prawo Ohma</h3>
-            <p>Poznaj zależność między napięciem, prądem i oporem.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 7</span>
-            <h3>🔌 Obwody elektryczne</h3>
-            <p>Poznaj elementy obwodów elektrycznych.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 8</span>
-            <h3>➖ Połączenie szeregowe</h3>
-            <p>Dowiedz się, jak działa połączenie szeregowe.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 9</span>
-            <h3>🔀 Połączenie równoległe</h3>
-            <p>Poznaj połączenie równoległe.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 10</span>
-            <h3>🧲 Magnetyzm</h3>
-            <p>Poznaj magnesy i ich właściwości.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 11</span>
-            <h3>🧲 Pole magnetyczne</h3>
-            <p>Dowiedz się, czym jest pole magnetyczne.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 12</span>
-            <h3>🧲 Elektromagnes</h3>
-            <p>Poznaj działanie elektromagnesu.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 13</span>
-            <h3>⚙️ Silnik elektryczny</h3>
-            <p>Dowiedz się, jak działa silnik elektryczny.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 14</span>
-            <h3>🌊 Fale</h3>
-            <p>Poznaj fale i ich właściwości.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 15</span>
-            <h3>🔊 Dźwięk</h3>
-            <p>Dowiedz się, jak powstaje dźwięk.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 16</span>
-            <h3>🏔️ Echo</h3>
-            <p>Poznaj zjawisko odbicia dźwięku.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 17</span>
-            <h3>💡 Światło</h3>
-            <p>Dowiedz się, czym jest światło.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 18</span>
-            <h3>🪞 Odbicie światła</h3>
-            <p>Poznaj zasady odbicia światła.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 19</span>
-            <h3>🌈 Załamanie światła</h3>
-            <p>Dowiedz się, dlaczego światło zmienia kierunek.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 20</span>
-            <h3>🔍 Soczewki</h3>
-            <p>Poznaj soczewki i ich zastosowania.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">LEKCJA 21</span>
-            <h3>🎨 Barwy</h3>
-            <p>Dowiedz się, jak powstają kolory.</p>
-        </div>
-
-    </div>
-
-
-    <!-- DODATKOWE TEMATY -->
-
-    <h2 class="section-title">🌌 Dodatkowe tematy</h2>
-
-    <div class="lessons">
-
-        <div class="lesson">
-            <span class="lesson-number">TEMAT DODATKOWY 1</span>
-            <h3>🌌 Astronomia</h3>
-            <p>Nauka o kosmosie i ciałach niebieskich.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">TEMAT DODATKOWY 2</span>
-            <h3>🪐 Układ Słoneczny</h3>
-            <p>Poznaj Słońce i planety.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">TEMAT DODATKOWY 3</span>
-            <h3>⭐ Gwiazdy</h3>
-            <p>Dowiedz się, czym są gwiazdy.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">TEMAT DODATKOWY 4</span>
-            <h3>⚛️ Atom</h3>
-            <p>Poznaj budowę atomu.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">TEMAT DODATKOWY 5</span>
-            <h3>☢️ Energia jądrowa</h3>
-            <p>Dowiedz się, czym jest energia jądrowa.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">TEMAT DODATKOWY 6</span>
-            <h3>🚀 Kosmos</h3>
-            <p>Odkrywaj tajemnice Wszechświata.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">TEMAT DODATKOWY 7</span>
-            <h3>🏆 Fizyka w sporcie</h3>
-            <p>Poznaj fizykę podczas uprawiania sportu.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">TEMAT DODATKOWY 8</span>
-            <h3>🩺 Fizyka w medycynie</h3>
-            <p>Dowiedz się, jak fizyka pomaga lekarzom.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">TEMAT DODATKOWY 9</span>
-            <h3>⚙️ Fizyka w technice</h3>
-            <p>Poznaj zastosowania fizyki w technice.</p>
-        </div>
-
-        <div class="lesson">
-            <span class="lesson-number">TEMAT DODATKOWY 10</span>
-            <h3>👨‍🔬 Wielcy fizycy</h3>
-            <p>Poznaj naukowców, którzy zmienili świat.</p>
-        </div>
-
-    </div>
+</div>
 
 </main>
 
 <footer>
-    <p>© 2026 Fizyka Arena</p>
+    © Fizyka Arena – nauka fizyki w ciekawy sposób
 </footer>
 
 </body>
